@@ -103,7 +103,7 @@ export default function WhitepapersPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold text-white">Get All Whitepapers</h2>
           <p className="mt-4 text-white/60">
-            Subscribe to get access to all our whitepapers and receive new ones as they're published.
+            Subscribe to get access to all our whitepapers and receive new ones as they&apos;re published.
           </p>
           <form className="mt-6 flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input

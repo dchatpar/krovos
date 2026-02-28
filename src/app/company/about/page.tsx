@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "About - Krovos | Enterprise AI Automation Company",
@@ -61,7 +62,7 @@ export default function AboutPage() {
           <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[#0E7C7B]/10 rounded-full blur-3xl" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
               Building the Future of <span className="text-[#D4A017]">Enterprise</span> Technology
             </h1>
@@ -74,6 +75,19 @@ export default function AboutPage() {
               Our mission is to liberate enterprises from repetitive tasks through intelligent automation, 
               enabling teams to focus on creative strategy and high-impact work that drives business growth.
             </p>
+          </div>
+          <div className="mt-12 lg:mt-0 relative">
+            <div className="relative w-full aspect-video rounded-3xl overflow-hidden border border-[#D4A017]/20 shadow-2xl">
+              <Image
+                src="/images/hero-enterprise.png"
+                alt="Krovos Enterprise Operations"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#D4A017]/20 rounded-full blur-2xl" />
+            <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#0E7C7B]/20 rounded-full blur-2xl" />
           </div>
         </div>
       </section>
@@ -118,6 +132,30 @@ export default function AboutPage() {
                   brings together diverse talent and perspectives to solve the most challenging 
                   problems in enterprise automation.
                 </p>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="relative w-full aspect-square rounded-3xl overflow-hidden border border-[#D4A017]/20 shadow-2xl">
+                <Image
+                  src="/images/ai-automation.png"
+                  alt="AI Automation Platform"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#0E7C7B]/20 rounded-full blur-2xl" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision */}
+      <section className="py-20 bg-[#0D2040]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Our Vision</h2>
+              <div className="space-y-4 text-white/70 leading-relaxed">
                 <p>
                   Our vision extends beyond mere efficiency gains. We envision a world where 
                   enterprises can scale infinitely without proportional increases in headcount, 

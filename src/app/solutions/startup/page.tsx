@@ -171,62 +171,6 @@ export default function StartupPage() {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section className="py-20 bg-[#0A1628]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white">Startup-Friendly Pricing</h2>
-            <p className="mt-4 text-white/60 max-w-xl mx-auto">
-              Start free, scale as you grow. No hidden fees, no surprises.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {plans.map((plan, index) => (
-              <div 
-                key={index}
-                className={`bg-[#0D2040] border rounded-2xl p-6 ${
-                  plan.name === "Growth" 
-                    ? "border-[#0E7C7B] relative" 
-                    : "border-white/10"
-                }`}
-              >
-                {plan.name === "Growth" && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-[#0E7C7B] text-white text-xs font-medium rounded-full">
-                    Most Popular
-                  </div>
-                )}
-                <h3 className="text-lg font-semibold text-white">{plan.name}</h3>
-                <div className="mt-4 flex items-baseline">
-                  <span className="text-3xl font-bold text-white">{plan.price}</span>
-                  {plan.period && <span className="text-white/40 ml-1">{plan.period}</span>}
-                </div>
-                <p className="text-white/50 text-sm mt-2">{plan.description}</p>
-                <ul className="mt-6 space-y-3">
-                  {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2 text-white/70 text-sm">
-                      <svg className="w-4 h-4 text-[#0E7C7B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href="/signup"
-                  className={`mt-6 block w-full py-3 text-center font-semibold rounded-lg transition-colors ${
-                    plan.name === "Growth"
-                      ? "bg-[#0E7C7B] text-white hover:bg-[#0E7C7B]/90"
-                      : "border border-white/20 text-white hover:bg-white/10"
-                  }`}
-                >
-                  Get Started
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-[#0E7C7B] to-[#14B8A6]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
