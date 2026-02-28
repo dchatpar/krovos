@@ -82,7 +82,7 @@ export default function ResourcesPage() {
               <div key={index} className="p-6 rounded-xl border border-slate-200 hover:border-indigo-200 hover:shadow-lg transition-all">
                 <h3 className="text-lg font-semibold text-slate-900">{template.name}</h3>
                 <p className="mt-2 text-sm text-slate-600">{template.description}</p>
-                <Link href={`/templates/${template.name.toLowerCase().replace(" ", "-")}`} className="mt-4 inline-block text-sm text-indigo-600 font-medium">
+                <Link href="/resources/templates" className="mt-4 inline-block text-sm text-indigo-600 font-medium">
                   Use template
                 </Link>
               </div>
@@ -104,7 +104,7 @@ export default function ResourcesPage() {
             {latestPosts.map((post, index) => (
               <Link
                 key={index}
-                href={`/resources/blog/${post.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+                href="/resources/blog"
                 className="p-6 rounded-xl border border-slate-200 bg-white hover:border-indigo-200 hover:shadow-lg transition-all"
               >
                 <div className="text-sm text-slate-500 mb-2">{post.date}</div>

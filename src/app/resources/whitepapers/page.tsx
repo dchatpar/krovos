@@ -85,10 +85,10 @@ export default function WhitepapersPage() {
                 <p className="mt-2 text-white/50 text-sm">{paper.description}</p>
                 <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
                   <Link
-                    href="#"
+                    href="/contact?subject=Request Whitepaper: {paper.title}"
                     className="text-[#D4A017] text-sm font-medium hover:underline"
                   >
-                    Download PDF
+                    Request Access
                   </Link>
                   <span className="text-white/30 text-xs">Free</span>
                 </div>

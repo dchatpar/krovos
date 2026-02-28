@@ -123,7 +123,7 @@ export default function BlogPage() {
                   <span>8 min read</span>
                 </div>
                 <Link
-                  href="/resources/blog/ai-agents-future"
+                  href="/resources/blog"
                   className="mt-6 inline-flex items-center text-[#D4A017] font-medium hover:underline"
                 >
                   Read Article
@@ -165,7 +165,7 @@ export default function BlogPage() {
                   <div className="mt-4 pt-4 border-t border-white/5 flex items-center justify-between">
                     <span className="text-white/30 text-xs">{post.readTime}</span>
                     <Link
-                      href="/resources/blog/ai-agents-future"
+                      href="/resources/blog"
                       className="text-[#D4A017] text-sm font-medium hover:underline"
                     >
                       Read more
