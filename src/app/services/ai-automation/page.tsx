@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useScroll, useTransform, useInView, AnimatePresence } from "framer-motion";
 
 // Animated Counter Component
@@ -542,51 +543,72 @@ export default function AIAutomationPage() {
         {/* Grid pattern overlay */}
         <div className="absolute inset-0 bg-grid-pattern opacity-30" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#0E7C7B]/20 border border-[#0E7C7B]/30 text-[#14B8A6] text-sm font-medium mb-8">
-              <span className="w-2 h-2 rounded-full bg-[#0E7C7B] animate-pulse" />
-              AI & Automation Division
-            </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#0E7C7B]/20 border border-[#0E7C7B]/30 text-[#14B8A6] text-sm font-medium mb-8">
+                <span className="w-2 h-2 rounded-full bg-[#0E7C7B] animate-pulse" />
+                AI & Automation Division
+              </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Intelligent Solutions for
-              <br />
-              <span className="bg-gradient-to-r from-[#D4A017] via-[#F0C040] to-[#D4A017] bg-clip-text text-transparent">
-                Modern Business
-              </span>
-            </h1>
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Intelligent Solutions for
+                <br />
+                <span className="bg-gradient-to-r from-[#D4A017] via-[#F0C040] to-[#D4A017] bg-clip-text text-transparent">
+                  Modern Business
+                </span>
+              </h1>
 
-            <p className="text-xl md:text-2xl text-[#9CA3AF] mb-10 max-w-3xl mx-auto leading-relaxed">
-              Transform your operations with cutting-edge artificial intelligence and automation solutions.
-              From machine learning to intelligent agents, we build systems that think, learn, and deliver results that matter.
-            </p>
+              <p className="text-xl md:text-2xl text-[#9CA3AF] mb-10 max-w-3xl leading-relaxed">
+                Transform your operations with cutting-edge artificial intelligence and automation solutions.
+                From machine learning to intelligent agents, we build systems that think, learn, and deliver results that matter.
+              </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="btn-primary text-lg px-10 py-4"
-                >
-                  Start Your Transformation
-                </motion.button>
-              </Link>
-              <Link href="#case-studies">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="btn-secondary text-lg"
-                >
-                  View Case Studies
-                </motion.button>
-              </Link>
-            </div>
-          </motion.div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/contact">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="btn-primary text-lg px-10 py-4"
+                  >
+                    Start Your Transformation
+                  </motion.button>
+                </Link>
+                <Link href="#case-studies">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="btn-secondary text-lg"
+                  >
+                    View Case Studies
+                  </motion.button>
+                </Link>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative hidden lg:block"
+            >
+              <div className="relative w-full aspect-square rounded-3xl overflow-hidden border border-[#D4A017]/20 shadow-2xl">
+                <Image
+                  src="/images/hero-ai-automation.png"
+                  alt="AI Automation Platform"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#D4A017]/20 rounded-full blur-3xl" />
+              <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#0E7C7B]/20 rounded-full blur-3xl" />
+            </motion.div>
+          </div>
         </div>
 
         {/* Scroll indicator */}
