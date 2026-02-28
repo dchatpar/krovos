@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Syne } from "next/font/google";
 import "./globals.css";
-import MegaMenu from "@/components/landing/MegaMenu";
+import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 
 const inter = Inter({
@@ -57,7 +57,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} ${syne.variable} antialiased`}
       >
-        <MegaMenu />
+        <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
