@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import ArchitecturalHero from "@/components/hero/ArchitecturalHero";
 
 // Section wrapper with animation
 const SectionWrapper = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
@@ -333,84 +334,12 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-navy">
-      {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        {/* Animated background */}
-        <div className="absolute inset-0 bg-mesh-navy" />
-        <div className="absolute inset-0 bg-grid bg-dots opacity-30" />
+    <div className="min-h-screen">
+      {/* Architectural Hero */}
+      <ArchitecturalHero />
 
-        {/* Floating elements */}
-        <motion.div style={{ y: heroY }} className="absolute top-20 left-10 w-64 h-64 rounded-full bg-gradient-to-br from-[#D4A017]/10 to-transparent blur-3xl" />
-        <motion.div style={{ y: heroY }} className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-gradient-to-br from-[#0E7C7B]/10 to-transparent blur-3xl" />
-
-        <motion.div style={{ y: heroY, opacity: heroOpacity }} className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            <span className="inline-block px-4 py-2 rounded-full bg-[rgba(212,160,23,0.15)] border border-[rgba(212,160,23,0.3)] text-[#D4A017] text-sm font-medium mb-6">
-              About Krovos Inc.
-            </span>
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight"
-          >
-            Building Technology That Moves Business
-            <span className="block text-gradient-gold mt-2">Since 2015</span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="text-xl lg:text-2xl text-[#94A3B8] max-w-3xl mx-auto leading-relaxed"
-          >
-            We are a global enterprise technology company specializing in AI automation,
-            custom software development, and digital transformation solutions.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-            className="mt-10 flex flex-wrap justify-center gap-4"
-          >
-            <Link href="/company/careers" className="btn-gold">
-              Join Our Team
-            </Link>
-            <Link href="/contact" className="btn-outline-gold">
-              Get a Quote
-            </Link>
-          </motion.div>
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 rounded-full border-2 border-[rgba(212,160,23,0.5)] flex items-start justify-center p-2"
-          >
-            <motion.div
-              animate={{ opacity: [1, 0.5, 1], y: [0, 8, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-1 h-2 rounded-full bg-[#D4A017]"
-            />
-          </motion.div>
-        </motion.div>
-      </section>
-
+      {/* Rest of the page */}
+      <div className="min-h-screen bg-navy">
       {/* Our Story Section */}
       <section className="py-24 lg:py-32 relative">
         <div className="absolute inset-0 bg-navy-light" />
@@ -709,6 +638,7 @@ export default function AboutPage() {
           </SectionWrapper>
         </div>
       </section>
+      </div>
     </div>
   );
 }

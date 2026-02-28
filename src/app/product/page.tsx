@@ -1,4 +1,5 @@
 import Link from "next/link";
+import QuantumHero from "@/components/hero/QuantumHero";
 
 export const metadata = {
   title: "Product Overview - Krovos",
@@ -46,21 +47,9 @@ const features = [
 
 export default function ProductPage() {
   return (
-    <div className="pt-16 lg:pt-20">
-      {/* Hero */}
-      <section className="py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl lg:text-5xl font-bold text-slate-900">
-              The complete AI automation platform
-            </h1>
-            <p className="mt-4 text-lg text-slate-600">
-              Build, deploy, and manage intelligent agents that transform how your
-              enterprise operates. All the tools you need in one platform.
-            </p>
-          </div>
-        </div>
-      </section>
+    <div>
+      {/* Quantum Hero */}
+      <QuantumHero />
 
       {/* Features Grid */}
       <section className="py-20 bg-slate-50">
