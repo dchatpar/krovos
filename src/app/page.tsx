@@ -513,9 +513,6 @@ const testimonials = [
   },
 ];
 
-// Footer Import
-import Footer from "@/components/landing/Footer";
-
 // Main Page Component
 export default function HomePage() {
   const { scrollY } = useScroll();
@@ -874,9 +871,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 }
