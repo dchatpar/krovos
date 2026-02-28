@@ -16,7 +16,7 @@ const servicesLinks = [
   { name: "Custom Software", href: "/services/custom-software" },
   { name: "Digital Marketing", href: "/services/digital-marketing" },
   { name: "Managed IT", href: "/services/managed-it" },
-  { name: "Talent Solutions", href: "/services/talent" },
+  { name: "Talent Solutions", href: "/services/talent-solutions" },
   { name: "Logistics Tech", href: "/services/logistics" },
 ];
 
