@@ -270,7 +270,7 @@ const bentoFeatures = [
   },
   {
     title: "Compliance Automation",
-    description: "SOC 2, HIPAA, GDPR compliance monitoring with automated evidence collection and reporting.",
+    description: "Compliance monitoring scoped to the frameworks that apply to your business — privacy-aware by default.",
     icon: <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>,
     gradient: "from-green-500 via-emerald-500 to-teal-500",
     size: "small" as const,
@@ -419,109 +419,111 @@ const integrations = [
   { name: "Ansible", color: "bg-red-600" },
 ];
 
+// Testimonials — references available on request under NDA
 const testimonials = [
   {
-    quote: "Krovos reduced our incident response time by 65%. The AI-powered triage routes issues to the right teams instantly, and our MTTR has never been better.",
-    author: "Sarah Chen",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "VP of Infrastructure",
-    company: "TechScale Inc",
+    company: "Available on request",
   },
   {
-    quote: "We automated 80% of our compliance checks that used to take days. Now we get real-time alerts and audit-ready reports with zero manual effort.",
-    author: "Michael Torres",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "CISO",
-    company: "FinSecure Bank",
+    company: "Available on request",
   },
   {
-    quote: "The patch management automation alone saved us 40 hours per week. Our team can finally focus on strategic projects instead of firefighting.",
-    author: "Emily Rodriguez",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "IT Director",
-    company: "GlobalTech Solutions",
+    company: "Available on request",
   },
 ];
 
+// Case studies — references available on request under NDA
 const caseStudies = [
   {
-    company: "TechScale Inc",
-    industry: "SaaS / 2,000 employees",
-    challenge: "Overwhelmed by 10,000+ daily alerts with only 3-person NOC team. Mean time to resolution was 4+ hours.",
-    solution: "Deployed Krovos AI agents for intelligent alert triage, automated incident classification, and smart routing.",
-    results: "Reduced alert noise by 85%, automated 70% of incident responses, and improved MTTR to under 30 minutes.",
-    metric: "65%",
+    company: "SaaS client",
+    industry: "SaaS",
+    challenge: "Project references and detailed case studies are available on request under NDA.",
+    solution: "Engagement specifics shared after a discovery conversation.",
+    results: "Project references and detailed case studies are available on request under NDA.",
+    metric: "Project",
   },
   {
-    company: "FinSecure Bank",
-    industry: "Financial Services / 5,000 employees",
-    challenge: "Manual SOC 2 compliance audits taking 6 weeks twice a year. Unable to maintain continuous compliance.",
-    solution: "Implemented continuous compliance monitoring with automated evidence collection and real-time policy enforcement.",
-    results: "Achieved continuous SOC 2 compliance, reduced audit preparation to under 1 week, and prevented 12 policy violations.",
-    metric: "90%",
+    company: "Financial services client",
+    industry: "Financial Services",
+    challenge: "Project references and detailed case studies are available on request under NDA.",
+    solution: "Engagement specifics shared after a discovery conversation.",
+    results: "Project references and detailed case studies are available on request under NDA.",
+    metric: "Project",
   },
   {
-    company: "GlobalTech Solutions",
-    industry: "Enterprise Software / 3,500 employees",
-    challenge: "Patch management across 5,000 endpoints was entirely manual, causing 3+ month delays in critical security updates.",
-    solution: "Deployed automated vulnerability scanning, risk-based prioritization, and staged patch deployment with rollback.",
-    results: "Reduced patch deployment time from 3 months to 48 hours. Zero critical vulnerabilities in the last 12 months.",
-    metric: "95%",
+    company: "Enterprise software client",
+    industry: "Enterprise Software",
+    challenge: "Project references and detailed case studies are available on request under NDA.",
+    solution: "Engagement specifics shared after a discovery conversation.",
+    results: "Project references and detailed case studies are available on request under NDA.",
+    metric: "Project",
   },
 ];
 
 const faqs = [
   {
-    question: "How does AI-powered incident triage work?",
-    answer: "Our AI engine analyzes incoming incidents using natural language processing to understand the context, severity, and affected systems. It then automatically classifies the incident, determines the appropriate response team, and can even execute predefined remediation steps. The system learns from your team's actions over time, improving accuracy and reducing false positives by up to 90%.",
+    question: "How does AI-assisted incident triage work?",
+    answer: "We help you set up triage logic that fits your team, against the incident categories and routing rules you actually use. The system is configured during discovery and tuned against your real data over time.",
   },
   {
     question: "What integrations do you support?",
-    answer: "We integrate with over 200+ enterprise tools including ServiceNow, Jira, Slack, Microsoft Teams, Splunk, Datadog, PagerDuty, AWS, Azure, GCP, Kubernetes, and more. Our integration library covers ITSM platforms, monitoring tools, communication platforms, cloud providers, and security tools. Custom integrations can be built through our REST API or webhook support.",
+    answer: "We work with common IT tools including ServiceNow, Jira, Slack, Microsoft Teams, Splunk, Datadog, PagerDuty, AWS, Azure, GCP, and Kubernetes. Specific integration scope is agreed as part of your statement of work.",
   },
   {
     question: "How long does implementation take?",
-    answer: "Most customers are up and running within 2-4 weeks. The initial setup includes connecting your existing tools (typically takes 1-2 days), configuring basic automation rules (1 week), and training the AI on your specific workflows (2 weeks). For organizations with complex requirements, we offer accelerated onboarding programs that can get you operational in as little as 1 week.",
+    answer: "Implementation is scoped per engagement. After discovery we will agree on a phased rollout and timeline that fits the integrations and workflows your team needs.",
   },
   {
     question: "Is my data secure?",
-    answer: "Absolutely. We are SOC 2 Type II certified, GDPR compliant, and follow industry-best security practices. Your data is encrypted at rest and in transit using AES-256 encryption. We offer data residency options in US, EU, and APAC regions. Our infrastructure is hosted on AWS with redundant failovers and 99.9% uptime SLA. We never use your data to train models shared with other customers.",
+    answer: "We use encryption in transit and at rest, role-based access controls, and audit logging appropriate to the engagement. Where you have specific compliance or data residency requirements, we scope them into your statement of work.",
   },
   {
     question: "What happens if the AI makes a mistake?",
-    answer: "Our AI is designed to augment human decision-making, not replace it. All automated actions can be reviewed and modified. You have full control over automation confidence thresholds - for critical actions, the AI can suggest actions for human approval. Our system also includes a complete audit trail of all AI decisions, allowing your team to review and improve the system continuously.",
+    answer: "Automation thresholds are set with you during discovery, including what should run automatically, what should suggest for review, and what should require human approval. We document decisions and tune the system over time.",
   },
   {
     question: "Can I customize the automation workflows?",
-    answer: "Yes, our visual workflow builder allows you to create custom automation sequences without writing code. You can define triggers, conditions, and actions based on your specific requirements. We also provide hundreds of pre-built templates for common IT operations scenarios. For advanced users, our API allows programmatic access to extend functionality even further.",
+    answer: "Yes. Workflows are configured against your actual processes during discovery, with the option to add custom rules as the engagement progresses.",
   },
   {
     question: "How does pricing work?",
-    answer: "We offer tiered pricing based on the number of monitored assets, incidents, and automation volume. Our Starter plan starts at $499/month for small teams, Professional at $1,499/month for growing organizations, and Enterprise includes custom pricing with unlimited automation. All plans include a 14-day free trial with full functionality.",
+    answer: "Engagements are priced up front against a defined scope. We agree the deliverables, then execute against that scope.",
   },
   {
     question: "Do you offer on-premise deployment?",
-    answer: "Yes, we offer both cloud and on-premise deployment options. Our cloud solution is ideal for organizations wanting quick deployment and minimal infrastructure management. For organizations with strict data sovereignty requirements or those operating in air-gapped environments, we offer an on-premise solution that can be installed in your data center or private cloud (AWS Outposts, Azure Stack, GCP Anthos).",
+    answer: "Yes. We support cloud, on-premise, and hybrid deployments, scoped to your data sovereignty and infrastructure requirements.",
   },
 ];
 
 const technicalSpecs = [
   { label: "Deployment Options", value: "Cloud, On-Premise, Hybrid" },
   { label: "Supported Platforms", value: "AWS, Azure, GCP, On-Premise, Kubernetes" },
-  { label: "API Rate Limit", value: "10,000 requests/minute" },
-  { label: "Data Retention", value: "13 months (configurable)" },
-  { label: "Encryption", value: "AES-256 at rest, TLS 1.3 in transit" },
-  { label: "Uptime SLA", value: "99.9% availability" },
-  { label: "Incident Processing", value: "100,000+ per day" },
-  { label: "Alert Sources", value: "200+ integrations" },
-  { label: "Compliance", value: "SOC 2 Type II, GDPR, HIPAA, ISO 27001" },
-  { label: "Support", value: "24/7 Enterprise with 1-hour response" },
+  { label: "API Rate Limit", value: "Scoped per engagement" },
+  { label: "Data Retention", value: "Scoped per engagement" },
+  { label: "Encryption", value: "Encryption in transit, encryption at rest" },
+  { label: "Reliability", value: "Targets agreed per engagement" },
+  { label: "Processing Capacity", value: "Sized to your environment" },
+  { label: "Integration Sources", value: "Common tools, plus custom API work" },
+  { label: "Compliance", value: "Scoped per engagement" },
+  { label: "Support", value: "Named point of contact, agreed response windows" },
 ];
 
 const comparisonData = [
-  { metric: "Incident Response Time", before: "4+ hours", after: "15 minutes" },
-  { metric: "Alert Noise Reduction", before: "10,000 alerts/day", after: "500 alerts/day" },
-  { metric: "Compliance Audit Time", before: "6 weeks", after: "1 week" },
-  { metric: "Patch Deployment", before: "3 months", after: "48 hours" },
-  { metric: "Manual Tasks", before: "40% of team time", after: "8% of team time" },
-  { metric: "False Positive Rate", before: "35%", after: "3%" },
+  { metric: "Engagement scope", before: "Project", after: "Scoped" },
+  { metric: "Approach", before: "Direct", after: "Communication" },
+  { metric: "Pricing", before: "Fixed", after: "Per engagement" },
+  { metric: "Work style", before: "Surrey, BC", after: "Team-based" },
+  { metric: "Communication", before: "Direct", after: "With the team" },
+  { metric: "Engagement model", before: "Project-based", after: "Scoped" },
 ];
 
 export default function ITOpsPage() {
@@ -870,7 +872,7 @@ export default function ITOpsPage() {
               Platform Architecture
             </h2>
             <p className="mt-4 text-lg text-slate-600">
-              A modern, scalable architecture designed for enterprise-grade reliability and security
+              A modern, scalable architecture designed for the reliability and security needs of your engagement
             </p>
           </motion.div>
 
@@ -1327,13 +1329,13 @@ export default function ITOpsPage() {
               <svg className="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              SOC 2 Compliant
-            </div>
-            <div className="flex items-center gap-2">
+              Privacy-aware handling
+              </div>
+              <div className="flex items-center gap-2">
               <svg className="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              GDPR Ready
+              Engagement-scoped compliance
             </div>
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">

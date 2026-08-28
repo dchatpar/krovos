@@ -1,52 +1,8 @@
 "use client";
 
-import { useState, useEffect, useRef, useMemo } from "react";
+import { useMemo } from "react";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
-
-// Animated counter component
-const AnimatedCounter = ({ end, suffix = "", prefix = "", duration = 2 }: { end: number; suffix?: string; prefix?: string; duration?: number }) => {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  const [isInView, setIsInView] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !isInView) {
-          setIsInView(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, [isInView]);
-
-  useEffect(() => {
-    if (!isInView) return;
-
-    let start = 0;
-    const increment = end / (duration * 60);
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, 1000 / 60);
-
-    return () => clearInterval(timer);
-  }, [end, duration, isInView]);
-
-  return <span ref={ref}>{prefix}{count}{suffix}</span>;
-};
 
 // Constellation: floating gold particles for the hero backdrop
 const Constellation = ({ count = 28 }: { count?: number }) => {
@@ -368,8 +324,8 @@ const whyKrovos = [
     icon: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
   },
   {
-    title: "6-Division Full-Stack Capability",
-    description: "From AI automation to talent solutions, we provide end-to-end services across all technology domains your business needs.",
+    title: "6-Division Service Coverage",
+    description: "From AI automation to talent solutions, we cover the technology domains small and mid-sized teams typically need.",
     icon: "M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6z",
   },
   {
@@ -547,34 +503,6 @@ export default function HomePage() {
                   </div>
                 </section>
 
-                {/* Stats Counter Bar */}
-      <section className="py-12 bg-[#0D1F35] border-y border-[#D4A017]/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-            {[
-                          { label: "Enterprise-Grade" },
-                          { label: "Full-Stack" },
-                          { label: "Canada-Based" },
-                          { label: "Client-Focused" },
-                        ].map((stat, index) => (
-                          <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            viewport={{ once: true }}
-                            className="text-center"
-                          >
-                            <div className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-[#D4A017] to-[#F0C040] bg-clip-text text-transparent">
-                              {stat.label}
-                            </div>
-                            <div className="text-[#94A3B8] text-base lg:text-lg mt-2">&nbsp;</div>
-                          </motion.div>
-                        ))}
-          </div>
-        </div>
-      </section>
-
       {/* Services Bento Grid */}
       <section className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -595,7 +523,7 @@ export default function HomePage() {
               </span>
             </h2>
             <p className="mt-4 text-lg text-[#94A3B8]">
-              Six specialized divisions working together to deliver comprehensive enterprise solutions.
+              Six focused services, delivered by one team from Surrey, BC.
             </p>
           </motion.div>
 
@@ -630,7 +558,7 @@ export default function HomePage() {
               </span>
             </h2>
             <p className="mt-4 text-lg text-[#94A3B8]">
-              What sets us apart in the enterprise technology landscape.
+              What working with us actually looks like.
             </p>
           </motion.div>
 
@@ -786,7 +714,7 @@ export default function HomePage() {
               Ready to Build Something Extraordinary?
             </h2>
             <p className="mt-4 text-lg text-[#0A1628]/70">
-              Let us transform your vision into reality. Our team of experts is ready to deliver solutions that drive business growth.
+              Tell us what you are building. We will scope it, price it, and get to work from Surrey, BC.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link

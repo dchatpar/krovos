@@ -461,12 +461,12 @@ export default function AIAutomationPage() {
   const keyBenefits = [
     {
       title: "Operational Efficiency",
-      description: "Automate up to 80% of repetitive tasks, reducing manual effort and human error while accelerating process completion by 10x. Your team focuses on strategic work while AI handles the routine.",
+      description: "Automate the repetitive tasks in your workflows so your team can focus on the work that needs a human. We will scope what is feasible in your environment during discovery.",
       icon: "M13 10V3L4 14h7v7l9-11h-7z"
     },
     {
       title: "Cost Reduction",
-      description: "AI solutions typically reduce operational costs by 30-60% through automation, optimization, and predictive capabilities. Achieve more with less while improving quality and consistency.",
+      description: "Automating repetitive work can reduce operational costs, but the actual impact depends on the processes involved. We model expected impact during the strategy phase and review it after deployment.",
       icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
     },
     {
@@ -494,7 +494,7 @@ export default function AIAutomationPage() {
   const faqItems = [
     {
       question: "What industries do you specialize in for AI automation?",
-      answer: "We have extensive experience across multiple industries including financial services, healthcare, manufacturing, retail, logistics, and enterprise technology. Our team includes domain experts who understand the unique challenges and regulatory requirements of each sector. We tailor our AI solutions to address industry-specific workflows, compliance needs, and business objectives. This cross-industry experience allows us to bring best practices and innovative approaches from one sector to benefit clients in another."
+      answer: "We work across a range of industries including financial services, healthcare, manufacturing, retail, logistics, and technology. We tailor our AI solutions to address the workflows and compliance needs relevant to your sector. If your industry has specific requirements, we will scope them into your statement of work."
     },
     {
       question: "How long does it typically take to implement AI automation?",
@@ -502,27 +502,27 @@ export default function AIAutomationPage() {
     },
     {
       question: "What kind of ROI can we expect from AI automation?",
-      answer: "Our clients typically see ROI within 6-12 months of implementation. Common returns include 40-80% reduction in manual processing time, 30-50% cost savings in operational workflows, and significant improvements in accuracy and consistency. We provide detailed ROI projections during the strategy phase and track performance metrics continuously. Many clients report ROI exceeding 300% within the first year, with ongoing savings accumulating in subsequent years."
+      answer: "Our clients typically see ROI within 6-12 months of implementation, though specific timelines depend on the project scope. We provide detailed ROI projections during the strategy phase and review actual outcomes against those projections as the engagement progresses."
     },
     {
       question: "How do you ensure data security and compliance?",
-      answer: "Security is foundational to everything we build. We implement enterprise-grade security measures including end-to-end encryption, role-based access controls, and comprehensive audit logging. Our solutions comply with SOC 2, GDPR, HIPAA, and other relevant regulations. We also provide on-premises deployment options for organizations with strict data sovereignty requirements. Our security team conducts regular penetration testing and vulnerability assessments to maintain the highest security standards."
+      answer: "Security is foundational to everything we build. We implement security measures appropriate to the engagement including encryption in transit, role-based access controls, and audit logging. We work with you to understand which privacy and compliance frameworks apply to your project (for example, PIPEDA, provincial privacy requirements, or industry-specific rules) and design accordingly. We also support on-premises deployment options for organizations with strict data sovereignty requirements."
     },
     {
       question: "Can AI agents integrate with our existing systems?",
-      answer: "Yes, our AI solutions integrate seamlessly with a wide range of enterprise systems including ERP platforms (SAP, Oracle), CRM systems (Salesforce, Microsoft Dynamics), legacy databases, cloud services, and custom applications. We use API-first architecture and support both cloud and on-premises integrations. Our integration specialists have experience with over 200+ enterprise systems and can quickly connect to your existing technology stack without disrupting operations."
+      answer: "Yes. We integrate with the systems you already use, including common ERP platforms (SAP, Oracle), CRM systems (Salesforce, Microsoft Dynamics), databases, cloud services, and custom applications. We use API-first architecture and support both cloud and on-premises integrations. We will scope the integration work for your specific technology stack as part of your statement of work."
     },
     {
       question: "What ongoing support and maintenance do you provide?",
-      answer: "We offer comprehensive support packages including 24/7 monitoring, performance optimization, model retraining, and continuous improvement. Our dedicated support team ensures your AI agents remain accurate and effective as your business evolves. We also provide training for your teams to manage and extend the solutions. Support packages are scalable and can be adjusted based on your needs, from basic maintenance to full managed services."
+      answer: "We offer support packages scoped per engagement, including monitoring, performance reviews, model retraining, and continuous improvement. Our team ensures your AI solutions remain accurate and effective as your business evolves. We also provide training for your internal teams to manage and extend the solutions. Support packages can be adjusted based on your needs, from basic maintenance to full managed services."
     },
     {
       question: "How do you handle AI bias and ethical considerations?",
-      answer: "We have robust frameworks for AI ethics and bias mitigation. This includes diverse training data selection, regular bias audits, explainable AI models, and human-in-the-loop controls for high-stakes decisions. Our solutions are designed with transparency and fairness as core principles. We provide detailed documentation of model decisions and can implement additional safeguards for industries with strict fairness requirements. Our ethical AI framework has been validated by independent auditors."
+      answer: "We incorporate bias and ethics considerations into our projects. This includes thoughtful training data selection, periodic review of model behaviour, explainable AI approaches where feasible, and human-in-the-loop controls for high-stakes decisions. We document model decisions and add extra safeguards for industries with strict fairness requirements."
     },
     {
       question: "What makes Krovos different from other AI automation providers?",
-      answer: "Krovos combines deep enterprise expertise with cutting-edge AI technology. Unlike pure technology providers, we understand business processes and ROI. Our approach focuses on measurable outcomes, not just technology deployment. With a track record of 500+ successful implementations and 85%+ efficiency gains, we deliver proven results. Our team includes former business executives who understand the strategic context, not just technical implementation. We partner with you as a strategic advisor, not just a vendor."
+      answer: "We focus on practical outcomes for small and mid-sized teams. Rather than treating every engagement like a multi-year enterprise transformation, we scope work tightly, communicate directly, and price projects up front. Our team combines technical depth with a working knowledge of the business processes where automation tends to land well."
     }
   ];
 

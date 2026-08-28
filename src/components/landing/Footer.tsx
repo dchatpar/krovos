@@ -6,9 +6,6 @@ import { useState } from "react";
 const companyLinks = [
   { name: "About Us", href: "/company/about" },
   { name: "Careers", href: "/company/careers" },
-  { name: "Leadership", href: "/company/leadership" },
-  { name: "Partners", href: "/company/partners" },
-  { name: "Press", href: "/company/press" },
 ];
 
 const servicesLinks = [
@@ -24,7 +21,7 @@ const contactInfo = {
   address: "13428 105 Ave Suite 1410",
   city: "Surrey, BC V3T 0S6",
   email: "info@krovos.ca",
-  phone: "",
+  phone: "+1 (437) 860-5694",
 };
 
 const Footer = () => {

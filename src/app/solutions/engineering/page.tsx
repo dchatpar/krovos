@@ -485,87 +485,87 @@ const processSteps = [
   },
 ];
 
-// Testimonials
+// Testimonials — references available on request under NDA
 const testimonials = [
   {
-    quote: "Krovos cut our deployment time from 45 minutes to under 5. The automated rollback feature alone has saved us countless hours of incident response.",
-    author: "David Kim",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "VP of Engineering",
-    company: "CloudScale Technologies",
+    company: "Available on request",
   },
   {
-    quote: "Our code review process is now 80% automated. Developers focus on logic and architecture while Krovos handles style, security, and quality checks.",
-    author: "Amanda Foster",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "Engineering Director",
-    company: "DataFlow Systems",
+    company: "Available on request",
   },
   {
-    quote: "Infrastructure as Code with Krovos eliminated environment drift completely. What used to take days now takes minutes.",
-    author: "Robert Chen",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "CTO",
-    company: "DevOps Inc",
+    company: "Available on request",
   },
 ];
 
-// Case studies
+// Case studies — references available on request under NDA
 const caseStudies = [
   {
-    company: "TechCorp Global",
+    company: "Enterprise SaaS client",
     industry: "Enterprise SaaS",
-    challenge: "Manual deployments causing 12+ hours of downtime per month, inconsistent environments across dev/staging/prod, and 40% of engineering time spent on operational tasks.",
-    solution: "Implemented Krovos for full CI/CD automation, Infrastructure as Code with Terraform templates, and self-service provisioning for developers.",
-    results: ["73% faster deployments", "99.99% uptime", "60% less toil", "40% cost reduction"],
+    challenge: "Project references and detailed case studies are available on request under NDA.",
+    solution: "Engagement specifics shared after a discovery conversation.",
+    results: ["Project references available on request"],
   },
   {
-    company: "FinanceHub",
+    company: "FinTech client",
     industry: "FinTech",
-    challenge: "Strict compliance requirements with manual audit processes taking 2 weeks, slow incident response times, and inability to meet SOC 2 requirements efficiently.",
-    solution: "Deployed DevSecOps pipeline with automated compliance scanning, integrated secrets management, and complete audit trail capabilities.",
-    results: ["SOC 2 certified", "85% faster audits", "65% MTTR reduction", "Zero compliance gaps"],
+    challenge: "Project references and detailed case studies are available on request under NDA.",
+    solution: "Engagement specifics shared after a discovery conversation.",
+    results: ["Project references available on request"],
   },
   {
-    company: "MobileFirst Apps",
+    company: "Mobile technology client",
     industry: "Mobile Technology",
-    challenge: "Complex multi-cloud infrastructure with escalating costs, manual container management, and lack of visibility into application performance.",
-    solution: "Implemented Kubernetes orchestration with Krovos cost optimization, centralized observability stack, and automated scaling policies.",
-    results: ["45% cloud cost savings", "Auto-scaling 99%", "Single dashboard view", "Zero manual scaling"],
+    challenge: "Project references and detailed case studies are available on request under NDA.",
+    solution: "Engagement specifics shared after a discovery conversation.",
+    results: ["Project references available on request"],
   },
 ];
 
 // FAQ data
 const faqData = [
   {
-    question: "How does Krovos integrate with our existing CI/CD tools?",
-    answer: "Krovos provides native integrations with all major CI/CD platforms including Jenkins, GitHub Actions, GitLab CI, CircleCI, and Azure DevOps. Our agent-based approach works alongside your existing tools, enhancing them with AI-powered automation without requiring a complete migration. You can connect your repositories in minutes and start automating immediately.",
+    question: "How do you integrate with our existing CI/CD tools?",
+    answer: "We work alongside your existing CI/CD tooling, including common options like GitHub Actions, GitLab CI, CircleCI, and Azure DevOps. Specific integration scope is agreed as part of your statement of work.",
   },
   {
-    question: "What security measures does Krovos implement?",
-    answer: "Security is built into every layer of Krovos. We implement SOC 2 Type II compliance, end-to-end encryption, and zero-trust architecture. Our DevSecOps features include automated vulnerability scanning (SAST/DAST/SCA), container security scanning, secrets management via HashiCorp Vault integration, and compliance-as-code with OPA policies. All data is encrypted at rest and in transit.",
+    question: "What security measures do you put in place?",
+    answer: "Security controls are scoped per engagement. We work with you on the controls, evidence, and reporting you need — including where you have specific framework requirements like SOC 2, ISO 27001, or HIPAA.",
   },
   {
     question: "How long does implementation typically take?",
-    answer: "Most customers are up and running within 1-2 weeks. The initial setup can be completed in a day for basic CI/CD automation. More comprehensive implementations with Infrastructure as Code, GitOps workflows, and full observability stack typically take 2-4 weeks. We provide dedicated onboarding support and documentation throughout the process.",
+    answer: "Implementation is scoped per engagement. After discovery we will agree on a phased rollout and timeline that fits the work your team needs.",
   },
   {
-    question: "Can Krovos help with cost optimization?",
-    answer: "Absolutely. Krovos includes comprehensive cost optimization features including right-sizing recommendations, spot instance management, reserved capacity planning, and resource utilization monitoring. Our customers typically see 30-50% reduction in cloud costs through automated resource optimization, waste identification, and cost-aware scheduling.",
+    question: "Can you help with cloud cost optimization?",
+    answer: "Yes. We&apos;ll review your current spend and propose changes scoped to your environment. Actual savings depend on your workloads and pricing model — we&apos;ll size the work against your actual usage rather than projecting from a generic benchmark.",
   },
   {
     question: "What happens if a deployment fails?",
-    answer: "Krovos provides automated rollback capabilities that can detect failures and automatically revert to the previous stable version within seconds. You can configure custom rollback triggers based on error rates, latency thresholds, or custom health checks. Detailed failure analytics help teams understand what went wrong and how to prevent similar issues in the future.",
+    answer: "We design rollback and recovery procedures with you during discovery, defining what should be automatic and what should require human approval, with the documentation your team needs to debug the failure.",
   },
   {
-    question: "Is there a trial period or demo available?",
-    answer: "Yes, we offer a 14-day free trial with full access to all features. No credit card is required to start. We also provide personalized demos where our engineering team can walk through specific use cases relevant to your organization. Contact our sales team to schedule a demo tailored to your needs.",
+    question: "Is there a trial or demo available?",
+    answer: "We&apos;re happy to walk through a relevant project example on a call. Discovery conversations are how most engagements start.",
   },
 ];
 
-// ROI metrics
+// ROI metrics — projections are scoped per engagement, not blanket claims
 const roiMetrics = [
-  { value: "$2.3M", label: "Annual Savings", description: "Average enterprise savings" },
-  { value: "47hrs", label: "Weekly/Engineer", description: "Time reclaimed from toil" },
-  { value: "312%", label: "3-Year ROI", description: "Average return on investment" },
-  { value: "4.2months", label: "Payback Period", description: "Time to positive ROI" },
+  { value: "Project", label: "Annual Savings", description: "Modelled per engagement using your actual baseline" },
+  { value: "Engagement", label: "Time Reclaimed", description: "Tracked against your team&apos;s current toil" },
+  { value: "Scoped", label: "ROI", description: "Modelled per engagement during the strategy phase" },
+  { value: "Agreed", label: "Payback", description: "Set as part of your statement of work" },
 ];
 
 export default function EngineeringPage() {
@@ -1178,13 +1178,13 @@ export default function EngineeringPage() {
               <svg className="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              SOC 2 Compliant
-            </div>
-            <div className="flex items-center gap-2">
+              Privacy-aware handling
+              </div>
+              <div className="flex items-center gap-2">
               <svg className="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              GDPR Ready
+              Engagement-scoped compliance
             </div>
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">

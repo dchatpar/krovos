@@ -19,8 +19,8 @@ const features = [
     description: "Round-the-clock security operations center with expert analysts monitoring your infrastructure.",
   },
   {
-    title: "Compliance Management",
-    description: "Stay compliant with SOC 2, HIPAA, GDPR, PCI-DSS, and more with automated controls.",
+    title: "Compliance Support",
+    description: "Help with the regulatory standards your business is subject to, scoped per engagement rather than blanket claims.",
   },
 ];
 

@@ -14,7 +14,7 @@ import {
 } from "@/components/landing/ServiceComponents";
 
 // Animated Counter Component
-const AnimatedCounter = ({ end, suffix = "", duration = 2000 }: { end: number; suffix?: string; duration?: number }) => {
+const AnimatedCounter = ({ end, suffix = "", duration = 2000 }: { end: string | number; suffix?: string; duration?: number }) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -25,6 +25,10 @@ const AnimatedCounter = ({ end, suffix = "", duration = 2000 }: { end: number; s
 
   useEffect(() => {
     if (!isVisible) return;
+    if (typeof end === "string") {
+      setCount(parseInt(end, 10) || 0);
+      return;
+    }
 
     let startTime: number;
     const animate = (timestamp: number) => {
@@ -114,12 +118,12 @@ const AnimatedGradientBorder = ({ children, className = "" }: { children: React.
   </div>
 );
 
-// Stats data for hero section
+// Stats data for hero section — projections are scoped per engagement
 const heroStats = [
-  { value: 75, suffix: "%", label: "Faster Processing", description: "Invoice automation speed" },
-  { value: 98, suffix: "%", label: "Accuracy Rate", description: "AI-powered validation" },
-  { value: 60, suffix: "%", label: "Cost Reduction", description: "Operational savings" },
-  { value: 24, suffix: "/7", label: "Automation", description: "Continuous processing" },
+  { value: "Project", suffix: "", label: "Engagement Model", description: "Scoped per client" },
+  { value: "Direct", suffix: "", label: "Communication", description: "With the team doing the work" },
+  { value: "Fixed", suffix: "", label: "Pricing", description: "Up front, against a defined scope" },
+  { value: "Surrey", suffix: ", BC", label: "Headquarters", description: "Canadian delivery" },
 ];
 
 // Bento grid features
@@ -188,9 +192,9 @@ const advancedFeatures = [
     icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01",
   },
   {
-    title: "Compliance Management",
-    description: "Ensure compliance with SOX, GAAP, IFRS, and other regulatory standards with automated controls.",
-    features: ["SOX compliance automation", "GAAP/IFRS alignment", "Policy enforcement", "Automated compliance reports"],
+    title: "Compliance Support",
+    description: "Help with the regulatory standards your business is subject to, scoped per engagement rather than blanket claims.",
+    features: ["Engagement-scoped controls", "Policy enforcement", "Reporting support", "Audit trail maintenance"],
     icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
   },
   {
@@ -259,58 +263,58 @@ const processSteps = [
   },
 ];
 
-// Case studies data
+// Case studies data — references available on request under NDA
 const caseStudies = [
   {
-    company: "Global Manufacturing Corp",
+    company: "Manufacturing client",
     industry: "Manufacturing",
-    challenge: "Manual invoice processing taking 5+ days with 15% error rate",
-    solution: "Deployed Krovos AP automation with AI-powered extraction",
+    challenge: "Project references and detailed case studies are available on request under NDA.",
+    solution: "Engagement specifics shared after a discovery conversation.",
     results: [
-      { label: "Processing Time", value: "5 days", improvement: "to 4 hours" },
-      { label: "Error Rate", value: "15%", improvement: "to 0.5%" },
-      { label: "Cost Savings", value: "$1.2M", improvement: "annually" },
+      { label: "Project", value: "Scoped", improvement: "per client" },
+      { label: "Engagement", value: "Fixed", improvement: "pricing" },
+      { label: "Approach", value: "Direct", improvement: "communication" },
     ],
-    quote: "Krovos transformed our entire accounts payable process. What used to take a week now happens in hours, and our error rate is virtually zero.",
-    author: "Robert Martinez",
-    role: "CFO",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
+    role: "Available on request",
   },
   {
-    company: "Meridian Healthcare",
+    company: "Healthcare client",
     industry: "Healthcare",
-    challenge: "Complex multi-entity financial consolidation taking 10+ days monthly",
-    solution: "Implemented unified financial reporting with automated consolidation",
+    challenge: "Project references and detailed case studies are available on request under NDA.",
+    solution: "Engagement specifics shared after a discovery conversation.",
     results: [
-      { label: "Close Time", value: "10 days", improvement: "to 2 days" },
-      { label: "Entities Consolidated", value: "25", improvement: "automatically" },
-      { label: "Reporting Accuracy", value: "95%", improvement: "to 99.9%" },
+      { label: "Project", value: "Scoped", improvement: "per client" },
+      { label: "Engagement", value: "Fixed", improvement: "pricing" },
+      { label: "Approach", value: "Direct", improvement: "communication" },
     ],
-    quote: "The multi-entity consolidation feature is a game-changer. Our monthly close is now a fraction of what it used to be.",
-    author: "Amanda Foster",
-    role: "CFO",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
+    role: "Available on request",
   },
   {
-    company: "TechVentures Capital",
+    company: "Financial services client",
     industry: "Financial Services",
-    challenge: "SOX compliance audits requiring 3+ months of preparation",
-    solution: "Automated audit trails and compliance controls with real-time monitoring",
+    challenge: "Project references and detailed case studies are available on request under NDA.",
+    solution: "Engagement specifics shared after a discovery conversation.",
     results: [
-      { label: "Audit Prep Time", value: "3 months", improvement: "to 1 week" },
-      { label: "Findings", value: "12", improvement: "to 1" },
-      { label: "Compliance Score", value: "78%", improvement: "to 99%" },
+      { label: "Project", value: "Scoped", improvement: "per client" },
+      { label: "Engagement", value: "Fixed", improvement: "pricing" },
+      { label: "Approach", value: "Direct", improvement: "communication" },
     ],
-    quote: "Compliance reporting that used to take days now happens automatically. SOX audits are painless with complete audit trails at our fingertips.",
-    author: "Patricia Williams",
-    role: "Controller",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
+    role: "Available on request",
   },
 ];
 
-// ROI metrics data
+// ROI metrics data — projections are scoped per engagement, not blanket claims
 const roiMetrics = [
-  { value: 300, suffix: "%", label: "ROI", description: "Average return on investment within first year" },
-  { value: 6, suffix: " months", label: "Payback", description: "Typical payback period" },
-  { value: 2.5, suffix: "M", label: "Saved", description: "Average annual savings per 1000 invoices" },
-  { value: 80, suffix: "%", label: "Time Saved", description: "Reduction in manual finance tasks" },
+  { value: "Project", suffix: "", label: "ROI", description: "Modelled per engagement during the strategy phase" },
+  { value: "Engagement", suffix: "", label: "Payback", description: "Agreed as part of your statement of work" },
+  { value: "Scoping", suffix: "", label: "Approach", description: "We size the work against your actual volumes" },
+  { value: "Direct", suffix: "", label: "Communication", description: "Updates from the team doing the work" },
 ];
 
 // Integrations
@@ -333,75 +337,75 @@ const integrations = [
 const faqData = [
   {
     question: "How long does implementation typically take?",
-    answer: "Most implementations are completed within 4-8 weeks depending on complexity. Our onboarding team works closely with you to ensure a smooth transition with minimal disruption to your operations. Phase 1 typically goes live in 2-3 weeks with core AP/AR automation.",
+    answer: "Implementation timelines depend on the scope. After discovery, we will agree on a phased rollout that lands the highest-value work first. We share realistic timelines as part of your statement of work rather than blanket estimates.",
   },
   {
     question: "What happens to my existing data?",
-    answer: "We provide comprehensive data migration services to ensure all your historical financial data is properly imported and structured in the new system. Our team handles data mapping, validation, and verification to guarantee data integrity throughout the migration process.",
+    answer: "We handle data migration as part of your project. The work includes analysis of your source data, mapping documents, cleansing and transformation, parallel running, and validation before cutover.",
   },
   {
     question: "Is the system SOC 2 and SOX compliant?",
-    answer: "Yes, Krovos is SOC 2 Type II certified and fully compliant with SOX requirements. We maintain complete audit trails, role-based access controls, and automated compliance reporting. Our platform is regularly audited by independent third parties to ensure continuous compliance.",
+    answer: "We work with you on the compliance requirements that apply to your project. Rather than blanket certifications, we scope controls, audit trails, and reporting to what you actually need and to the framework your auditor or assessor is working with.",
   },
   {
     question: "Can I integrate with my existing ERP system?",
-    answer: "Absolutely. We offer native integrations with all major ERP systems including SAP, Oracle, Microsoft Dynamics, NetSuite, and more. Our integration hub supports 500+ business applications with pre-built connectors and custom API capabilities for unique requirements.",
+    answer: "Yes. We integrate with common ERP systems including SAP, Oracle, Microsoft Dynamics, and NetSuite. Integration scope is agreed as part of your statement of work.",
   },
   {
-    question: "How does the AI-powered invoice processing work?",
-    answer: "Our AI engine uses advanced machine learning models trained on millions of invoices to automatically extract relevant data including vendor details, line items, amounts, and dates. The system continuously learns from corrections to improve accuracy over time, typically achieving 98%+ accuracy after initial training.",
+    question: "How does the AI-assisted invoice processing work?",
+    answer: "Our AI tooling extracts relevant data from invoices. The system is configured against your specific invoice formats and reviewed with your team before going live, so accuracy is measured against your real data rather than a generic benchmark.",
   },
   {
     question: "What kind of support do you offer?",
-    answer: "We provide comprehensive 24/7 support through dedicated account managers, technical support teams, and a self-service knowledge base. Enterprise customers also receive priority support with guaranteed response times and dedicated implementation assistance.",
+    answer: "Support is scoped per engagement, with a named point of contact and agreed response windows. We&apos;re happy to discuss support terms during discovery.",
   },
   {
     question: "Can the system handle multiple currencies and international transactions?",
-    answer: "Yes, our platform supports 150+ currencies with real-time exchange rate updates, automatic conversion, and comprehensive FX gain/loss tracking. We also support multi-entity and multi-country configurations for global organizations.",
+    answer: "Yes. We support multi-currency, multi-entity, and multi-country configurations, scoped to the jurisdictions you actually operate in.",
   },
   {
     question: "How is pricing structured?",
-    answer: "Our pricing is based on transaction volume and the specific modules you need. We offer tiered pricing plans starting from basic AP automation to full-suite financial operations. Contact our sales team for a customized quote based on your organization's specific requirements.",
+    answer: "Engagements are priced up front against a defined scope. We agree the deliverables, then execute against that scope.",
   },
 ];
 
-// Testimonials
+// Testimonials — references available on request under NDA
 const testimonials = [
   {
-    quote: "Krovos transformed our accounts payable process. We reduced invoice processing time by 75% and eliminated nearly all manual data entry errors. The ROI has exceeded our expectations.",
-    author: "Amanda Foster",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "CFO",
-    company: "Meridian Healthcare",
+    company: "Available on request",
   },
   {
-    quote: "The AI-powered reconciliation saved us 40 hours per week. Our team now focuses on strategic financial planning instead of manual matching. Best investment we've made.",
-    author: "Christopher Lee",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "Finance Director",
-    company: "Global Retail Inc",
+    company: "Available on request",
   },
   {
-    quote: "Compliance reporting that used to take days now happens automatically. SOX audits are painless with complete audit trails at our fingertips. Game changer for our finance team.",
-    author: "Patricia Williams",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "Controller",
-    company: "TechVentures Capital",
+    company: "Available on request",
   },
   {
-    quote: "The multi-currency support is exceptional. Managing payments across 30+ countries is now seamless, and the real-time exchange rate handling has saved us significant money.",
-    author: "James Wilson",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "VP of Finance",
-    company: "International Trade Co",
+    company: "Available on request",
   },
   {
-    quote: "We processed over $2 billion through Krovos last year with zero errors. The system is incredibly reliable and the automated controls give us complete confidence.",
-    author: "Sarah Thompson",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "CFO",
-    company: "Capital Investments Ltd",
+    company: "Available on request",
   },
   {
-    quote: "Implementation was smooth and the team was incredibly supportive. Within 3 months, we saw dramatic improvements in our month-end close process.",
-    author: "Michael Torres",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "Controller",
-    company: "Manufacturing Solutions",
+    company: "Available on request",
   },
 ];
 
@@ -942,10 +946,10 @@ export default function FinancePage() {
 
               <div className="mt-8 space-y-4">
                 {[
-                  { icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", label: "SOC 2 Type II Certified" },
-                  { icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01", label: "SOX Compliant" },
-                  { icon: "M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3", label: "GAAP & IFRS Aligned" },
-                  { icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z", label: "256-bit Encryption" },
+                  { icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", label: "Privacy-aware handling" },
+                  { icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01", label: "Engagement-scoped compliance" },
+                  { icon: "M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3", label: "Accounting standards support" },
+                  { icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z", label: "Encryption in transit" },
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -975,18 +979,18 @@ export default function FinancePage() {
               <AnimatedGradientBorder className="p-8">
                 <div className="text-center">
                   <div className="text-6xl font-bold bg-gradient-to-r from-amber-600 to-orange-500 bg-clip-text text-transparent mb-4">
-                    99.99%
+                    Engagement
                   </div>
-                  <div className="text-xl font-semibold text-slate-900">Uptime SLA</div>
-                  <div className="text-slate-500 mt-2">Guaranteed availability for enterprise deployments</div>
+                  <div className="text-xl font-semibold text-slate-900">Scoped Reliability</div>
+                  <div className="text-slate-500 mt-2">Targets are agreed per project, not blanket claims</div>
                 </div>
                 <div className="mt-8 grid grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-slate-50 rounded-xl">
-                    <div className="text-2xl font-bold text-slate-900">0</div>
-                    <div className="text-sm text-slate-500">Data Breaches</div>
+                    <div className="text-2xl font-bold text-slate-900">Direct</div>
+                    <div className="text-sm text-slate-500">Communication</div>
                   </div>
                   <div className="text-center p-4 bg-slate-50 rounded-xl">
-                    <div className="text-2xl font-bold text-slate-900">24/7</div>
+                    <div className="text-2xl font-bold text-slate-900">Project</div>
                     <div className="text-sm text-slate-500">Security Monitoring</div>
                   </div>
                 </div>
@@ -1057,13 +1061,13 @@ export default function FinancePage() {
                 <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                SOC 2 Compliant
+                Privacy-aware handling
               </div>
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                SOX Compliant
+                Engagement-scoped compliance
               </div>
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">

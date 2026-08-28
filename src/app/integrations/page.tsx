@@ -2,18 +2,19 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Integrations - Krovos",
-  description: "Connect 500+ tools with Krovos AI automation. Slack, Jira, Salesforce, HubSpot, ServiceNow, and more.",
+  description:
+    "Connect the tools your team already uses. We work with common CRMs, helpdesks, HRIS, ITSM, and productivity tools, plus custom APIs.",
 };
 
 const categories = [
-  { name: "Communication", count: 45 },
-  { name: "CRM", count: 32 },
-  { name: "IT Service Management", count: 28 },
-  { name: "Cloud Infrastructure", count: 56 },
-  { name: "Databases", count: 48 },
-  { name: "Marketing", count: 38 },
-  { name: "Finance", count: 24 },
-  { name: "HR", count: 22 },
+  { name: "Communication" },
+  { name: "CRM" },
+  { name: "IT Service Management" },
+  { name: "Cloud Infrastructure" },
+  { name: "Databases" },
+  { name: "Marketing" },
+  { name: "Finance" },
+  { name: "HR" },
 ];
 
 const featured = [
@@ -36,8 +37,9 @@ export default function IntegrationsPage() {
               Connect every <span className="gradient-text">tool</span> in your stack
             </h1>
             <p className="mt-4 text-lg text-slate-600">
-              500+ integrations and growing. Connect your CRM, ITSM, HRIS, and more
-              to build powerful automation workflows.
+              We connect to the platforms your team already uses, including
+              common CRMs, ITSM, HRIS, and productivity tools, and we are happy
+              to scope custom integrations on request.
             </p>
           </div>
         </div>
@@ -52,7 +54,7 @@ export default function IntegrationsPage() {
                 key={index}
                 className="px-4 py-2 rounded-full bg-white border border-slate-200 text-sm font-medium text-slate-600 hover:border-indigo-200 hover:text-indigo-600 transition-colors"
               >
-                {cat.name} <span className="text-slate-400">({cat.count})</span>
+                {cat.name}
               </button>
             ))}
           </div>
@@ -63,19 +65,31 @@ export default function IntegrationsPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold text-slate-900">Featured integrations</h2>
+            <h2 className="text-2xl font-bold text-slate-900">
+              Featured integrations
+            </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featured.map((int, index) => (
-              <div key={index} className="p-6 rounded-xl border border-slate-200 hover:border-indigo-200 hover:shadow-lg transition-all">
+              <div
+                key={index}
+                className="p-6 rounded-xl border border-slate-200 hover:border-indigo-200 hover:shadow-lg transition-all"
+              >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center">
-                    <span className="text-sm font-bold text-slate-600">{int.name[0]}</span>
+                    <span className="text-sm font-bold text-slate-600">
+                      {int.name[0]}
+                    </span>
                   </div>
-                  <h3 className="text-lg font-semibold text-slate-900">{int.name}</h3>
+                  <h3 className="text-lg font-semibold text-slate-900">
+                    {int.name}
+                  </h3>
                 </div>
                 <p className="text-slate-600">{int.description}</p>
-                <Link href={`/integrations/${int.name.toLowerCase()}`} className="mt-4 inline-flex items-center text-indigo-600 text-sm font-medium">
+                <Link
+                  href={`/integrations/${int.name.toLowerCase()}`}
+                  className="mt-4 inline-flex items-center text-indigo-600 text-sm font-medium"
+                >
                   View integration
                 </Link>
               </div>
@@ -91,14 +105,21 @@ export default function IntegrationsPage() {
             Need a custom integration?
           </h2>
           <p className="mt-4 text-lg text-slate-300">
-            Build custom integrations with our REST API and webhooks.
+            We build custom integrations against your APIs and webhooks as part
+            of your project scope.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/docs/api" className="px-8 py-4 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors">
+            <Link
+              href="/docs/api"
+              className="px-8 py-4 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
+            >
               API Reference
             </Link>
-            <Link href="/contact" className="px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg border border-slate-700 hover:border-slate-600 transition-colors">
-              Contact sales
+            <Link
+              href="/contact"
+              className="px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg border border-slate-700 hover:border-slate-600 transition-colors"
+            >
+              Contact us
             </Link>
           </div>
         </div>

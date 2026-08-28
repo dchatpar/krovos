@@ -155,80 +155,7 @@ const FeatureCard = ({
   );
 };
 
-// Case Study Card Component
-const CaseStudyCard = ({
-  title,
-  company,
-  metric,
-  metricLabel,
-  description,
-  delay = 0
-}: {
-  title: string;
-  company: string;
-  metric: string;
-  metricLabel: string;
-  description: string;
-  delay?: number;
-}) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 40 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-      transition={{ duration: 0.6, delay: delay * 0.15 }}
-      className="card-premium overflow-hidden group"
-    >
-      <div className="h-1 bg-gradient-to-r from-[#D4A017] via-[#F0C040] to-[#D4A017]" />
-      <div className="p-6 lg:p-8">
-        <div className="text-sm font-semibold text-[#D4A017] mb-2">{company}</div>
-        <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
-        <div className="flex items-baseline gap-2 mb-4">
-          <span className="text-4xl lg:text-5xl font-bold gradient-text">
-            {metric}
-          </span>
-          <span className="text-gray-400">{metricLabel}</span>
-        </div>
-        <p className="text-gray-400 leading-relaxed">{description}</p>
-      </div>
-    </motion.div>
-  );
-};
-
-// Testimonial Card Component
-const TestimonialCard = ({ quote, author, role, company, delay = 0 }: { quote: string; author: string; role: string; company: string; delay?: number }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
-      transition={{ duration: 0.6, delay: delay * 0.1 }}
-      className="glass-heavy rounded-3xl p-8 lg:p-12 text-center"
-    >
-      <svg className="w-12 h-12 text-[#D4A017] mx-auto mb-6 opacity-50" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-      </svg>
-      <p className="text-xl lg:text-2xl text-white leading-relaxed mb-8 italic">
-        &ldquo;{quote}&rdquo;
-      </p>
-      <div className="flex items-center justify-center gap-4">
-        <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#7C3AED] to-[#9333EA] flex items-center justify-center text-white font-bold text-lg">
-          {author.charAt(0)}
-        </div>
-        <div className="text-left">
-          <div className="text-white font-semibold">{author}</div>
-          <div className="text-gray-400 text-sm">{role}, {company}</div>
-        </div>
-      </div>
-    </motion.div>
-  );
-};
+// (Case Study Card removed — see note above.)
 
 // Process Timeline Component
 const ProcessTimeline = () => {
@@ -456,13 +383,13 @@ export default function TalentSolutionsPage() {
 
   const features = [
     {
-      title: "Global Talent Network",
-      description: "Access our extensive network of over 50,000 pre-vetted professionals across 45+ countries. We have established relationships with top talent in technology, finance, healthcare, and more, giving you a competitive edge in accessing passive candidates who aren't actively job hunting but represent exceptional opportunities.",
+      title: "Sourcing Across Channels",
+      description: "We source candidates through the channels your role actually calls for — direct outreach, your network, job boards, and specialist recruiters when the search warrants it. We will scope the sourcing approach for each engagement.",
       icon: <GlobeIcon />
     },
     {
-      title: "AI-Powered Matching",
-      description: "Our proprietary AI-driven matching technology analyzes candidate skills, experience, cultural fit, and career trajectory to identify the ideal match for your requirements. This technology, combined with human expertise, significantly reduces time-to-hire while improving placement quality and retention rates.",
+      title: "Matching With Context",
+      description: "We match candidates against your role requirements and the practical context of your team — skills, experience, location, and how the role fits alongside the rest of your hiring. The match is reviewed with your hiring lead before we put anyone in front of you.",
       icon: <RocketIcon />
     },
     {
@@ -489,86 +416,45 @@ export default function TalentSolutionsPage() {
 
   const differentiators = [
     {
-      stat: "15,000+",
-      statLabel: "Placements Made",
-      title: "Proven Track Record",
-      description: "Our extensive experience spanning over two decades has resulted in more than 15,000 successful placements across diverse industries, giving us unmatched insight into matching talent with opportunity."
+      stat: "Direct",
+      statLabel: "Engagement Model",
+      title: "Straightforward Recruitment",
+      description: "We work with you directly on each search, rather than handing the work to junior recruiters after the sale. Scope, fees, and timelines are agreed up front."
     },
     {
-      stat: "94%",
-      statLabel: "Retention Rate",
-      title: "Quality That Lasts",
-      description: "Our rigorous vetting process and cultural fit assessment result in a 94% retention rate, well above the industry average of 70%. We focus on long-term matches that benefit both employers and candidates."
+      stat: "Project",
+      statLabel: "Engagement Model",
+      title: "Scoped Per Role",
+      description: "Each search is scoped per role. Replacement terms are written into your engagement so you know what happens if a placement does not work out."
     },
     {
-      stat: "3.2x",
-      statLabel: "Faster Hiring",
-      title: "Speed Without Compromise",
-      description: "Our streamlined process and ready access to talent means we fill positions 3.2x faster than traditional recruitment methods, helping you secure top talent before competitors."
+      stat: "Practical",
+      statLabel: "Sourcing",
+      title: "Mix of Channels",
+      description: "We combine direct outreach, your existing network, and standard job-board postings — choosing channels that fit the role rather than running the same playbook for every search."
     }
   ];
 
-  const caseStudies = [
-    {
-      title: "Scaling a Fintech Startup",
-      company: "Series B Fintech Company",
-      metric: "40",
-      metricLabel: "Hires in 90 Days",
-      description: "Needed to rapidly scale from 20 to 60 employees for a major product launch. We delivered 40 qualified hires across engineering, product, and operations roles while maintaining cultural fit. The startup successfully launched on schedule and secured Series C funding six months later."
-    },
-    {
-      title: "Building Global Engineering Hub",
-      company: "Fortune 500 Tech Company",
-      metric: "85%",
-      metricLabel: "Retention After 2 Years",
-      description: "Required building a 200-person engineering center in a new geography. Our localized recruitment strategy, comprehensive onboarding support, and ongoing retention programs achieved 85% retention after two years, significantly exceeding their initial 70% target."
-    },
-    {
-      title: "C-Suite Executive Placement",
-      company: "Healthcare SaaS Leader",
-      metric: "6",
-      metricLabel: "Weeks to Close",
-      description: "Critical CTO replacement needed within strict timeline due to unexpected departure. Our executive search network and rigorous process delivered a perfect fit in just 6 weeks, minimizing disruption to ongoing product development and investor relations."
-    }
-  ];
+  // Case studies removed — fabricated project descriptions are not honest content.
 
-  const testimonials = [
-    {
-      quote: "Krovos transformed our talent acquisition strategy. They understood our culture and delivered candidates who weren't just technically qualified but truly aligned with our mission. Our team has never been stronger, and our retention has improved dramatically since we started working together.",
-      author: "Michael Torres",
-      role: "Chief People Officer",
-      company: "Enterprise Tech Solutions"
-    },
-    {
-      quote: "The difference between Krovos and other agencies is night and day. They took the time to understand our specific needs, and the candidates they sent were exceptional. We've reduced our time-to-hire by 60% and our new hire quality has never been higher.",
-      author: "Sarah Chen",
-      role: "VP of Engineering",
-      company: "GrowthStage Startups"
-    },
-    {
-      quote: "As a rapidly scaling company, we needed a partner who could keep up with our growth. Krovos has been instrumental in helping us build teams across three continents. Their global reach and local expertise made all the difference.",
-      author: "David Okonkwo",
-      role: "CEO",
-      company: "Nexus Global"
-    }
-  ];
+  // Testimonials removed — fabricated names and quotes are not honest content.
 
   const faqItems = [
     {
       question: "What industries do you specialize in for talent solutions?",
-      answer: "We have extensive experience across multiple industries including technology, healthcare, financial services, manufacturing, retail, and professional services. Our team includes industry specialists who understand the unique talent demands and market dynamics of each sector. We tailor our recruitment strategies to address industry-specific requirements, compensation benchmarks, and candidate availability. Whether you need software engineers in Silicon Valley or data scientists in London, we have the expertise to find the right talent."
+      answer: "We work across technology, healthcare, financial services, manufacturing, retail, and professional services. We tailor our recruitment strategies to each sector's talent market and compensation norms."
     },
     {
       question: "How do you ensure candidate quality?",
-      answer: "Our quality assurance process includes multi-stage screening with technical assessments, behavioral interviews, reference verification, and cultural fit evaluation. We also implement skills testing, personality assessments, and background checks. Our 94% retention rate demonstrates the effectiveness of our vetting process. We stand behind our placements with replacement guarantees, showing our confidence in the quality of candidates we provide."
+      answer: "Our screening includes technical assessments where appropriate, structured interviews, reference checks, and cultural-fit conversations with your hiring team. Replacement guarantees can be built into the engagement."
     },
     {
       question: "What is your typical hiring timeline?",
-      answer: "Timelines vary by role complexity and availability. For staff augmentation and contract roles, we can often provide candidates within 48-72 hours. For direct hires, typical timelines range from 2-6 weeks depending on the seniority of the position. Executive searches may take 8-12 weeks. We provide realistic timelines during the consultation phase and keep you updated throughout the process, ensuring transparency every step of the way."
+      answer: "Timelines vary by role complexity and the availability of the right candidates. For staff augmentation and contract roles we can often move quickly; for direct hires, timelines typically range from a few weeks to a few months depending on seniority. We provide realistic timelines during the consultation phase and keep you updated throughout."
     },
     {
       question: "How do you handle remote and international hiring?",
-      answer: "We have extensive experience building remote and distributed teams across multiple time zones. Our services include compliance guidance for international hiring, timezone coordination, remote onboarding support, and ongoing management tools. We can handle payroll, benefits administration, and compliance for employees in multiple countries through our employer of record partnerships, making global hiring seamless."
+      answer: "We support remote and distributed hiring, including timezone coordination and onboarding support. Where you need to hire across borders, we can walk through the practical compliance considerations for your specific countries — including whether an employer-of-record arrangement makes sense for your situation."
     },
     {
       question: "What are your pricing models?",
@@ -576,7 +462,7 @@ export default function TalentSolutionsPage() {
     },
     {
       question: "Do you offer guarantees on placements?",
-      answer: "Yes, we offer replacement guarantees on all our placements. For direct hires, we provide a 90-day guarantee where we'll find a replacement at no additional cost if the candidate leaves or doesn't work out. For contract placements, we offer immediate replacement within the contract period. This demonstrates our confidence in our vetting process and commitment to your satisfaction."
+      answer: "We stand behind our placements. Replacement terms (often a 90-day window for direct hires) are written into your engagement, so you know exactly what happens if a candidate leaves or the role is not the right fit. For contract roles, we move quickly on replacements."
     },
     {
       question: "How do you handle confidential searches?",
@@ -584,7 +470,7 @@ export default function TalentSolutionsPage() {
     },
     {
       question: "What makes Krovos different from other talent agencies?",
-      answer: "Krovos combines personalized service with technology-enabled efficiency. Unlike large agencies that treat you as a number, we provide dedicated account management and consultative partnership. Our hybrid approach combines AI-powered sourcing tools with human expertise for optimal results. With 15,000+ placements and a 94% retention rate, we deliver proven outcomes that justify our premium service."
+      answer: "We combine direct engagement with the practical tooling you would expect. Each search has a clear owner on our side and a clear point of contact on yours, so decisions and feedback don't get lost between layers. We scope work up front and keep it focused on the role you need filled."
     }
   ];
 
@@ -666,9 +552,9 @@ export default function TalentSolutionsPage() {
               className="mt-16 grid grid-cols-3 gap-8 max-w-2xl mx-auto"
             >
               {[
-                { value: "15,000+", label: "Placements" },
-                { value: "94%", label: "Retention" },
-                { value: "50K+", label: "Talent Pool" }
+                { value: "Project", label: "Engagement Model" },
+                { value: "Direct", label: "Communication" },
+                { value: "Fixed", label: "Pricing" }
               ].map((stat, i) => (
                 <div key={i} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold gradient-text">{stat.value}</div>
@@ -817,39 +703,7 @@ export default function TalentSolutionsPage() {
         </div>
       </section>
 
-      {/* Case Studies Section */}
-      <section className="py-24 bg-[#0A1628]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Proven Results
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              See how we have helped leading organizations build exceptional teams
-              and achieve their talent goals.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {caseStudies.map((study, index) => (
-              <CaseStudyCard
-                key={study.title}
-                title={study.title}
-                company={study.company}
-                metric={study.metric}
-                metricLabel={study.metricLabel}
-                description={study.description}
-                delay={index}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Case Studies Section — removed; see note above. */}
 
       {/* Process Timeline Section */}
       <section className="py-24 bg-[#0D2040]">
@@ -873,37 +727,7 @@ export default function TalentSolutionsPage() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-24 bg-[#0A1628]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Trusted by leading organizations worldwide to deliver exceptional talent solutions.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard
-                key={testimonial.author}
-                quote={testimonial.quote}
-                author={testimonial.author}
-                role={testimonial.role}
-                company={testimonial.company}
-                delay={index}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Testimonials Section — removed; see note above. */}
 
       {/* FAQ Section */}
       <section className="py-24 bg-[#0D2040]">

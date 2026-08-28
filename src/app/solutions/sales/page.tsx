@@ -213,7 +213,8 @@ function ROICalculator() {
 
           <div className="mt-6 p-4 bg-white rounded-xl">
             <p className="text-sm text-slate-600">
-              <strong className="text-emerald-600">40%</strong> improvement in conversion rate calculated based on average customer results.
+              Projections are illustrative based on the inputs above. We model
+              ROI together during the strategy phase using your actual data.
             </p>
           </div>
         </div>
@@ -222,18 +223,18 @@ function ROICalculator() {
   );
 }
 
-// Data arrays
+// Data arrays — metrics are scoped per engagement
 const metrics = [
-  { value: "3x", label: "More Leads", description: "AI-powered lead generation" },
-  { value: "50%", label: "Shorter Sales Cycle", description: "Automated workflows" },
-  { value: "40%", label: "Higher Conversion", description: "Personalized engagement" },
+  { value: "Project", label: "Lead Generation", description: "Scoped per client engagement" },
+  { value: "Engagement", label: "Sales Cycle", description: "Targets agreed in your statement of work" },
+  { value: "Scoped", label: "Conversion", description: "Measured against your baseline" },
 ];
 
 const animatedStats = [
-  { value: 250, suffix: "+", label: "Enterprise Customers" },
-  { value: 50, suffix: "B+", label: "Pipeline Managed" },
-  { value: 98, suffix: "%", label: "Customer Satisfaction" },
-  { value: 10, suffix: "M+", label: "Leads Processed" },
+  { value: 0, suffix: "", label: "Direct Communication" },
+  { value: 0, suffix: "", label: "Engagement Scoped" },
+  { value: 0, suffix: "", label: "Project Pricing" },
+  { value: 0, suffix: "", label: "Surrey, BC Team" },
 ];
 
 const automationFeatures = [
@@ -364,78 +365,79 @@ const integrationTools = [
   { name: "Microsoft 365", color: "bg-blue-700", category: "Productivity" },
 ];
 
+// Case studies — references available on request under NDA
 const caseStudies = [
   {
-    company: "TechScale Inc",
+    company: "SaaS client",
     industry: "SaaS",
-    challenge: "Manual lead qualification taking 20+ hours per week",
-    solution: "Deployed Krovos AI agents for automated lead scoring and qualification",
-    results: ["3x more qualified leads", "50% reduction in admin time", "35% higher conversion rate"],
-    metric: "+147%",
-    metricLabel: "Pipeline Growth",
+    challenge: "Project references and detailed case studies are available on request under NDA.",
+    solution: "Engagement specifics shared after a discovery conversation.",
+    results: ["Project references available on request"],
+    metric: "Project",
+    metricLabel: "Engagement",
   },
   {
-    company: "GlobalTech Solutions",
+    company: "Enterprise software client",
     industry: "Enterprise Software",
-    challenge: "Disconnected sales data across multiple systems",
-    solution: "Unified CRM integration with real-time data synchronization",
-    results: ["100% data accuracy", "30% faster sales cycles", "25% revenue increase"],
-    metric: "+$2.5M",
-    metricLabel: "Annual Revenue",
+    challenge: "Project references and detailed case studies are available on request under NDA.",
+    solution: "Engagement specifics shared after a discovery conversation.",
+    results: ["Project references available on request"],
+    metric: "Project",
+    metricLabel: "Engagement",
   },
   {
-    company: "InnovateCorp",
+    company: "FinTech client",
     industry: "FinTech",
-    challenge: "Inefficient commission tracking causing rep dissatisfaction",
-    solution: "Automated commission calculations with transparent dashboards",
-    results: ["90% reduction in disputes", "Real-time quota tracking", "Improved rep retention"],
-    metric: "100%",
-    metricLabel: "Accuracy",
+    challenge: "Project references and detailed case studies are available on request under NDA.",
+    solution: "Engagement specifics shared after a discovery conversation.",
+    results: ["Project references available on request"],
+    metric: "Project",
+    metricLabel: "Engagement",
   },
 ];
 
 const faqItems = [
   {
     question: "How long does it take to implement Krovos Sales?",
-    answer: "Most customers are up and running within 2-4 weeks. Our implementation team guides you through CRM integration, data migration, and team onboarding. We provide dedicated support to ensure a smooth transition with minimal disruption to your sales operations.",
+    answer: "Implementation timelines are scoped per engagement. After discovery we will agree on the integration points, data migration, and rollout plan that fits your team.",
   },
   {
     question: "What CRM systems do you integrate with?",
-    answer: "Krovos integrates natively with all major CRM platforms including Salesforce, HubSpot, Pipedrive, Microsoft Dynamics, Zoho CRM, and SugarCRM. We also offer custom integrations through our API and support for bidirectional sync to keep your data always current.",
+    answer: "We integrate with common CRM platforms including Salesforce, HubSpot, Pipedrive, Microsoft Dynamics, and Zoho CRM. Integration scope is agreed as part of your statement of work.",
   },
   {
     question: "Is my data secure?",
-    answer: "Absolutely. We are SOC 2 Type II certified and GDPR compliant. We use bank-level 256-bit encryption for all data in transit and at rest. Our infrastructure is hosted on AWS with multiple redundancy layers. We never sell or share your data with third parties.",
+    answer: "We use encryption in transit and at rest, role-based access controls, and audit logging appropriate to the engagement. Where you have specific compliance or data residency requirements, we scope them into your statement of work.",
   },
   {
     question: "Can I customize the AI models for my specific industry?",
-    answer: "Yes. Our AI models are trained on your data and can be fine-tuned for your specific industry, sales process, and customer base. We offer custom model training as part of our enterprise plans, with ongoing optimization based on your deal outcomes.",
+    answer: "Yes. We configure the AI tooling against your data and your specific sales process, with ongoing tuning based on your team&apos;s feedback and deal outcomes.",
   },
   {
     question: "What kind of support do you offer?",
-    answer: "We provide comprehensive support including dedicated customer success managers, 24/7 technical support, regular training sessions, and access to our customer community. Enterprise customers also receive strategic planning sessions and custom integrations.",
+    answer: "Support is scoped per engagement, with a named point of contact and agreed response windows. We&apos;re happy to discuss support terms during discovery.",
   },
   {
-    question: "How does the ROI calculator work?",
-    answer: "Our ROI calculator uses data from thousands of similar companies to project potential improvements. It factors in your team size, average deal size, current conversion rates, and deal volume to estimate the impact of automation, improved conversion rates, and shortened sales cycles.",
+    question: "How does the ROI conversation work?",
+    answer: "We model ROI together during the strategy phase using your actual data — team size, average deal size, current conversion rates, and deal volume — rather than projecting from a generic benchmark.",
   },
   {
-    question: "What happens if I need to cancel my subscription?",
-    answer: "You can cancel your subscription at any time with 30 days notice. We provide a 30-day data export window so you can download all your information. We also offer flexible plans that can scale with your business needs.",
+    question: "What happens if the engagement ends?",
+    answer: "We agree a clear exit plan up front. You receive your data and documentation, and we&apos;re happy to support the transition to your team or another vendor.",
   },
   {
     question: "Do you offer training for my sales team?",
-    answer: "Yes, all plans include comprehensive onboarding and training. We offer live training sessions, video tutorials, documentation, and access to our best practices library. Enterprise customers receive customized training programs tailored to their sales methodology.",
+    answer: "Yes. We include onboarding and training as part of your engagement, with materials tailored to how your team actually sells.",
   },
 ];
 
 const technicalSpecs = [
-  { category: "Performance", specs: "99.9% uptime SLA, <100ms response time, Global CDN" },
-  { category: "Security", specs: "SOC 2 Type II, GDPR, HIPAA ready, 256-bit encryption" },
-  { category: "Integrations", specs: "50+ native integrations, REST API, GraphQL, Webhooks" },
-  { category: "Data", specs: "Unlimited storage, Real-time sync, Automated backups" },
-  { category: "Compliance", specs: "GDPR, CCPA, SOX, ISO 27001 certified" },
-  { category: "Support", specs: "24/7 support, Dedicated CSM, Priority response" },
+  { category: "Performance", specs: "Reliability targets agreed per engagement" },
+  { category: "Security", specs: "Encryption in transit, role-based access controls, audit logging" },
+  { category: "Integrations", specs: "Common CRM integrations, custom API work as needed" },
+  { category: "Data", specs: "Backup strategy agreed per engagement" },
+  { category: "Compliance", specs: "Privacy-aware handling, scoped per engagement" },
+  { category: "Support", specs: "Named point of contact, agreed response windows" },
 ];
 
 const processSteps = [
@@ -459,24 +461,25 @@ const processSteps = [
   },
 ];
 
+// Testimonials — references available on request under NDA
 const testimonials = [
   {
-    quote: "Krovos transformed our sales process. We went from manually chasing leads to having AI agents nurture prospects 24/7. Our conversion rate jumped 45% in just 3 months.",
-    author: "David Park",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "VP of Sales",
-    company: "TechGrowth Inc",
+    company: "Available on request",
   },
   {
-    quote: "The meeting booking feature alone is worth the investment. Our reps used to spend 10 hours a week on scheduling. Now the AI handles it all flawlessly.",
-    author: "Jessica Martinez",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "Sales Director",
-    company: "CloudScale Solutions",
+    company: "Available on request",
   },
   {
-    quote: "Lead scoring has been a game-changer. Our team now focuses only on high-intent prospects, and we've seen a 3x increase in qualified opportunities.",
-    author: "Robert Chen",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "CRO",
-    company: "EnterpriseFlow",
+    company: "Available on request",
   },
 ];
 
@@ -1478,13 +1481,13 @@ export default function SalesPage() {
               <svg className="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              SOC 2 Compliant
-            </div>
-            <div className="flex items-center gap-2">
+              Privacy-aware handling
+              </div>
+              <div className="flex items-center gap-2">
               <svg className="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              GDPR Ready
+              Engagement-scoped compliance
             </div>
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">

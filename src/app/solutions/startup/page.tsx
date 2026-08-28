@@ -19,8 +19,8 @@ const features = [
     description: "Startup-friendly pricing with generous free tiers. Pay only for what you use as you scale.",
   },
   {
-    title: "Integration Ready",
-    description: "Connect with the tools startups use: Stripe, Slack, Notion, Airtable, and 200+ more.",
+    title: "Integration Work",
+    description: "We connect to the tools your team uses, including common options like Stripe, Slack, Notion, and Airtable. Specific integration scope is agreed per engagement.",
   },
 ];
 
@@ -154,11 +154,11 @@ export default function StartupPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl lg:text-3xl font-bold text-white">Works With Your Stack</h2>
-            <p className="mt-4 text-white/60">Connect with 200+ tools startups rely on</p>
+            <p className="mt-4 text-white/60">We connect to the tools your team uses</p>
           </div>
           <div className="flex flex-wrap justify-center gap-3">
             {tools.map((tool, index) => (
-              <div 
+              <div
                 key={index}
                 className="px-4 py-2 bg-[#0A1628] border border-white/10 rounded-full text-white/70 text-sm hover:border-[#0E7C7B]/30 hover:text-[#0E7C7B] transition-colors cursor-pointer"
               >
@@ -167,7 +167,7 @@ export default function StartupPage() {
               </div>
             ))}
           </div>
-          <p className="text-center text-white/40 text-sm mt-8">+ 200 more integrations</p>
+          <p className="text-center text-white/40 text-sm mt-8">Other tools scoped per engagement</p>
         </div>
       </section>
 
@@ -178,7 +178,7 @@ export default function StartupPage() {
             Ready to Accelerate Your Growth?
           </h2>
           <p className="mt-4 text-white/80 text-lg max-w-2xl mx-auto">
-            Join thousands of startups saving 40+ hours per week with AI automation.
+            We help small teams ship useful work faster. Tell us what you&apos;re building.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link

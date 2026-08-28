@@ -21,8 +21,8 @@ const featuredTemplates = [
 
 const latestPosts = [
   { title: "How AI Agents are transforming enterprise workflows", date: "Feb 20, 2026" },
-  { title: "Building a SOC 2 compliant automation platform", date: "Feb 15, 2026" },
-  { title: "Top 10 use cases for AI in IT operations", date: "Feb 10, 2026" },
+  { title: "Practical patterns for secure automation platforms", date: "Feb 15, 2026" },
+  { title: "Top use cases for AI in IT operations", date: "Feb 10, 2026" },
 ];
 
 export default function ResourcesPage() {

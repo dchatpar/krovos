@@ -115,49 +115,6 @@ const FAQItem = ({ question, answer, isOpen, onToggle }: { question: string; ans
   );
 };
 
-// Case Study Card Component
-const CaseStudyCard = ({
-  title,
-  company,
-  metric,
-  metricLabel,
-  description,
-  delay = 0
-}: {
-  title: string;
-  company: string;
-  metric: string;
-  metricLabel: string;
-  description: string;
-  delay?: number;
-}) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 40 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-      transition={{ duration: 0.6, delay: delay * 0.15 }}
-      className="card-premium overflow-hidden group"
-    >
-      <div className="h-1 bg-gradient-to-r from-[var(--krovos-gold)] to-[var(--krovos-blue)]" />
-      <div className="p-6 lg:p-8">
-        <div className="text-sm font-semibold text-[var(--krovos-gold)] mb-2">{company}</div>
-        <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
-        <div className="flex items-baseline gap-2 mb-4">
-          <span className="text-4xl lg:text-5xl font-bold gradient-text">
-            {metric}
-          </span>
-          <span className="text-[var(--krovos-gray-400)]">{metricLabel}</span>
-        </div>
-        <p className="text-[var(--krovos-gray-400)] leading-relaxed">{description}</p>
-      </div>
-    </motion.div>
-  );
-};
-
 // Technology Logo Component
 const TechLogo = ({ name, icon }: { name: string; icon: string }) => {
   const ref = useRef(null);
@@ -176,50 +133,6 @@ const TechLogo = ({ name, icon }: { name: string; icon: string }) => {
         </svg>
       </div>
       <span className="font-medium text-white">{name}</span>
-    </motion.div>
-  );
-};
-
-// Testimonial Card Component
-const TestimonialCard = ({
-  quote,
-  author,
-  role,
-  company,
-  delay = 0
-}: {
-  quote: string;
-  author: string;
-  role: string;
-  company: string;
-  delay?: number;
-}) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-      transition={{ delay }}
-      className="glass-heavy rounded-3xl p-8 lg:p-12"
-    >
-      <svg className="w-12 h-12 text-[var(--krovos-gold)] mb-6" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-      </svg>
-      <p className="text-xl lg:text-2xl text-white leading-relaxed mb-8 font-light">
-        {quote}
-      </p>
-      <div className="flex items-center gap-4">
-        <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[var(--krovos-blue)] to-[var(--krovos-gold)] flex items-center justify-center text-white font-bold text-xl">
-          {author.charAt(0)}
-        </div>
-        <div>
-          <div className="text-white font-semibold text-lg">{author}</div>
-          <div className="text-[var(--krovos-gray-400)]">{role}, {company}</div>
-        </div>
-      </div>
     </motion.div>
   );
 };
@@ -439,28 +352,20 @@ export default function CustomSoftwarePage() {
 
   const differentiators = [
     {
-      stat: "200+",
-      statLabel: "Projects Delivered",
       title: "Proven Development Expertise",
-      description: "With over 200 successful custom software projects across industries, our team brings deep technical expertise and proven methodologies to every engagement. We've solved complex challenges for Fortune 500 companies and innovative startups alike."
+      description: "We bring hands-on experience across modern stacks and industries, focused on shipping reliable, maintainable software rather than over-promising on volume."
     },
     {
-      stat: "48",
-      statLabel: "Hours to First Build",
       title: "Rapid Development Velocity",
-      description: "Our agile methodology and expert teams deliver working software faster. Thanks to our established frameworks and pre-built components, you can expect your first functional build within 48 hours of project kickoff."
+      description: "Our agile workflow and reusable components let us deliver an early working build quickly so you can see real progress and give feedback."
     },
     {
-      stat: "98%",
-      statLabel: "Client Retention",
       title: "Long-Term Partnership",
-      description: "Our clients stay with us for years, not months. Our 98% retention rate reflects our unwavering commitment to quality, communication, and delivering lasting business value that grows with your organization."
+      description: "We aim to be the team you want to keep working with — clear communication, sensible scope, and code that holds up after launch."
     },
     {
-      stat: "24/7",
-      statLabel: "Support Available",
-      title: "Round-the-Clock Support",
-      description: "Our dedicated support team is available around the clock to address any issues, implement enhancements, and ensure your software continues to perform optimally. Sleep easy knowing your systems are in capable hands."
+      title: "Ongoing Support",
+      description: "We offer maintenance and support packages after launch to keep your software secure, updated, and aligned with evolving requirements."
     }
   ];
 
@@ -475,62 +380,14 @@ export default function CustomSoftwarePage() {
     { name: "Docker", icon: "M4 4v5h.582m15.582 0A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" }
   ];
 
-  const caseStudies = [
-    {
-      title: "Enterprise Resource Planning System",
-      company: "Manufacturing Conglomerate",
-      metric: "67%",
-      metricLabel: "Efficiency Increase",
-      description: "Built a custom ERP system replacing legacy software, integrating 12 departments and reducing operational overhead by 67% in the first year. The system handles over 50,000 daily transactions and provides real-time analytics across the entire organization."
-    },
-    {
-      title: "Patient Portal & Healthcare CRM",
-      company: "National Healthcare Provider",
-      metric: "45K",
-      metricLabel: "Patients Served Monthly",
-      description: "Developed a comprehensive patient-facing portal with appointment scheduling, medical records access, and telehealth integration, improving patient satisfaction by 94% and reducing call center volume by 60%."
-    },
-    {
-      title: "E-Commerce Platform",
-      company: "Global Retail Brand",
-      metric: "$24M",
-      metricLabel: "First Year Revenue",
-      description: "Created a custom e-commerce platform handling 10,000+ concurrent users, with AI-powered recommendations driving 35% higher conversion rates. Integrated with 15+ third-party logistics and payment providers."
-    },
-    {
-      title: "Supply Chain Management System",
-      company: "Logistics Enterprise",
-      metric: "40%",
-      metricLabel: "Cost Reduction",
-      description: "Developed an end-to-end supply chain management system with real-time tracking, predictive analytics, and automated inventory management, reducing operational costs by 40% and improving delivery times by 25%."
-    }
-  ];
+  // Case studies removed — fabricated project descriptions are not honest content.
 
-  const testimonials = [
-    {
-      quote: "Krovos built us a custom ERP system that transformed our operations. Their team understood our complex requirements and delivered a solution that reduced our operational costs by 67% while giving us capabilities our competitors don't have. The ongoing support has been exceptional.",
-      author: "Michael Rodriguez",
-      role: "Chief Technology Officer",
-      company: "Manufacturing Corp"
-    },
-    {
-      quote: "The mobile app they developed exceeded our expectations. User engagement increased by 280% within the first three months, and the app store ratings remain at 4.9 stars. Their team truly understood our vision and translated it into an incredible product.",
-      author: "Sarah Chen",
-      role: "VP of Product",
-      company: "HealthTech Solutions"
-    },
-    {
-      quote: "We were skeptical about the 48-hour first build promise, but they delivered. The quality of code and the speed of development has been remarkable. They've become a true technology partner for our organization.",
-      author: "James Williams",
-      role: "CEO",
-      company: "FinServe Analytics"
-    }
-  ];
+  // Testimonials removed — fabricated names and quotes are not honest content.
 
   const faqItems = [
     {
       question: "What types of custom software do you develop?",
-      answer: "We develop a comprehensive range of custom software solutions including enterprise web applications, mobile apps for iOS and Android, API development and integration, cloud solutions and migration, legacy system modernization, and custom database solutions. Our team has deep expertise across multiple industries including healthcare (HIPAA-compliant solutions), finance (security-focused applications with PCI-DSS compliance), manufacturing (ERP and supply chain systems), retail (e-commerce and inventory management), and logistics (fleet management and real-time tracking). We work with businesses of all sizes from startups to Fortune 500 companies."
+      answer: "We develop custom software across web applications, mobile apps (iOS/Android), APIs and integrations, cloud and migration work, and modernization of legacy systems. We work with businesses of all sizes and focus on practical, well-supported solutions over feature lists."
     },
     {
       question: "How long does it take to develop custom software?",
@@ -542,27 +399,27 @@ export default function CustomSoftwarePage() {
     },
     {
       question: "How do you ensure software quality and security?",
-      answer: "Quality and security are built into every phase of our development process. We implement comprehensive testing including unit tests with 80%+ code coverage, integration tests, end-to-end tests, security penetration testing, performance testing, and user acceptance testing. Our security practices include OWASP guidelines compliance, encryption at rest and in transit (AES-256, TLS 1.3), regular vulnerability assessments, and adherence to industry-specific compliance standards (HIPAA, PCI-DSS, SOC 2). Every deployment goes through rigorous security review."
+      answer: "Quality and security are built into every phase. We write tests alongside the code, run code review on every change, perform security checks before releases, and follow OWASP guidance. Specific compliance certifications (SOC 2, HIPAA, PCI-DSS) can be discussed as part of your engagement if your project requires them."
     },
     {
       question: "Do you provide ongoing support and maintenance?",
-      answer: "Yes, we offer comprehensive post-launch support and maintenance packages that include bug fixes, security updates, performance monitoring, and feature enhancements. Our support plans are flexible and can be tailored to your needs - from basic maintenance to premium 24/7 support with dedicated account management. We recommend our support packages to ensure your software remains secure, optimized, and continues to evolve with your business needs. Most clients opt for our ongoing support, which includes SLA guarantees and priority response times."
+      answer: "Yes. We offer post-launch maintenance and support packages covering bug fixes, security updates, performance monitoring, and feature work. Plans are flexible and tailored to your needs; we're happy to discuss what's right for your project."
     },
     {
       question: "Can you integrate with our existing systems?",
-      answer: "Absolutely. We have extensive experience integrating with virtually any system including ERP platforms (SAP, Oracle, Microsoft Dynamics), CRM systems (Salesforce, HubSpot), legacy databases, third-party APIs, IoT devices, and custom applications. We use API-first architecture and can work with REST, GraphQL, SOAP, and gRPC protocols. During discovery, we analyze your existing tech stack and design integration strategies that minimize disruption while maximizing data flow efficiency."
+      answer: "Yes. We've integrated with a wide range of platforms — ERP, CRM, payment gateways, identity providers, internal APIs, and legacy systems. During discovery we map your stack and design an integration approach that minimizes disruption."
     },
     {
       question: "What industries do you specialize in?",
-      answer: "Our team has deep expertise across multiple verticals: Healthcare (HIPAA-compliant patient portals, telemedicine platforms, medical device integration), Finance (trading platforms, banking APIs, compliance-heavy applications), Manufacturing (ERP, supply chain, IoT monitoring), Retail (e-commerce, inventory management, loyalty programs), Logistics (fleet management, route optimization, warehouse systems), and Real Estate (property management, MLS integrations). We understand industry-specific compliance requirements, workflow patterns, and best practices."
+      answer: "We work across healthcare, finance, manufacturing, retail, logistics, real estate, and other verticals. Industry-specific compliance (HIPAA, PCI-DSS, etc.) is handled case-by-case based on project requirements."
     },
     {
       question: "How do you handle data migration from legacy systems?",
-      answer: "We have extensive experience with data migration projects of all sizes. Our approach includes comprehensive data analysis and profiling, detailed mapping documents, data cleansing and transformation, parallel running with legacy systems, validation and reconciliation, and phased cutover strategies. We handle structured data (databases, spreadsheets) and unstructured data (documents, images). Our migration process includes rollback capabilities to ensure zero data loss and minimal downtime - typically less than 4 hours for most migrations."
+      answer: "We handle data migration projects of all sizes. The approach includes analysis and profiling of the source data, mapping documents, cleansing and transformation, parallel running with the legacy system, validation, and phased cutover. We always plan a rollback path to avoid data loss."
     },
     {
       question: "What about intellectual property and confidentiality?",
-      answer: "Your intellectual property is fully protected. All code and documentation we create is exclusively yours - we transfer full ownership upon final payment. We sign comprehensive NDAs and IP transfer agreements before starting any work. Our development environments are secure and isolated. We never use your proprietary code or concepts for other clients. Many of our projects involve highly sensitive data, and we've maintained perfect confidentiality for over 15 years."
+      answer: "Your intellectual property is fully protected. All code and documentation we create is exclusively yours — we transfer full ownership upon final payment. We sign NDAs and IP transfer agreements before starting any work, and we never reuse your proprietary code or concepts for other clients."
     },
     {
       question: "How do you handle project scope changes?",
@@ -851,15 +708,9 @@ export default function CustomSoftwarePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center card-premium p-6"
+                className="card-premium p-6"
               >
-                <div className="inline-flex items-baseline justify-center gap-2 mb-4">
-                  <span className="text-5xl lg:text-6xl font-bold gradient-text">
-                    {diff.stat}
-                  </span>
-                </div>
-                <div className="text-[var(--krovos-gold)] font-semibold mb-4">{diff.statLabel}</div>
-                <h3 className="text-xl font-bold text-white mb-2">{diff.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">{diff.title}</h3>
                 <p className="text-[var(--krovos-gray-400)] leading-relaxed text-sm">{diff.description}</p>
               </motion.div>
             ))}
@@ -915,71 +766,9 @@ export default function CustomSoftwarePage() {
         </div>
       </section>
 
-      {/* Case Studies */}
-      <section className="py-24 bg-[var(--krovos-navy)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Success Stories
-            </h2>
-            <p className="text-xl text-[var(--krovos-gray-400)] max-w-3xl mx-auto">
-              See how we&apos;ve helped leading organizations transform their operations
-              with custom software solutions tailored to their unique needs.
-            </p>
-          </motion.div>
+      {/* Case Studies section removed — fabricated project descriptions are not honest content. */}
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {caseStudies.map((study, index) => (
-              <CaseStudyCard
-                key={study.title}
-                title={study.title}
-                company={study.company}
-                metric={study.metric}
-                metricLabel={study.metricLabel}
-                description={study.description}
-                delay={index}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-24 bg-mesh-navy">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-xl text-[var(--krovos-gray-400)] max-w-3xl mx-auto">
-              Hear from organizations that have transformed their business with our custom software solutions.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard
-                key={testimonial.author}
-                quote={testimonial.quote}
-                author={testimonial.author}
-                role={testimonial.role}
-                company={testimonial.company}
-                delay={index * 0.1}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Testimonials section removed — see note above */}
 
       {/* ROI Benefits Section */}
       <section className="py-24 bg-[var(--krovos-navy-deep)]">

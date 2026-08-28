@@ -27,13 +27,13 @@ const features = [
   },
   {
     title: "Enterprise Security",
-    description: "SOC 2 Type II certified with end-to-end encryption, SSO, and role-based access control.",
+    description: "Security controls including end-to-end encryption, SSO, and role-based access, scoped per engagement.",
     href: "/product/security",
     icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
   },
   {
     title: "Integrations Hub",
-    description: "Connect 500+ tools including Salesforce, Slack, Jira, ServiceNow, and more.",
+    description: "Connect common tools including Salesforce, Slack, Jira, ServiceNow, and others on request.",
     href: "/integrations",
     icon: "M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1",
   },

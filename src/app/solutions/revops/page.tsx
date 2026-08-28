@@ -239,33 +239,33 @@ const marketingIntegrations = [
   { name: "Klaviyo", icon: "K", color: "bg-purple-500" },
 ];
 
-// Case studies
+// Case studies — references available on request under NDA
 const caseStudies = [
   {
-    company: "TechScale Inc",
+    company: "SaaS client",
     industry: "SaaS",
-    metric: "45%",
-    metricLabel: "Revenue Growth",
-    quote: "Krovos transformed our revenue operations. We went from siloed teams to a unified revenue machine in just 3 months.",
-    author: "Sarah Chen",
+    metric: "Project",
+    metricLabel: "Engagement",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "CRO",
   },
   {
-    company: "Enterprise Solutions",
+    company: "Enterprise software client",
     industry: "Enterprise Software",
-    metric: "60%",
-    metricLabel: "Forecast Accuracy",
-    quote: "The AI forecasting is incredible. We can now predict revenue within 5% accuracy, which has completely changed how we plan.",
-    author: "Michael Torres",
+    metric: "Project",
+    metricLabel: "Engagement",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "VP Revenue Ops",
   },
   {
-    company: "GrowthCo",
+    company: "FinTech client",
     industry: "FinTech",
-    metric: "3x",
-    metricLabel: "ROI in 6 Months",
-    quote: "The cross-team alignment features paid for themselves in the first quarter. Our Sales and Marketing teams have never been more aligned.",
-    author: "Jessica Williams",
+    metric: "Project",
+    metricLabel: "Engagement",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "Chief Revenue Officer",
   },
 ];
@@ -273,28 +273,28 @@ const caseStudies = [
 // FAQ items
 const faqItems = [
   {
-    question: "How does Krovos unify revenue data from multiple sources?",
-    answer: "Krovos uses advanced data reconciliation algorithms to aggregate data from all your revenue tools. Our AI automatically identifies and resolves conflicts, creating a single source of truth that updates in real-time. We support bi-directional sync with 45+ native integrations, and our open API allows connection to any custom systems.",
+    question: "How do you unify revenue data from multiple sources?",
+    answer: "We work with you to map the data sources that matter and design the integration approach that fits your team. We support common CRMs and revenue tools, with bi-directional sync where it makes sense. Specific scope is agreed as part of your statement of work.",
   },
   {
-    question: "What makes your AI forecasting different from traditional methods?",
-    answer: "Our forecasting AI goes beyond simple trend analysis. It uses machine learning models that consider hundreds of signals including historical deal patterns, buyer behavior, market conditions, and engagement metrics. The system continuously learns from outcomes, improving accuracy over time and providing confidence intervals for each prediction.",
+    question: "What does the AI forecasting approach look like?",
+    answer: "Forecasting models are configured against your historical deal data and reviewed with your team before going live. We tune them as your business evolves rather than running a generic out-of-the-box model.",
   },
   {
     question: "How long does implementation typically take?",
-    answer: "Most customers are up and running within 2-4 weeks. Our onboarding team handles the entire setup process, including data migration, integration configuration, and team training. We also provide dedicated customer success support to ensure your team gets maximum value from the platform.",
+    answer: "Implementation is scoped per engagement. After discovery we agree on a phased rollout and timeline that fits the integrations and workflows your team needs.",
   },
   {
-    question: "Can Krovos work with our existing CRM and tools?",
-    answer: "Absolutely. Krovos is designed to enhance your existing tools rather than replace them. We integrate natively with Salesforce, HubSpot, Microsoft Dynamics, and 40+ other platforms. Our bi-directional sync ensures data flows seamlessly between systems without duplicates or conflicts.",
+    question: "Can you work with our existing CRM and tools?",
+    answer: "Yes. We work alongside your existing CRM and revenue tooling, with bi-directional sync where it makes sense. We will scope the integration work for your specific technology stack as part of your statement of work.",
   },
   {
-    question: "How secure is our data with Krovos?",
-    answer: "Security is our top priority. We're SOC 2 Type II certified, GDPR compliant, and use enterprise-grade encryption for all data in transit and at rest. We also offer role-based access controls, audit logs, and SSO integration with major identity providers.",
+    question: "How secure is our data?",
+    answer: "We scope security to what your project needs. We use encryption in transit and at rest, role-based access controls, and audit logging. Where you have specific framework requirements like SOC 2, GDPR, or ISO 27001, we work with you on the controls and documentation rather than making blanket claims.",
   },
   {
     question: "What kind of support do you offer?",
-    answer: "Every customer gets a dedicated Customer Success Manager who provides ongoing strategic guidance. We also offer 24/7 technical support, comprehensive documentation, video tutorials, and regular training sessions. Our support team has an average response time of under 2 hours.",
+    answer: "Support is scoped per engagement, with a named point of contact and agreed response windows. We&apos;re happy to discuss support terms during discovery.",
   },
 ];
 
@@ -1851,13 +1851,13 @@ export default function RevOpsPage() {
                 <svg className="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                SOC 2 Compliant
+                Privacy-aware handling
               </div>
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                GDPR Ready
+                Engagement-scoped compliance
               </div>
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">

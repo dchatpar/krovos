@@ -80,11 +80,11 @@ const ContactMethodCard = ({ icon, title, description, detail, delay = 0 }: { ic
         <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
         <p className="text-[#94A3B8] mb-4">{description}</p>
         <a
-          href={detail.startsWith('http') ? detail : `mailto:${detail}`}
-          className="text-[#D4A017] font-medium hover:underline"
-        >
-          {detail}
-        </a>
+                  href={detail.startsWith('http') ? detail : detail.startsWith('+') || /^\d/.test(detail) ? `tel:${detail.replace(/\s|\(|\)|-/g, '')}` : `mailto:${detail}`}
+                  className="text-[#D4A017] font-medium hover:underline"
+                >
+                  {detail}
+                </a>
       </div>
     </motion.div>
   );
@@ -126,9 +126,9 @@ const OfficeCard = ({ city, country, address, phone, email, timezone, delay = 0 
             <svg className="w-5 h-5 text-[#D4A017] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
-            <a href={`tel:${phone}`} className="text-[#94A3B8] text-base lg:text-lg hover:text-[#D4A017] transition-colors">
-              {phone}
-            </a>
+            <a href={`tel:${phone.replace(/\D/g, "")}`} className="text-[#94A3B8] text-base lg:text-lg hover:text-[#D4A017] transition-colors">
+                          {phone}
+                        </a>
           </div>
 
           <div className="flex items-center gap-3">
@@ -385,16 +385,23 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-[#0A1628]-light" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <SectionWrapper>
-            <div className="grid md:grid-cols-2 gap-6">
-                          <ContactMethodCard
-                                          icon="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                                          title="Email Us"
-                                          description="Send us an email anytime. We respond within 24 hours."
-                                          detail="contact@krovos.ca"
-                                          delay={0}
-                                        />
-                                      </div>
-          </SectionWrapper>
+                      <div className="grid md:grid-cols-2 gap-6">
+                                    <ContactMethodCard
+                                                    icon="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                                    title="Email Us"
+                                                    description="Send us an email anytime. We respond within 24 hours."
+                                                    detail="contact@krovos.ca"
+                                                    delay={0}
+                                                  />
+                                                  <ContactMethodCard
+                                                    icon="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                                                    title="Call Us"
+                                                    description="Speak with our team directly. Available during business hours."
+                                                    detail="+1 (437) 860-5694"
+                                                    delay={0.1}
+                                                  />
+                                                </div>
+                    </SectionWrapper>
         </div>
       </section>
 
@@ -518,14 +525,14 @@ export default function ContactPage() {
 
                         <div className="grid md:grid-cols-1 gap-6 max-w-xl mx-auto">
                           <OfficeCard
-                            city="Surrey"
-                            country="Canada"
-                            address="13428 105 Ave Suite 1410, Surrey, BC V3T 0S6"
-                            phone=""
-                            email="contact@krovos.ca"
-                            timezone="PT (UTC-8)"
-                            delay={0}
-                          />
+                                                      city="Surrey"
+                                                      country="Canada"
+                                                      address="13428 105 Ave Suite 1410, Surrey, BC V3T 0S6"
+                                                      phone="+1 (437) 860-5694"
+                                                      email="contact@krovos.ca"
+                                                      timezone="PT (UTC-8)"
+                                                      delay={0}
+                                                    />
                         </div>
           </SectionWrapper>
         </div>

@@ -31,8 +31,8 @@ const whitepapers = [
     category: "Architecture",
   },
   {
-    title: "Compliance Guide: SOC 2, HIPAA, GDPR",
-    description: "Navigate enterprise compliance requirements with this comprehensive guide.",
+    title: "Compliance Guide: Privacy & Data Handling",
+    description: "An overview of common Canadian and international privacy considerations when building internal tooling.",
     pages: 40,
     category: "Compliance",
   },

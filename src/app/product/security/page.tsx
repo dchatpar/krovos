@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Security - Krovos",
-  description: "Enterprise-grade security at Krovos. SOC 2 Type II, encryption, SSO, and more.",
+  description: "Security controls and data handling practices at Krovos.",
 };
 
 const features = [
@@ -16,7 +16,7 @@ const features = [
   },
   {
     title: "Compliance",
-    items: ["SOC 2 Type II", "GDPR", "HIPAA ready"],
+    items: ["Privacy-aware handling", "Scoped per engagement"],
   },
   {
     title: "Monitoring",

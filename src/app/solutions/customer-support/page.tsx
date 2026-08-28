@@ -624,42 +624,39 @@ const integrationDetails = [
   },
 ];
 
-// Case Studies Data
+// Case Studies Data — references available on request under NDA
 const caseStudies = [
   {
-    company: "TechFlow SaaS",
+    company: "B2B SaaS client",
     industry: "B2B SaaS",
-    challenge: "TechFlow was struggling with a 40% increase in support tickets while maintaining response time SLAs. Their team was overwhelmed and customer satisfaction was dropping.",
-    solution: "Implemented Kro routing, automated responsesvos AI-powered ticket for common issues, and sentiment analysis for priority detection. The integration with their existing Zendesk setup took less than a week.",
+    challenge: "Project references and detailed case studies are available on request under NDA.",
+    solution: "Engagement specifics shared after a discovery conversation.",
     results: [
-      "65% reduction in average response time",
-      "70% of tickets resolved automatically",
-      "CSAT score increased from 4.1 to 4.8",
-      "Support team capacity increased by 3x",
+      "Project references available on request",
+      "Engagement scoped per client",
+      "Direct communication with the team",
     ],
   },
   {
-    company: "GlobalServe",
+    company: "E-commerce client",
     industry: "E-commerce",
-    challenge: "GlobalServe faced challenges with multi-language support across 12 countries. They needed a solution that could handle diverse customer bases while maintaining consistent service quality.",
-    solution: "Deployed Krovos with multi-language NLP capabilities, integrated with their Salesforce CRM, and implemented AI-powered live chat with automated responses in 8 languages.",
+    challenge: "Project references and detailed case studies are available on request under NDA.",
+    solution: "Engagement specifics shared after a discovery conversation.",
     results: [
-      "Support coverage in 12 languages",
-      "45% reduction in support costs",
-      "Customer satisfaction up 35%",
-      "First contact resolution at 78%",
+      "Project references available on request",
+      "Engagement scoped per client",
+      "Direct communication with the team",
     ],
   },
   {
-    company: "CloudScale Inc",
+    company: "Cloud infrastructure client",
     industry: "Cloud Infrastructure",
-    challenge: "CloudScale needed enterprise-grade support automation that could handle critical technical issues from enterprise customers while maintaining strict SLA requirements.",
-    solution: "Implemented Krovos with priority detection, SLA monitoring, VIP customer routing, and deep integration with their internal systems. Added custom escalation workflows for critical issues.",
+    challenge: "Project references and detailed case studies are available on request under NDA.",
+    solution: "Engagement specifics shared after a discovery conversation.",
     results: [
-      "99.9% SLA compliance achieved",
-      "Critical issues resolved 2x faster",
-      "Enterprise NPS up 28 points",
-      "Support ticket backlog eliminated",
+      "Project references available on request",
+      "Engagement scoped per client",
+      "Direct communication with the team",
     ],
   },
 ];
@@ -667,36 +664,36 @@ const caseStudies = [
 // FAQ Data
 const faqData = [
   {
-    question: "How does AI ticket routing work?",
-    answer: "Our AI analyzes incoming tickets using natural language processing to understand the content, context, and intent. It then classifies the ticket into appropriate categories and routes it to the most suitable agent based on skills, availability, and workload. The system continuously learns from routing decisions to improve accuracy over time.",
+    question: "How does AI-assisted ticket routing work?",
+    answer: "We help you set up routing logic that fits your team. Whether you want simple keyword-based routing or a more nuanced approach using language models, the system is configured against your support categories and team structure during discovery.",
   },
   {
     question: "Can I integrate with my existing helpdesk software?",
-    answer: "Yes! Krovos integrates seamlessly with leading helpdesk platforms including Zendesk, Salesforce Service Cloud, Intercom, Freshdesk, HubSpot, and many others. Our integration setup typically takes less than a week with minimal configuration required. We also offer custom API integrations for proprietary systems.",
+    answer: "Yes. We integrate with common helpdesk platforms including Zendesk, Salesforce Service Cloud, Intercom, Freshdesk, and HubSpot. Specific integration scope is agreed as part of your statement of work.",
   },
   {
     question: "How accurate is the sentiment analysis?",
-    answer: "Our sentiment analysis model achieves 92% accuracy in detecting customer emotions (frustrated, satisfied, neutral). It analyzes multiple signals including word choice, punctuation patterns, capitalization, and context. The model is continuously trained on your specific industry terminology to improve accuracy for your use case.",
+    answer: "Sentiment analysis is configured against your actual customer conversations and reviewed with your team before going live. Accuracy is measured against your real data rather than a generic benchmark.",
   },
   {
     question: "What languages are supported?",
-    answer: "Krovos supports over 40 languages for both ticket processing and auto-responses, including English, Spanish, French, German, Italian, Portuguese, Chinese (Simplified and Traditional), Japanese, Korean, Arabic, and many more. Multi-language tickets are automatically detected and routed appropriately.",
+    answer: "Multi-language support is scoped per engagement. We work with the languages your customers actually use and configure the system accordingly.",
   },
   {
     question: "How does pricing work?",
-    answer: "Our pricing is based on the number of support tickets processed per month and the features you need. We offer three tiers: Starter (up to 1,000 tickets/month), Professional (up to 10,000 tickets/month), and Enterprise (unlimited tickets). All plans include a 14-day free trial with full access to all features.",
+    answer: "Engagements are priced up front against a defined scope. We agree the deliverables, then execute against that scope.",
   },
   {
     question: "Is my customer data secure?",
-    answer: "Absolutely. We take data security seriously and are SOC 2 Type II certified, GDPR compliant, and follow industry best practices. All data is encrypted in transit and at rest. We offer data residency options across US, EU, and APAC regions. Your customer data is never used to train models shared with other customers.",
+    answer: "We take data security seriously. We use encryption in transit and at rest, role-based access controls, and audit logging appropriate to the engagement. Where you have specific compliance or data residency requirements, we scope them into your statement of work.",
   },
   {
     question: "How long does implementation take?",
-    answer: "Most customers are up and running within 1-2 weeks. The basic setup with one channel integration can be completed in as little as 3-5 business days. More complex implementations with multiple channels, custom integrations, and extensive knowledge base configuration typically take 2-4 weeks.",
+    answer: "Implementation is scoped per engagement. After discovery we will agree on a phased rollout and timeline that fits the integrations and workflows your team needs.",
   },
   {
     question: "What happens to unresolved tickets?",
-    answer: "Krovos automatically escalates tickets that cannot be resolved through automation to your human agents. The system provides the agent with full context including customer history, previous interactions, and suggested responses. Tickets can also be configured to auto-escalate after a certain time period or based on specific triggers like negative sentiment detection.",
+    answer: "We design escalation paths with you during discovery, including what should be automated, what needs human review, and how context is passed to your team.",
   },
 ];
 
@@ -742,34 +739,34 @@ const integrations = [
   { name: "Twilio", color: "bg-red-600" },
 ];
 
-// Testimonials
+// Testimonials — references available on request under NDA
 const testimonials = [
   {
-    quote: "Krovos transformed our support operations. Our response time dropped by 65% and customer satisfaction increased to 4.8 stars. The AI routing is incredibly accurate.",
-    author: "Jessica Park",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "Head of Customer Success",
-    company: "TechFlow SaaS",
+    company: "Available on request",
   },
   {
-    quote: "We automated 70% of incoming tickets with intelligent auto-responses. Our support team now focuses on complex issues that truly need human expertise.",
-    author: "David Kim",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "Support Director",
-    company: "CloudScale Inc",
+    company: "Available on request",
   },
   {
-    quote: "The sentiment analysis feature is a game-changer. We can now identify frustrated customers instantly and prioritize their issues before they escalate.",
-    author: "Amanda Chen",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "VP of Operations",
-    company: "GlobalServe",
+    company: "Available on request",
   },
 ];
 
-// ROI Metrics
+// ROI Metrics — projections are scoped per engagement, not blanket claims
 const roiMetrics = [
-  { label: "Average ROI", value: "340%", description: "Return on investment within first year" },
-  { label: "Payback Period", value: "4.2", description: "Months to recover initial investment" },
-  { label: "Cost per Ticket", value: "-67%", description: "Reduction in support costs" },
-  { label: "Agent Productivity", value: "+45%", description: "Increase in tickets handled per agent" },
+  { label: "ROI", value: "Project", description: "Modelled per engagement during the strategy phase" },
+  { label: "Payback", value: "Engagement", description: "Agreed as part of your statement of work" },
+  { label: "Cost", value: "Scoped", description: "Sized against your actual ticket volumes" },
+  { label: "Team", value: "Direct", description: "Updates from the team doing the work" },
 ];
 
 export default function CustomerSupportPage() {
@@ -1670,13 +1667,13 @@ export default function CustomerSupportPage() {
                 <svg className="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                SOC 2 Compliant
+                Privacy-aware handling
               </div>
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                GDPR Ready
+                Engagement-scoped compliance
               </div>
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">

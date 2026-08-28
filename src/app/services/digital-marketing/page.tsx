@@ -503,80 +503,71 @@ export default function DigitalMarketingPage() {
 
   const caseStudies = [
     {
-      title: "E-Commerce Growth Campaign",
-      company: "Premium Fashion Retailer",
-      metric: "347%",
-      metricLabel: "Revenue Growth",
-      description: "Implemented comprehensive digital strategy combining SEO, paid social, and email marketing, resulting in 347% revenue increase and 285% customer acquisition growth within 12 months.",
-      tags: ["E-Commerce", "SEO", "Paid Social", "Email"]
+      title: "Local Search Visibility",
+      company: "Regional services client",
+      metric: "Project",
+      metricLabel: "Type",
+      description:
+        "Local SEO and content work to improve visibility in the markets our client serves. Specific results are shared privately with prospects under NDA.",
+      tags: ["Local SEO", "Content"],
     },
     {
-      title: "B2B Lead Generation",
-      company: "Enterprise Software Company",
-      metric: "412%",
-      metricLabel: "More Qualified Leads",
-      description: "Developed multi-channel lead generation strategy with content marketing, LinkedIn advertising, and marketing automation that generated 412% more qualified leads at 35% lower cost.",
-      tags: ["B2B", "LinkedIn", "Content", "Automation"]
+      title: "Lead Generation Refresh",
+      company: "B2B services client",
+      metric: "Project",
+      metricLabel: "Type",
+      description:
+        "Refreshed landing pages and lead forms to improve the quality of inbound enquiries. Specific results are shared privately with prospects under NDA.",
+      tags: ["B2B", "Content", "Web"],
     },
     {
-      title: "Local Market Dominance",
-      company: "Regional Healthcare System",
-      metric: "89%",
-      metricLabel: "Search Visibility",
-      description: "Local SEO and content strategy achieved 89% visibility in local search results, increasing patient appointments by 156% year-over-year with 40% reduction in acquisition cost.",
-      tags: ["Healthcare", "Local SEO", "Content"]
+      title: "Brand Site Rebuild",
+      company: "Established product brand",
+      metric: "Project",
+      metricLabel: "Type",
+      description:
+        "Rebuilt the public site and content structure to better reflect the brand. Specific results are shared privately with prospects under NDA.",
+      tags: ["Branding", "Content", "Web"],
     },
     {
-      title: "Mobile App Launch",
-      company: "FinTech Startup",
-      metric: "2.3M",
-      metricLabel: "App Downloads",
-      description: "Launch strategy combining ASO, influencer partnerships, and targeted paid campaigns drove 2.3 million downloads in the first 6 months with 28% organic conversion rate.",
-      tags: ["FinTech", "Mobile", "ASO", "Influencer"]
+      title: "Restaurant Online Ordering",
+      company: "Local restaurant group",
+      metric: "Project",
+      metricLabel: "Type",
+      description:
+        "Set up online ordering and a simple loyalty mechanic. Specific results are shared privately with prospects under NDA.",
+      tags: ["Food & Beverage", "Mobile", "Web"],
     },
-    {
-      title: "Brand Transformation",
-      company: "Legacy Manufacturing Brand",
-      metric: "524%",
-      metricLabel: "Brand Awareness",
-      description: "Complete digital transformation including website redesign, content strategy, and social media presence increased brand awareness by 524% and web traffic by 312%.",
-      tags: ["Manufacturing", "Branding", "Content"]
-    },
-    {
-      title: "Restaurant Chain Expansion",
-      company: "National Fast-Casual Chain",
-      metric: "68%",
-      metricLabel: "Online Orders",
-      description: "Implemented digital ordering, loyalty program, and localized marketing campaigns that increased online orders by 68% and customer retention by 45%.",
-      tags: ["Food & Beverage", "Mobile", "Loyalty"]
-    }
   ];
 
   const testimonials = [
     {
-      quote: "Krovos transformed our digital presence completely. Our organic traffic increased by 280% within 6 months, and the quality of leads has never been higher. The team's data-driven approach is exactly what we needed.",
-      author: "Sarah Mitchell",
-      role: "Chief Marketing Officer",
-      company: "TechFlow Solutions"
+      quote:
+        "The team at Krovos was easy to work with — direct communication, fixed-price scope, and a working site at the end of it.",
+      author: "Project reference",
+      role: "Operations Lead",
+      company: "Available on request",
     },
     {
-      quote: "Working with Krovos was a game-changer for our e-commerce business. They didn't just increase our traffic - they fundamentally improved our conversion rate and customer lifetime value. The ROI speaks for itself.",
-      author: "Michael Chen",
-      role: "Founder & CEO",
-      company: "LuxeHome Interiors"
+      quote:
+        "We appreciated having senior people on the work, not junior staff handed off after the sale.",
+      author: "Project reference",
+      role: "Founder",
+      company: "Available on request",
     },
     {
-      quote: "The team's expertise in B2B lead generation is unmatched. They helped us scale our enterprise sales pipeline while reducing our cost per lead by 35%. Their strategic approach has been invaluable to our growth.",
-      author: "Jennifer Rodriguez",
-      role: "VP of Sales",
-      company: "CloudSync Analytics"
-    }
+      quote:
+        "Clear scope, sensible pricing, and the project landed on time. We&apos;d work with them again.",
+      author: "Project reference",
+      role: "Marketing Lead",
+      company: "Available on request",
+    },
   ];
 
   const faqItems = [
     {
       question: "What makes Krovos digital marketing different from other agencies?",
-      answer: "At Krovos, we combine data-driven strategies with creative excellence. Our approach focuses on measurable outcomes rather than vanity metrics. We provide transparent reporting, dedicated account teams, and custom strategies tailored to your specific business goals. Our team includes certified experts across all major platforms with deep industry experience. We don't believe in one-size-fits-all solutions - every strategy is crafted to address your unique challenges and opportunities."
+      answer: "At Krovos, we combine data-driven strategies with creative execution. Our approach focuses on measurable outcomes rather than vanity metrics. We provide transparent reporting, dedicated account leads, and strategies tailored to your specific business goals. Every strategy is crafted to address your unique challenges and opportunities — we don't do one-size-fits-all."
     },
     {
       question: "How long does it take to see results from digital marketing?",
@@ -592,7 +583,7 @@ export default function DigitalMarketingPage() {
     },
     {
       question: "What industries do you specialize in?",
-      answer: "We have extensive experience across e-commerce, B2B technology, healthcare, financial services, real estate, professional services, and more. Our team includes vertical specialists who understand industry-specific challenges, regulations, and best practices for maximum impact."
+      answer: "We work across e-commerce, B2B technology, healthcare, financial services, real estate, professional services, and more. Each project is scoped against the channels and audiences that matter for your business. Industry-specific considerations (such as regulated verticals) are worked through during discovery."
     },
     {
       question: "How much should I budget for digital marketing?",

@@ -484,79 +484,79 @@ const integrations = [
   { name: "ServiceNow", color: "bg-blue-500", description: "IT Service Mgmt" },
 ];
 
-// Case studies data
+// Case studies data — references available on request under NDA
 const caseStudies = [
   {
-    company: "TechCorp Global",
+    company: "Technology client",
     industry: "Technology",
-    employees: "5,000+",
-    challenge: "Manual onboarding taking 3 weeks per new hire",
-    solution: "Implemented automated onboarding workflows",
+    employees: "Project",
+    challenge: "Project references and detailed case studies are available on request under NDA.",
+    solution: "Engagement specifics shared after a discovery conversation.",
     results: [
-      "75% reduction in onboarding time",
-      "95% new hire satisfaction rate",
-      "40 hours saved per week by HR team",
+      "Project references available on request",
+      "Engagement scoped per client",
+      "Direct communication with the team",
     ],
   },
   {
-    company: "Healthcare Plus",
+    company: "Healthcare client",
     industry: "Healthcare",
-    employees: "10,000+",
-    challenge: "Complex multi-state payroll compliance",
-    solution: "Unified payroll with automated tax processing",
+    employees: "Project",
+    challenge: "Project references and detailed case studies are available on request under NDA.",
+    solution: "Engagement specifics shared after a discovery conversation.",
     results: [
-      "100% compliance across 25 states",
-      "Zero payroll errors in 2 years",
-      "$1.2M annual cost savings",
+      "Project references available on request",
+      "Engagement scoped per client",
+      "Direct communication with the team",
     ],
   },
   {
-    company: "RetailMax",
+    company: "Retail client",
     industry: "Retail",
-    employees: "25,000+",
-    challenge: "High turnover and inconsistent onboarding",
-    solution: "Standardized digital onboarding platform",
+    employees: "Project",
+    challenge: "Project references and detailed case studies are available on request under NDA.",
+    solution: "Engagement specifics shared after a discovery conversation.",
     results: [
-      "50% reduction in turnover",
-      "60% faster time-to-productivity",
-      "92% employee satisfaction",
+      "Project references available on request",
+      "Engagement scoped per client",
+      "Direct communication with the team",
     ],
   },
 ];
 
-// ROI metrics data
+// ROI metrics data — projections are scoped per engagement, not blanket claims
 const roiMetrics = [
-  { value: 847, suffix: "K", label: "Hours Saved Annually", description: "Average for mid-size companies" },
-  { value: 2.3, suffix: "M", label: "Reduced Turnover Costs", description: "Through better onboarding" },
-  { value: 99.9, suffix: "%", label: "Compliance Rate", description: "Automated tracking" },
-  { value: 4.8, suffix: "/5", label: "Employee Satisfaction", description: "With self-service portal" },
+  { value: "Project", suffix: "", label: "Hours Saved", description: "Tracked against your team&apos;s current baseline" },
+  { value: "Engagement", suffix: "", label: "Turnover Impact", description: "Modelled against your actual turnover data" },
+  { value: "Scoped", suffix: "", label: "Compliance", description: "Sized to the frameworks that apply to you" },
+  { value: "Direct", suffix: "", label: "Communication", description: "Updates from the team doing the work" },
 ];
 
 // FAQ data
 const faqItems = [
   {
     question: "How long does implementation take?",
-    answer: "Most implementations are completed within 4-8 weeks depending on your organization's size and complexity. We provide a dedicated implementation team to ensure a smooth transition, including data migration, system configuration, and user training.",
+    answer: "Implementation timelines depend on the scope. After discovery we agree a phased rollout that lands the highest-value work first. We share realistic timelines as part of your statement of work rather than blanket estimates.",
   },
   {
     question: "Is the platform secure and compliant?",
-    answer: "Absolutely. We are SOC 2 Type II certified, GDPR compliant, and maintain 99.9% uptime SLA. All data is encrypted at rest and in transit. We also support HIPAA compliance for healthcare organizations.",
+    answer: "We scope security and compliance to what your project needs. We use encryption in transit and at rest, role-based access controls, and audit logging. Where you have specific framework requirements like SOC 2, GDPR, or HIPAA, we work with you on the controls and documentation rather than making blanket claims.",
   },
   {
     question: "Can we integrate with our existing HR systems?",
-    answer: "Yes, we offer pre-built integrations with 50+ leading HR platforms including Workday, ADP, BambooHR, and more. Our open API allows for custom integrations as needed.",
+    answer: "We integrate with common HR platforms including Workday, ADP, and BambooHR. Specific integration scope is agreed as part of your statement of work.",
   },
   {
     question: "What kind of support do you offer?",
-    answer: "We provide 24/7 customer support with dedicated account managers, comprehensive documentation, video tutorials, and regular training sessions. Enterprise customers also have access to priority support and custom SLAs.",
+    answer: "Support is scoped per engagement, with a named point of contact and agreed response windows. We&apos;re happy to discuss support terms during discovery.",
   },
   {
     question: "Is there a free trial available?",
-    answer: "Yes, we offer a 14-day free trial with full access to all features. No credit card required to start. We also provide complimentary demos and pilot programs for enterprise customers.",
+    answer: "We&apos;re happy to walk through relevant project examples on a call. Discovery conversations are how most engagements start.",
   },
   {
     question: "How does pricing work?",
-    answer: "Our pricing is per-employee-per-month (PEPM) and scales based on your organization size and selected features. We offer flexible plans starting at $8 PEPM with volume discounts for larger organizations.",
+    answer: "Engagements are priced up front against a defined scope. We agree the deliverables, then execute against that scope.",
   },
 ];
 
@@ -588,28 +588,28 @@ const processSteps = [
   },
 ];
 
-// Testimonials
+// Testimonials — references available on request under NDA
 const testimonials = [
   {
-    quote: "Krovos transformed our onboarding process. New hires are productive in half the time, and our HR team saved 30 hours per week on administrative tasks. The ROI has exceeded our expectations.",
-    author: "Jessica Williams",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "Chief People Officer",
-    company: "TechStart Innovations",
-    employees: "2,500 employees",
+    company: "Available on request",
+    employees: "",
   },
   {
-    quote: "The compliance automation is a game-changer. We passed our latest audit with zero findings, and tracking training compliance went from manual spreadsheets to fully automated. Highly recommended.",
-    author: "Robert Martinez",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "VP of HR Operations",
-    company: "GlobalTech Solutions",
-    employees: "8,000 employees",
+    company: "Available on request",
+    employees: "",
   },
   {
-    quote: "Our employees love the self-service portal. HR inquiries dropped by 60%, and our team can finally focus on strategic talent initiatives instead of answering routine questions.",
-    author: "Amanda Thompson",
+    quote: "Project references and detailed case studies are available on request under NDA.",
+    author: "Project reference",
     role: "HR Director",
-    company: "FinanceFirst Corp",
-    employees: "5,000 employees",
+    company: "Available on request",
+    employees: "",
   },
 ];
 
@@ -740,7 +740,7 @@ export default function HRPage() {
                   <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  SOC 2 Certified
+                  Privacy-aware handling
                 </div>
               </motion.div>
             </motion.div>
@@ -1290,10 +1290,10 @@ export default function HRPage() {
             viewport={{ once: true }}
             className="mt-16"
           >
-            <p className="text-center text-slate-500 mb-8">Trusted by 500+ companies worldwide</p>
+            <p className="text-center text-slate-500 mb-8">Engagements scoped per project</p>
             <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
-              {["Fortune 500", "Tech 50", "Forbes Cloud 100", "G2 Leader", "Capterra Top HR"].map((company, i) => (
-                <div key={i} className="text-xl font-bold text-slate-400">{company}</div>
+              {["Direct", "Fixed-Price", "Surrey, BC", "Engagement-Scoped"].map((label, i) => (
+                <div key={i} className="text-xl font-bold text-slate-400">{label}</div>
               ))}
             </div>
           </motion.div>
@@ -1416,13 +1416,13 @@ export default function HRPage() {
               <svg className="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              SOC 2 Compliant
-            </div>
-            <div className="flex items-center gap-2">
+              Privacy-aware handling
+              </div>
+              <div className="flex items-center gap-2">
               <svg className="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              GDPR Ready
+              Engagement-scoped compliance
             </div>
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">

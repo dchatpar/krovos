@@ -488,7 +488,7 @@ export default function LogisticsPage() {
   const faqItems = [
     {
       question: "What makes Krovos logistics technology different from other solutions?",
-      answer: "Krovos combines deep industry expertise with cutting-edge technology to deliver comprehensive supply chain solutions. Our platform is built on decades of logistics experience, understanding the unique challenges of fleet management, warehouse operations, and route optimization. Unlike generic solutions, we provide tailored implementations that address your specific operational requirements while integrating seamlessly with your existing systems. Our AI-powered algorithms continuously learn and optimize based on your data, delivering ever-improving efficiency gains over time."
+      answer: "We work closely with you on the operational context before recommending tooling. That includes understanding your fleet and warehouse workflows, route constraints, and which systems you already use. We will scope an implementation against your actual operations rather than running the same playbook for every client."
     },
     {
       question: "How long does it take to implement your logistics technology?",
@@ -500,11 +500,11 @@ export default function LogisticsPage() {
     },
     {
       question: "Can your systems integrate with our existing ERP and WMS?",
-      answer: "Yes, our logistics technology integrates seamlessly with major ERP platforms (SAP, Oracle, Microsoft Dynamics), WMS solutions, TMS systems, and custom applications. We use API-first architecture and support both cloud and on-premises deployments. Our integration team ensures data flows smoothly across your entire technology ecosystem. We offer pre-built connectors for over 200+ logistics and business systems."
+      answer: "Yes. Our logistics technology integrates with the ERP, WMS, TMS, and other systems you already use, with API-first architecture and support for both cloud and on-premises deployments. Specific integration scope is agreed as part of your statement of work."
     },
     {
       question: "How do you ensure data security and compliance?",
-      answer: "Security is foundational to our platform. We implement enterprise-grade security measures including end-to-end encryption, role-based access controls, and comprehensive audit logging. Our solutions comply with SOC 2, ISO 27001, GDPR, and other relevant regulations. We also provide on-premises deployment options for organizations with strict data sovereignty requirements. Our security team continuously monitors for threats and updates our defenses accordingly."
+      answer: "Security is built into how we work. We use encryption in transit, role-based access controls, and audit logging appropriate to the engagement. We work with you to understand which privacy and compliance frameworks apply (PIPEDA, provincial privacy, industry-specific rules) and design accordingly. We also support on-premises deployment for organizations with strict data sovereignty requirements."
     },
     {
       question: "What ongoing support and maintenance do you provide?",

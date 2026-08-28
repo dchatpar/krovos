@@ -465,12 +465,12 @@ export default function SecurityOpsPage() {
     },
     {
       title: "Compliance Reporting",
-      description: "Generate comprehensive compliance reports for SOC 2, HIPAA, PCI-DSS, and other regulatory frameworks.",
+      description: "Generate compliance reports for frameworks relevant to your business — scoped per engagement rather than blanket claims.",
       features: [
-        "SOC 2 Type II automation",
-        "HIPAA compliance reports",
-        "PCI-DSS audit preparation",
-        "Continuous compliance monitoring",
+        "Privacy-aware handling",
+        "Framework-specific reports",
+        "Audit preparation support",
+        "Continuous monitoring",
       ],
       index: 3,
     },
@@ -512,112 +512,115 @@ export default function SecurityOpsPage() {
 
   const testimonials = [
     {
-      quote: "Krovos reduced our alert fatigue by 70%. The AI triage agents now handle 90% of our initial investigation, letting our analysts focus on real threats.",
-      author: "David Martinez",
-      role: "CISO",
-      company: "HealthFirst Systems",
+      quote:
+        "Project references are available on request. We&apos;re happy to share relevant case studies under NDA once we understand your situation.",
+      author: "Project reference",
+      role: "Security Lead",
+      company: "Available on request",
     },
     {
-      quote: "Our mean time to respond dropped from 4 hours to under 5 minutes. The automated containment saved us from a potential ransomware outbreak.",
-      author: "Jennifer Walsh",
-      role: "Director of Security Operations",
-      company: "FinTech Global",
+      quote:
+        "Project references are available on request. We&apos;re happy to share relevant case studies under NDA once we understand your situation.",
+      author: "Project reference",
+      role: "Director, Security Operations",
+      company: "Available on request",
     },
     {
-      quote: "SOC 2 compliance reporting that used to take weeks now completes automatically. The continuous monitoring gives us confidence 24/7.",
-      author: "Robert Kim",
+      quote:
+        "Project references are available on request. We&apos;re happy to share relevant case studies under NDA once we understand your situation.",
+      author: "Project reference",
       role: "Security Architect",
-      company: "CloudScale Enterprise",
+      company: "Available on request",
     },
   ];
 
   const useCases = [
     {
-      title: "Enterprise SOC",
-      description: "Scale your security operations center with AI agents that work 24/7, handling the volume of alerts that would require a team of dozens.",
+      title: "Security Operations Support",
+      description: "We help security teams with automation that fits how they actually work, handling alert volume that would otherwise slow investigations.",
       icon: "M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z",
       metrics: [
-        { value: "85%", label: "Alert Reduction" },
-        { value: "24/7", label: "Coverage" },
+        { value: "Project", label: "Scoped Per Client" },
+        { value: "Direct", label: "Communication" },
       ],
     },
     {
-      title: "Managed Security",
-      description: " MSPs and MSSPs can deliver enterprise-grade security services to their clients with automated detection and response capabilities.",
+      title: "Managed Service Providers",
+      description: "MSPs and MSSPs can build automation into the services they deliver, scoped per client engagement rather than blanket claims.",
       icon: "M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9",
       metrics: [
-        { value: "60%", label: "Cost Reduction" },
-        { value: "3x", label: "Client Growth" },
+        { value: "Project", label: "Scoped Per Client" },
+        { value: "Fixed", label: "Pricing" },
       ],
     },
     {
-      title: "Cloud Security",
-      description: "Protect multi-cloud environments with AI agents that understand the unique threats facing AWS, Azure, and GCP workloads.",
+      title: "Cloud Security Posture",
+      description: "Work with the cloud platforms your team uses to improve detection and response, scoped to your actual environment.",
       icon: "M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z",
       metrics: [
-        { value: "95%", label: "Coverage" },
-        { value: "40%", label: "Faster MTTR" },
+        { value: "Project", label: "Scoped Per Client" },
+        { value: "Engagement", label: "Based Timelines" },
       ],
     },
     {
-      title: "Threat Hunting",
-      description: "Proactively search for hidden threats using AI-powered threat hunting that analyzes billions of events to identify sophisticated attacks.",
+      title: "Threat Hunting Workflows",
+      description: "Build threat hunting workflows that fit the way your team actually investigates, rather than a one-size-fits-all approach.",
       icon: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z",
       metrics: [
-        { value: "2.5x", label: "More Findings" },
-        { value: "70%", label: "Time Saved" },
+        { value: "Project", label: "Scoped Per Client" },
+        { value: "Direct", label: "Communication" },
       ],
     },
   ];
 
   const faqs = [
     {
-      question: "How does AI-powered threat detection work?",
-      answer: "Our AI agents analyze billions of security events using machine learning models trained on billions of threat samples. They identify patterns, anomalies, and indicators of compromise that traditional rule-based systems miss. The system continuously learns from your environment, reducing false positives while catching sophisticated attacks that would otherwise go undetected.",
+      question: "How does AI-assisted threat detection work?",
+      answer: "We help your team use AI tools to analyze security events against patterns relevant to your environment. Specific detection logic is scoped with you during discovery, so the system focuses on the threats your business actually faces rather than running the same playbook for every client."
     },
     {
       question: "Can Krovos integrate with our existing security tools?",
-      answer: "Yes, Krovos integrates with over 200 security tools including all major SIEMs (Splunk, Microsoft Sentinel, IBM QRadar), EDRs (CrowdStrike, SentinelOne, Microsoft Defender), firewalls (Palo Alto Networks, Fortinet), and cloud security platforms (AWS Security Hub, Azure Security Center, GCP Security Command Center). Our pre-built connectors enable deployment in hours, not weeks.",
+      answer: "Yes. We work with the SIEM, EDR, firewall, and cloud security tools you already use — including common options like Splunk, Microsoft Sentinel, CrowdStrike, and Palo Alto Networks. Specific connectors and integrations are scoped as part of your statement of work."
     },
     {
       question: "What happens during an automated incident response?",
-      answer: "When a threat is detected, Krovos automatically executes a predefined response playbook. This can include isolating the affected endpoint, blocking malicious IP addresses, killing suspicious processes, revoking user credentials, and collecting forensic data. Every action is logged for compliance and audit purposes. You can customize playbooks or use our templates based on industry best practices.",
+      answer: "We design response playbooks with you during the engagement, defining what can be automated, what needs human approval, and what should remain manual. Every automated action is logged for compliance and audit purposes."
     },
     {
       question: "How does Krovos help with compliance?",
-      answer: "Krovos provides continuous compliance monitoring for SOC 2, HIPAA, PCI-DSS, ISO 27001, and GDPR. The platform automatically collects evidence, generates audit reports, and alerts on compliance drift. Our compliance dashboard gives you real-time visibility into your security posture across all frameworks, reducing audit preparation time by up to 80%.",
+      answer: "We scope compliance work to the frameworks that actually apply to your business. Where you have a SOC 2, HIPAA, PCI-DSS, ISO 27001, or GDPR requirement, we&apos;ll work with you on the controls, evidence collection, and reporting — rather than claiming blanket certifications."
     },
     {
       question: "What is the deployment process?",
-      answer: "Most customers are up and running within 24 hours. The deployment involves deploying lightweight agents to your endpoints, configuring API integrations with your security tools, and customizing detection rules to your environment. Our onboarding team guides you through each step, and our self-service portal makes ongoing configuration intuitive.",
+      answer: "Deployment is scoped per engagement. After discovery we will agree on the integration points, deployment approach, and timeline, and our team will work with yours to roll it out."
     },
     {
       question: "How is pricing structured?",
-      answer: "Krovos pricing is based on the number of endpoints protected and the level of functionality required. We offer three tiers: Core (threat detection), Pro (detection + automated response), and Enterprise (full platform with custom integrations and dedicated support). All plans include 24/7 support and regular feature updates.",
+      answer: "Engagements are priced based on the project scope rather than per-endpoint or per-seat. We agree the deliverables and price up front, then execute against that scope."
     },
   ];
 
   const caseStudies = [
     {
-      company: "Global Finance Corp",
+      company: "Financial services client",
       industry: "Financial Services",
-      challenge: "Processing over 100,000 security alerts daily with a team of 12 analysts, resulting in 40% of threats going undetected for days.",
-      solution: "Deployed Krovos AI agents for automated triage and response, integrating with existing CrowdStrike and Splunk infrastructure.",
-      result: "Reduced alerts requiring human review by 85%, achieved same-day threat detection, and saved $2.4M annually in analyst time.",
+      challenge: "Project references and detailed case studies are available on request under NDA.",
+      solution: "Engagement specifics shared after a discovery conversation.",
+      result: "Project references and detailed case studies are available on request under NDA.",
     },
     {
-      company: "MedTech Solutions",
+      company: "Healthcare client",
       industry: "Healthcare",
-      challenge: "Struggling to maintain HIPAA compliance while expanding telehealth services, with manual audit preparation taking 6 weeks.",
-      solution: "Implemented continuous compliance monitoring with automated evidence collection and real-time HIPAA gap detection.",
-      result: "Cut compliance audit prep from 6 weeks to 2 days, achieved zero findings in annual audits, and reduced compliance costs by 60%.",
+      challenge: "Project references and detailed case studies are available on request under NDA.",
+      solution: "Engagement specifics shared after a discovery conversation.",
+      result: "Project references and detailed case studies are available on request under NDA.",
     },
     {
-      company: "RetailMax",
+      company: "E-commerce client",
       industry: "E-Commerce",
-      challenge: "Experiencing frequent DDoS attacks and payment fraud during peak shopping seasons, with incident response times averaging 4 hours.",
-      solution: "Deployed Krovos for real-time threat detection across cloud infrastructure, with automated DDoS mitigation and fraud prevention.",
-      result: "Blocked 50M+ attack attempts in first year, reduced average response time to 3 minutes, and prevented $12M in potential fraud losses.",
+      challenge: "Project references and detailed case studies are available on request under NDA.",
+      solution: "Engagement specifics shared after a discovery conversation.",
+      result: "Project references and detailed case studies are available on request under NDA.",
     },
   ];
 
@@ -1186,37 +1189,38 @@ export default function SecurityOpsPage() {
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900">
-              Compliance Made Simple
+              Compliance Support, Scoped To You
             </h2>
             <p className="mt-4 text-lg text-slate-600">
-              Automated compliance monitoring and reporting for major frameworks
+              We work with you on the frameworks relevant to your project rather
+              than making blanket claims.
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <ComplianceBadge
-              name="SOC 2 Type II"
-              description="Continuous controls monitoring with automated evidence collection and audit preparation"
+              name="Privacy-Aware Handling"
+              description="We design with PIPEDA, provincial privacy rules, and applicable frameworks in mind."
               icon="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
             />
             <ComplianceBadge
-              name="ISO 27001"
-              description="Information security management system compliance with risk assessment automation"
+              name="Framework-Specific Reports"
+              description="Where you need SOC 2, ISO 27001, HIPAA, PCI-DSS, or GDPR work, we scope it explicitly per engagement."
               icon="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
             />
             <ComplianceBadge
-              name="HIPAA"
-              description="Healthcare data protection with PHI monitoring and breach notification automation"
+              name="Continuous Monitoring"
+              description="Ongoing checks against the controls you have agreed with your auditor or assessor."
               icon="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
             />
             <ComplianceBadge
-              name="PCI-DSS"
-              description="Payment card industry data security standard compliance for retail and e-commerce"
+              name="Audit Preparation"
+              description="Help with evidence collection and audit prep against the framework you actually need."
               icon="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
             />
             <ComplianceBadge
-              name="GDPR"
-              description="General Data Protection Regulation compliance with data subject request automation"
+              name="Policy & Documentation"
+              description="Help writing and maintaining the policies, controls, and evidence your project needs."
               icon="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
             />
             <ComplianceBadge
@@ -1477,19 +1481,19 @@ export default function SecurityOpsPage() {
                 <svg className="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                SOC 2 Compliant
+                Privacy-aware handling
               </div>
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                HIPAA Ready
+                Engagement-scoped compliance
               </div>
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                ISO 27001 Certified
+                Direct communication
               </div>
             </div>
           </motion.div>

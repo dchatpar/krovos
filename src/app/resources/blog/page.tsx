@@ -15,10 +15,10 @@ const posts = [
   },
   {
     date: "February 15, 2026",
-    category: "Case Studies",
-    title: "How a Fortune 500 Bank Reduced Processing Time by 75%",
-    excerpt: "A deep dive into how we helped a major financial institution automate their loan approval process.",
-    readTime: "12 min read",
+    category: "AI & Automation",
+    title: "Practical Patterns for AI-Assisted Document Review",
+    excerpt: "Notes from a recent engagement where we helped a services team speed up their document review process with AI assistance and human-in-the-loop checks.",
+    readTime: "8 min read",
   },
   {
     date: "February 10, 2026",
@@ -53,7 +53,6 @@ const posts = [
 const categories = [
   "All Posts",
   "AI & Automation",
-  "Case Studies",
   "Product",
   "Tutorial",
   "Industry",

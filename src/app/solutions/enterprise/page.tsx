@@ -1,55 +1,55 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Enterprise Solutions - Krovos",
-  description: "Comprehensive enterprise automation solutions designed for large-scale organizations with advanced security and compliance requirements.",
+  title: "Enterprise - Krovos",
+  description: "Larger engagements from Krovos: scoped per project, with the security controls your enterprise needs.",
 };
 
 const features = [
   {
-    title: "Scalable Architecture",
-    description: "Built for enterprise scale with support for 10,000+ concurrent users and millions of automated workflows.",
+    title: "Project-Based Engagement",
+    description: "Larger engagements are scoped as fixed-price projects with clear deliverables, milestones, and acceptance criteria.",
     icon: "M13 10V3L4 14h7v7l9-11h-7z",
   },
   {
-    title: "Advanced Security",
-    description: "SOC 2 Type II certified with SSO, RBAC, audit logs, and enterprise-grade data encryption.",
+    title: "Scoped Security Controls",
+    description: "Security controls appropriate to the engagement, including SSO, role-based access, audit logging, and encryption in transit and at rest.",
     icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
   },
   {
-    title: "Custom Integrations",
-    description: "Connect with 500+ enterprise applications including SAP, Oracle, Salesforce, and legacy systems.",
+    title: "Integration Work",
+    description: "We integrate with the systems you actually use, including common ERPs, CRMs, and identity platforms. Custom integration work is scoped as part of your project.",
     icon: "M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z",
   },
   {
-    title: "Dedicated Support",
-    description: "24/7 enterprise support with dedicated account managers and SLA guarantees.",
+    title: "Named Team",
+    description: "You get a named point of contact and a small senior team on the work, rather than a hand-off to junior staff after the sale.",
     icon: "M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z",
   },
 ];
 
 const stats = [
-  { value: "500+", label: "Enterprise Clients" },
-  { value: "99.99%", label: "Uptime SLA" },
-  { value: "50M+", label: "Workflows/Month" },
-  { value: "24/7", label: "Support" },
+  { value: "Project", label: "Engagement Model" },
+  { value: "Direct", label: "Communication" },
+  { value: "Fixed", label: "Pricing" },
+  { value: "Senior", label: "Team on the Work" },
 ];
 
 const caseStudies = [
   {
-    company: "Fortune 500 Bank",
-    metric: "75%",
-    description: "Reduction in manual processing time",
+    company: "Available on request",
+    metric: "Project",
+    description: "Project references and detailed case studies are available on request under NDA.",
   },
   {
-    company: "Global Manufacturer",
-    metric: "$12M",
-    description: "Annual cost savings achieved",
+    company: "Available on request",
+    metric: "Project",
+    description: "Project references and detailed case studies are available on request under NDA.",
   },
   {
-    company: "Healthcare System",
-    metric: "90%",
-    description: "Faster compliance reporting",
+    company: "Available on request",
+    metric: "Project",
+    description: "Project references and detailed case studies are available on request under NDA.",
   },
 ];
 
@@ -66,18 +66,19 @@ export default function EnterprisePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
             <h1 className="text-4xl lg:text-6xl font-bold text-white">
-              Enterprise-Grade <span className="text-[#D4A017]">Automation</span>
+              Project-Based <span className="text-[#D4A017]">Engagements</span>
             </h1>
             <p className="mt-6 text-lg text-white/70 max-w-2xl">
-              Scale automation across your entire organization with Krovos Enterprise. 
-              Purpose-built for large organizations with advanced security, compliance, and integration requirements.
+              Larger projects delivered by Krovos are scoped up front, priced
+              up front, and run by a small senior team you can talk to
+              directly. We work out of Surrey, BC.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-3 bg-[#D4A017] text-[#0A1628] font-semibold rounded-lg hover:bg-[#D4A017]/90 transition-colors"
               >
-                Schedule Demo
+                Start a Conversation
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -86,7 +87,7 @@ export default function EnterprisePage() {
                 href="/resources/case-studies"
                 className="inline-flex items-center justify-center px-8 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
               >
-                View Case Studies
+                See Project Examples
               </Link>
             </div>
           </div>
@@ -111,14 +112,14 @@ export default function EnterprisePage() {
       <section className="py-20 bg-[#0A1628]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white">Built for Enterprise</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white">How Larger Projects Run</h2>
             <p className="mt-4 text-white/60 max-w-2xl mx-auto">
-              Everything large organizations need to automate at scale
+              The model we use for bigger engagements — scoped, fixed-price, direct.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-[#0D2040]/50 border border-[#D4A017]/10 rounded-2xl p-6 hover:border-[#D4A017]/30 transition-all"
               >
@@ -139,14 +140,14 @@ export default function EnterprisePage() {
       <section className="py-20 bg-[#0D2040]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white">Proven Results</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white">Project Examples</h2>
             <p className="mt-4 text-white/60 max-w-2xl mx-auto">
-              See how leading enterprises are transforming with Krovos
+              We share detailed project references under NDA once we understand your situation.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {caseStudies.map((study, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-[#0A1628] border border-[#D4A017]/10 rounded-2xl p-8"
               >
@@ -163,7 +164,7 @@ export default function EnterprisePage() {
               href="/resources/case-studies"
               className="inline-flex items-center text-[#D4A017] font-medium hover:underline"
             >
-              View all case studies
+              See project examples
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -178,11 +179,13 @@ export default function EnterprisePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-white">
-                Enterprise Security & Compliance
+                Security & Compliance
               </h2>
               <p className="mt-6 text-white/70 leading-relaxed">
-                Meet the most demanding security and compliance requirements with Krovos Enterprise. 
-                Our platform is designed from the ground up with security-first principles.
+                Where you need a specific framework (SOC 2, ISO 27001, HIPAA,
+                PCI-DSS, GDPR, or another), we scope the controls,
+                documentation, and reporting into your statement of work
+                rather than making blanket claims.
               </p>
               <div className="mt-8 grid grid-cols-2 gap-4">
                 <div className="flex items-center gap-3">
@@ -191,7 +194,7 @@ export default function EnterprisePage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-white/80 text-sm">SOC 2 Type II</span>
+                  <span className="text-white/80 text-sm">Privacy-aware handling</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center">
@@ -199,7 +202,7 @@ export default function EnterprisePage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-white/80 text-sm">GDPR Compliant</span>
+                  <span className="text-white/80 text-sm">PIPEDA-aware design</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center">
@@ -207,7 +210,7 @@ export default function EnterprisePage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-white/80 text-sm">HIPAA Ready</span>
+                  <span className="text-white/80 text-sm">Framework-specific scoping</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center">
@@ -215,7 +218,7 @@ export default function EnterprisePage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-white/80 text-sm">ISO 27001</span>
+                  <span className="text-white/80 text-sm">Engagement-level controls</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center">
@@ -238,7 +241,7 @@ export default function EnterprisePage() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-[#D4A017]/20 to-[#0E7C7B]/20 rounded-3xl blur-2xl" />
               <div className="relative bg-[#0D2040] border border-[#D4A017]/20 rounded-2xl p-8">
-                <h3 className="text-xl font-semibold text-white mb-6">Enterprise Features</h3>
+                <h3 className="text-xl font-semibold text-white mb-6">Project Features</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-[#D4A017] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -262,7 +265,7 @@ export default function EnterprisePage() {
                     <svg className="w-5 h-5 text-[#D4A017] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
-                    <span className="text-white/80">Advanced threat protection</span>
+                    <span className="text-white/80">Threat modelling for your environment</span>
                   </li>
                 </ul>
               </div>
@@ -275,17 +278,18 @@ export default function EnterprisePage() {
       <section className="py-20 bg-gradient-to-r from-[#D4A017] to-[#F0C040]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-[#0A1628]">
-            Ready to Scale Your Enterprise?
+            Ready to Scope a Project?
           </h2>
           <p className="mt-4 text-[#0A1628]/70 text-lg max-w-2xl mx-auto">
-            Join 500+ enterprise companies transforming their operations with Krovos automation.
+            Tell us what you are building. We will scope the work, price it up
+            front, and get to it from Surrey, BC.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-[#D4A017] bg-[#0A1628] rounded-full hover:bg-[#0A1628]/90 transition-colors"
             >
-              Schedule Enterprise Demo
+              Start a Conversation
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

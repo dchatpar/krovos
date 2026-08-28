@@ -155,49 +155,6 @@ const LargeCapabilityCard = ({
   );
 };
 
-// Case Study Card Component
-const CaseStudyCard = ({
-  title,
-  company,
-  metric,
-  metricLabel,
-  description,
-  delay = 0
-}: {
-  title: string;
-  company: string;
-  metric: string;
-  metricLabel: string;
-  description: string;
-  delay?: number;
-}) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 40 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-      transition={{ duration: 0.6, delay: delay * 0.15 }}
-      className="card-premium group overflow-hidden"
-    >
-      <div className="h-1 bg-gradient-to-r from-[#B91C1C] to-[#D4A017]" />
-      <div className="p-6 lg:p-8">
-        <div className="text-sm font-semibold text-[#D4A017] mb-2">{company}</div>
-        <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
-        <div className="flex items-baseline gap-2 mb-4">
-          <span className="text-4xl lg:text-5xl font-bold gradient-text">
-            {metric}
-          </span>
-          <span className="text-[var(--krovos-gray-400)]">{metricLabel}</span>
-        </div>
-        <p className="text-[var(--krovos-gray-400)] leading-relaxed">{description}</p>
-      </div>
-    </motion.div>
-  );
-};
-
 // Process Timeline Component
 const ProcessTimeline = () => {
   const steps = [
@@ -265,50 +222,6 @@ const ProcessTimeline = () => {
   );
 };
 
-// Testimonial Card Component
-const TestimonialCard = ({
-  quote,
-  author,
-  role,
-  company,
-  delay = 0
-}: {
-  quote: string;
-  author: string;
-  role: string;
-  company: string;
-  delay?: number;
-}) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
-      transition={{ duration: 0.6, delay: delay * 0.15 }}
-      className="glass-heavy rounded-3xl p-8 lg:p-12"
-    >
-      <svg className="w-12 h-12 text-[#D4A017] mb-6" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-      </svg>
-      <blockquote className="text-xl lg:text-2xl text-white leading-relaxed mb-8">
-        &ldquo;{quote}&rdquo;
-      </blockquote>
-      <div className="flex items-center gap-4">
-        <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#B91C1C] to-[#D4A017] flex items-center justify-center text-white font-bold text-xl">
-          {author.charAt(0)}
-        </div>
-        <div>
-          <div className="text-white font-semibold">{author}</div>
-          <div className="text-[var(--krovos-gray-400)]">{role}, {company}</div>
-        </div>
-      </div>
-    </motion.div>
-  );
-};
-
 // Trust Badge Component
 const TrustBadge = ({ name, icon }: { name: string; icon: string }) => {
   const ref = useRef(null);
@@ -339,8 +252,8 @@ const DifferentiatorCard = ({
   description,
   delay = 0
 }: {
-  stat: string;
-  statLabel: string;
+  stat?: string;
+  statLabel?: string;
   title: string;
   description: string;
   delay?: number;
@@ -442,8 +355,8 @@ export default function ManagedITPage() {
       icon: "M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
     },
     {
-      title: "Compliance Management",
-      description: "Automated compliance monitoring and reporting for SOX, PCI-DSS, HIPAA, GDPR, SOC 2, and other regulatory frameworks with continuous audit readiness.",
+      title: "Compliance Support",
+      description: "Help with compliance monitoring, policy documentation, vulnerability assessments, and reporting — scoped to the frameworks that actually apply to your business.",
       icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
     },
     {
@@ -499,111 +412,67 @@ export default function ManagedITPage() {
 
   const differentiators = [
     {
-      stat: "99.99%",
-      statLabel: "Uptime SLA",
-      title: "Enterprise-Grade Reliability",
-      description: "Industry-leading uptime guarantees with redundant infrastructure, automatic failover, and 24/7 proactive monitoring ensure your systems never go down."
+      stat: "Engagement",
+      statLabel: "Reliability Targets",
+      title: "Reliability Scoped Per Project",
+      description: "Reliability targets (uptime, response times, RPO/RTO) are defined as part of your statement of work, against the actual systems and workloads that matter to your team."
     },
     {
-      stat: "15min",
-      statLabel: "Avg Response Time",
-      title: "Rapid Incident Response",
-      description: "Our dedicated SOC team responds to critical issues within minutes, not hours, minimizing business impact and ensuring operational continuity."
+      stat: "Project",
+      statLabel: "Response Targets",
+      title: "Response Targets Agreed Up Front",
+      description: "We agree severity definitions and response targets during discovery, with clear escalation paths and communication windows for incidents."
     },
     {
-      stat: "500+",
-      statLabel: "Enterprise Clients",
-      title: "Proven Enterprise Expertise",
-      description: "Two decades of experience managing IT for Fortune 500 companies, financial institutions, healthcare organizations, and government agencies."
+      title: "Practical IT Experience",
+      description: "We bring practical IT management experience across financial services, healthcare, manufacturing, retail, government, and technology. We tailor our services to each sector rather than offering one-size-fits-all."
     }
   ];
 
   const trustBadges = [
-    { name: "ISO 27001", icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" },
-    { name: "SOC 2 Type II", icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" },
-    { name: "GDPR Compliant", icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" },
-    { name: "HIPAA Compliant", icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" },
-    { name: "PCI DSS", icon: "M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" },
-    { name: "SOX Compliant", icon: "M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" }
+    { name: "Privacy-First Practices", icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" },
+    { name: "Encrypted Data in Transit & At Rest", icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" },
+    { name: "Role-Based Access Control", icon: "M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" },
+    { name: "Audit Logging", icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" },
+    { name: "Backup & Recovery", icon: "M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" }
   ];
 
-  const caseStudies = [
-    {
-      title: "Financial Institution IT Overhaul",
-      company: "Global Investment Bank",
-      metric: "60%",
-      metricLabel: "Cost Reduction",
-      description: "Complete IT infrastructure modernization for a major investment bank, reducing operational costs by 60% while improving security posture and achieving full regulatory compliance."
-    },
-    {
-      title: "Healthcare System Security",
-      company: "Regional Hospital Network",
-      metric: "99.9%",
-      metricLabel: "Uptime Achieved",
-      description: "Implemented comprehensive managed IT and security solutions for a 15-hospital network, achieving 99.9% uptime and HIPAA compliance with zero security breaches."
-    },
-    {
-      title: "Manufacturing IT Transformation",
-      company: "Industrial Conglomerate",
-      metric: "45%",
-      metricLabel: "Productivity Boost",
-      description: "Digital transformation of IT operations across 12 manufacturing facilities, increasing operational efficiency by 45% and reducing unplanned downtime by 70%."
-    }
-  ];
+  // Case studies removed — fabricated project descriptions are not honest content.
 
-  const testimonials = [
-    {
-      quote: "Krovos has been instrumental in transforming our IT operations. Their managed services team reduced our downtime by 95%, and their cybersecurity expertise helped us achieve SOC 2 Type II compliance within months. The ROI has been substantial, and their proactive approach prevents issues before they impact our business.",
-      author: "Michael Rodriguez",
-      role: "Chief Information Officer",
-      company: "Meridian Financial Group"
-    },
-    {
-      quote: "As a healthcare organization, we face unique IT challenges with strict HIPAA compliance requirements. Krovos has been exceptional in maintaining our security posture while ensuring our systems remain highly available for patient care. Their team truly understands the healthcare industry.",
-      author: "Sarah Chen",
-      role: "VP of Information Technology",
-      company: "Pacific Health Systems"
-    },
-    {
-      quote: "The transition to cloud infrastructure was seamless with Krovos guiding us every step of the way. Their expertise in multi-cloud environments helped us optimize costs while improving performance. We've reduced our cloud spend by 35% while increasing application responsiveness.",
-      author: "James Patterson",
-      role: "CTO",
-      company: "TechCorp Industries"
-    }
-  ];
+  // Testimonials removed — fabricated names and quotes are not honest content.
 
   const faqItems = [
     {
       question: "What industries do you specialize in for managed IT services?",
-      answer: "We have extensive experience across multiple regulated industries including financial services, healthcare, manufacturing, retail, government, and technology. Our team includes certified professionals who understand the unique compliance requirements, security demands, and operational challenges of each sector. We tailor our managed IT solutions to address industry-specific workflows, regulatory requirements, and business objectives. Our vertical-specific expertise allows us to deliver solutions that not only meet technical requirements but also align with industry best practices and regulatory frameworks specific to your sector."
+      answer: "We work across financial services, healthcare, manufacturing, retail, government, and technology. We tailor our services to each sector and learn the workflows that matter to your team."
     },
     {
       question: "What is included in your managed IT services?",
-      answer: "Our comprehensive managed IT services include 24/7 infrastructure monitoring and support, security management (firewall, endpoint protection, SIEM), cloud infrastructure management, help desk support, backup and disaster recovery, compliance management, and strategic IT consulting. We offer flexible packages that can be customized based on your organization's specific needs and budget. Each package includes dedicated account management, regular strategic reviews, and comprehensive reporting. Our services are designed to provide complete coverage of your IT environment while allowing flexibility to scale as your business grows."
+      answer: "Typical engagements include infrastructure monitoring, security management (firewall, endpoint protection, SIEM), cloud infrastructure, help desk support, backup and disaster recovery, and strategic IT consulting. Packages are tailored to your environment after discovery."
     },
     {
       question: "How quickly can you respond to IT emergencies?",
-      answer: "We offer tiered response times based on service level agreements. Our standard enterprise package includes 15-minute response times for critical issues, with dedicated escalation paths for severity 1 incidents. Our 24/7 Security Operations Center (SOC) provides continuous monitoring and can respond to security incidents immediately, often detecting and neutralizing threats before they impact your business. We maintain clear escalation procedures and communication protocols to ensure you're always informed during critical situations."
+      answer: "Response targets are defined in your service agreement. We maintain escalation paths for severity 1 incidents and clear communication throughout any incident."
     },
     {
       question: "How do you ensure compliance with regulations like HIPAA, SOX, and PCI-DSS?",
-      answer: "We maintain a dedicated compliance team that stays current with all regulatory requirements. Our services include continuous compliance monitoring, automated audit preparation, policy documentation, regular vulnerability assessments, and detailed reporting for auditors. We have proven track records helping organizations achieve and maintain compliance with HIPAA, SOX, PCI-DSS, SOC 2, ISO 27001, GDPR, and other frameworks. Our automated compliance tools provide real-time visibility into your compliance posture, and we conduct regular mock audits to ensure you're always prepared for formal assessments."
+      answer: "We work with you to understand the regulatory frameworks that apply to your business. Our services include monitoring, policy documentation, vulnerability assessments, and reporting — and we'll discuss specific compliance certifications case-by-case based on your requirements. We don't claim certifications we haven't earned; if you need SOC 2, ISO 27001, or another attestation, we'll scope that explicitly in your engagement."
     },
     {
       question: "Can you manage our existing IT infrastructure, or do you require a complete overhaul?",
-      answer: "We work with organizations at any stage of their IT journey. Whether you need full infrastructure management or supplemental support for your existing team, we adapt our services to fit your needs. We can gradually assume responsibility for specific systems or provide comprehensive oversight. Our approach minimizes disruption while maximizing the value of your existing investments. We conduct thorough assessments of your current environment before recommending any changes, ensuring that every decision is backed by solid business rationale and cost-benefit analysis."
+      answer: "Either. We adapt to your situation — full infrastructure management or supplemental support alongside your existing team. We always start with an assessment before recommending changes, so every decision is grounded in your actual environment and budget."
     },
     {
       question: "What makes Krovos different from other managed IT providers?",
-      answer: "Krovos combines deep enterprise expertise with personalized service. Unlike large providers that treat you as just another account, we provide dedicated account teams who understand your business. With 20+ years of experience and 500+ enterprise clients, we bring proven methodologies while maintaining the flexibility to customize solutions. Our 99.99% uptime SLA and 15-minute average response times set us apart in the industry. We invest heavily in our people, tools, and processes to ensure we deliver exceptional service that exceeds expectations."
+      answer: "We focus on clear communication, sensible scope, and work you can verify. You'll work directly with the engineers doing the work, get honest timelines, and see what's been delivered. Specific SLAs and response targets are defined in your service agreement."
     },
     {
       question: "How do you handle data backup and disaster recovery?",
-      answer: "We implement comprehensive backup solutions with multiple layers of protection including local snapshots, offsite replication, and cloud archiving. Our disaster recovery services include automated testing, documented runbooks, and proven recovery time objectives (RTO) and recovery point objectives (RPO). We regularly test recovery procedures and provide detailed reports on your backup status and recovery capabilities. Our approach ensures that your business can recover quickly from any disaster, minimizing data loss and operational disruption."
+      answer: "We set up layered backups (local snapshots, offsite replication, cloud archiving) with documented recovery procedures and regular testing. Recovery time and data-loss targets are agreed up-front and reviewed with you periodically."
     },
     {
       question: "What are your pricing options for managed IT services?",
-      answer: "We offer flexible pricing models including per-device, per-user, and comprehensive flat-rate options. Our team will work with you to understand your needs and provide a customized quote. We believe in transparent pricing with no hidden fees, and we provide detailed reporting so you can see the value delivered. Many clients find our managed services cost less than maintaining equivalent in-house capabilities. We provide detailed ROI analysis and ongoing value reporting to demonstrate the tangible benefits of our partnership."
+      answer: "We offer per-device, per-user, and flat-rate pricing depending on what fits your team. Quotes are tailored to your environment after a discovery call — no hidden fees, and we'll walk through what's included before you sign anything."
     }
   ];
 
@@ -916,39 +785,7 @@ export default function ManagedITPage() {
         </div>
       </section>
 
-      {/* Case Studies */}
-      <section className="py-24 bg-[var(--krovos-navy-deep)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Proven Results
-            </h2>
-            <p className="text-xl text-[var(--krovos-gray-400)] max-w-3xl mx-auto">
-              See how leading organizations have transformed their IT operations
-              with our managed services and cybersecurity solutions.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {caseStudies.map((study, index) => (
-              <CaseStudyCard
-                key={study.title}
-                title={study.title}
-                company={study.company}
-                metric={study.metric}
-                metricLabel={study.metricLabel}
-                description={study.description}
-                delay={index}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Case Studies section removed — fabricated project descriptions are not honest content. */}
 
       {/* Process Timeline */}
       <section className="py-24 bg-[var(--krovos-navy)]">
@@ -972,37 +809,7 @@ export default function ManagedITPage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-24 bg-mesh-navy">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-xl text-[var(--krovos-gray-400)] max-w-3xl mx-auto">
-              Hear from enterprise leaders who have transformed their IT operations with Krovos.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard
-                key={testimonial.author}
-                quote={testimonial.quote}
-                author={testimonial.author}
-                role={testimonial.role}
-                company={testimonial.company}
-                delay={index}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Testimonials section removed — fabricated names and quotes are not honest content. */}
 
       {/* FAQ Section */}
       <section className="py-24 bg-[var(--krovos-navy-deep)]">
