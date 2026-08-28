@@ -299,7 +299,7 @@ export default function PressPage() {
           </p>
           <div className="mt-8">
             <Link
-              href="mailto:press@krovos.com"
+              href="mailto:press@krovos.ca"
               className="inline-flex items-center justify-center px-8 py-3 bg-[#D4A017] text-[#0A1628] font-semibold rounded-lg hover:bg-[#D4A017]/90 transition-colors"
             >
               Contact Press Team

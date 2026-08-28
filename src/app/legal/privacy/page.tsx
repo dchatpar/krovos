@@ -122,9 +122,9 @@ export default function PrivacyPage() {
               </p>
               <div className="mt-4 p-4 bg-[#0D2040] rounded-lg">
                 <p className="text-white">Krovos Inc.</p>
-                <p className="text-white/60">123 Innovation Drive</p>
-                <p className="text-white/60">San Francisco, CA 94102</p>
-                <p className="text-white/60 mt-2">Email: privacy@krovos.com</p>
+                <p className="text-white/60">13428 105 Ave Suite 1410</p>
+                <p className="text-white/60">Surrey, BC V3T 0S6</p>
+                <p className="text-white/60 mt-2">Email: privacy@krovos.ca</p>
               </div>
             </section>
 

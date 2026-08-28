@@ -148,7 +148,7 @@ export default function CookiesPage() {
               If you have questions about our use of cookies, please contact us at:
             </p>
             <div className="mt-4 p-4 bg-[#0D2040] rounded-lg">
-              <p className="text-white">Email: privacy@krovos.com</p>
+              <p className="text-white">Email: privacy@krovos.ca</p>
             </div>
           </section>
 

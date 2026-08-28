@@ -227,47 +227,12 @@ export default function AboutPage() {
 
   // Timeline data
   const timeline = [
-    {
-      year: "2015",
-      title: "Founded",
-      description: "Krovos Inc. was established in Vancouver, Canada with a vision to transform enterprise technology."
-    },
-    {
-      year: "2017",
-      title: "First Global Office",
-      description: "Opened our Dubai office, expanding operations to the Middle East and North Africa region."
-    },
-    {
-      year: "2019",
-      title: "Service Expansion",
-      description: "Launched AI automation and custom software development services for enterprise clients."
-    },
-    {
-      year: "2020",
-      title: "India Operations",
-      description: "Established Mumbai office to serve growing demand in the Asia-Pacific market."
-    },
-    {
-      year: "2022",
-      title: "ISO Certification",
-      description: "Achieved ISO 27001 and ISO 9001 certifications, demonstrating commitment to quality and security."
-    },
-    {
-      year: "2024",
-      title: "SOC 2 Type II",
-      description: "Completed SOC 2 Type II audit, ensuring highest standards of data security and privacy."
-    },
-    {
-      year: "2025",
-      title: "Industry Recognition",
-      description: "Named among the top enterprise technology solution providers by multiple industry analysts."
-    },
-    {
-      year: "2026",
-      title: "Global Scale",
-      description: "Serving 200+ clients across 11 countries with 120+ team members worldwide."
-    }
-  ];
+      {
+        year: "2026",
+        title: "Incorporation",
+        description: "Krovos Inc. was incorporated in Surrey, Canada with a vision to transform enterprise technology."
+      }
+    ];
 
   // Team members data
   const teamMembers = [
@@ -353,26 +318,19 @@ export default function AboutPage() {
                 </h2>
                 <div className="space-y-4 text-[#94A3B8] leading-relaxed">
                   <p>
-                    Founded in 2015 in Vancouver, Canada, Krovos Inc. began with a simple yet ambitious vision:
-                    to transform how enterprises leverage technology for business growth.
-                  </p>
-                  <p>
-                    What started as a small team of passionate technologists has grown into a global organization
-                    with over 120 team members across three continents. Throughout our journey, we have remained
-                    committed to our core principles: innovation, integrity, and delivering exceptional value to our clients.
-                  </p>
-                  <p>
-                    Today, we serve more than 200 enterprise clients across 11 countries, having completed over 450
-                    successful projects. Our team combines deep technical expertise with industry knowledge to deliver
-                    solutions that drive real business outcomes.
-                  </p>
+                                      Founded in 2026 in Surrey, Canada, Krovos Inc. began with a simple yet ambitious vision:
+                                      to transform how enterprises leverage technology for business growth.
+                                    </p>
+                                    <p>
+                                      Though young, our team is committed to our core principles: innovation, integrity, and delivering exceptional value to our clients.
+                                    </p>
                 </div>
               </div>
               <div className="relative">
                 <div className="aspect-square rounded-3xl bg-gradient-to-br from-navy-mid to-navy-light border border-[rgba(212,160,23,0.2)] p-8 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="text-6xl lg:text-8xl font-bold text-gradient-gold mb-4">10+</div>
-                    <div className="text-xl text-white">Years of Excellence</div>
+                    <div className="text-6xl lg:text-8xl font-bold text-gradient-gold mb-4">2026</div>
+                                        <div className="text-xl text-white">Incorporated</div>
                   </div>
                 </div>
                 {/* Decorative elements */}
@@ -495,33 +453,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership Team Section */}
-      <section className="py-24 lg:py-32 relative bg-navy-light">
-        <div className="max-w-7xl mx-auto px-6">
-          <SectionWrapper>
-            <div className="text-center mb-16">
-              <span className="text-[#D4A017] font-medium uppercase tracking-wider text-sm">Leadership</span>
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mt-3">Meet Our Executive Team</h2>
-              <p className="text-[#94A3B8] mt-4 text-lg max-w-2xl mx-auto">
-                Seasoned industry leaders with decades of combined experience in technology, operations, and enterprise strategy.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {teamMembers.map((member, index) => (
-                <TeamMember
-                  key={index}
-                  name={member.name}
-                  title={member.title}
-                  bio={member.bio}
-                  imageColor={member.imageColor}
-                  delay={index * 0.1}
-                />
-              ))}
-            </div>
-          </SectionWrapper>
-        </div>
-      </section>
+      {/* Leadership Team Section - removed */}
 
       {/* Global Offices Section */}
       <section className="py-24 lg:py-32 relative">
@@ -529,39 +461,23 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <SectionWrapper>
             <div className="text-center mb-16">
-              <span className="text-[#D4A017] font-medium uppercase tracking-wider text-sm">Global Presence</span>
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mt-3">Our Offices Worldwide</h2>
-              <p className="text-[#94A3B8] mt-4 text-lg max-w-2xl mx-auto">
-                Strategically located across three continents to serve our global client base.
-              </p>
-            </div>
+              <span className="text-[#D4A017] font-medium uppercase tracking-wider text-sm">Our Location</span>
+                            <h2 className="text-4xl lg:text-5xl font-bold text-white mt-3">Visit Our Office</h2>
+                            <p className="text-[#94A3B8] mt-4 text-lg max-w-2xl mx-auto">
+                              Based in Surrey, British Columbia — serving clients across Canada and beyond.
+                            </p>
+                          </div>
 
-            <div className="grid md:grid-cols-3 gap-6">
-              <OfficeCard
-                city="Vancouver"
-                country="Canada (HQ)"
-                address="1000-500 Granville Street, Vancouver, BC V6C 1S4"
-                phone="+1 (604) 555-0100"
-                email="vancouver@krovos.com"
-                delay={0}
-              />
-              <OfficeCard
-                city="Dubai"
-                country="United Arab Emirates"
-                address="Level 42, Emirates Tower, Sheikh Zayed Road, Dubai"
-                phone="+971 4 555 0200"
-                email="dubai@krovos.com"
-                delay={0.15}
-              />
-              <OfficeCard
-                city="Mumbai"
-                country="India"
-                address="Level 8, One BKC, G Block, Bandra Kurla Complex, Mumbai 400051"
-                phone="+91 22 5555 0300"
-                email="mumbai@krovos.com"
-                delay={0.3}
-              />
-            </div>
+                          <div className="grid md:grid-cols-1 gap-6 max-w-xl mx-auto">
+                            <OfficeCard
+                              city="Surrey"
+                              country="Canada"
+                              address="13428 105 Ave Suite 1410, Surrey, BC V3T 0S6"
+                              phone=""
+                              email="contact@krovos.ca"
+                              delay={0}
+                            />
+                          </div>
           </SectionWrapper>
         </div>
       </section>
@@ -593,20 +509,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-24 lg:py-32 relative bg-navy-mid">
-        <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <SectionWrapper>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-              <StatItem value="200+" label="Enterprise Clients" delay={0} />
-              <StatItem value="450+" label="Projects Delivered" delay={0.1} />
-              <StatItem value="11" label="Countries" delay={0.2} />
-              <StatItem value="120+" label="Team Members" delay={0.3} />
-            </div>
-          </SectionWrapper>
-        </div>
-      </section>
+      {/* Stats Section - removed */}
 
       {/* CTA Section */}
       <section className="py-24 lg:py-32 relative overflow-hidden">

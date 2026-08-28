@@ -218,107 +218,10 @@ const WhyKrovosCard = ({
   </motion.div>
 );
 
-// Testimonial Card
-const TestimonialCard = ({
-  quote,
-  author,
-  role,
-  company,
-  delay = 0
-}: {
-  quote: string;
-  author: string;
-  role: string;
-  company: string;
-  delay?: number;
-}) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5, delay }}
-    viewport={{ once: true }}
-    className="bg-white/5 backdrop-blur-xl rounded-3xl p-6 lg:p-8 border border-white/10 hover:border-[#D4A017]/20 transition-all"
-  >
-    {/* Stars */}
-    <div className="flex gap-1 mb-4">
-      {[...Array(5)].map((_, i) => (
-        <svg key={i} className="w-5 h-5 text-[#D4A017]" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-        </svg>
-      ))}
-    </div>
-
-    {/* Quote */}
-    <p className="text-white/80 text-base lg:text-lg mb-6 lg:mb-8 leading-relaxed">&ldquo;{quote}&rdquo;</p>
-
-    {/* Author */}
-    <div className="flex items-center gap-3">
-      <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-gradient-to-br from-[#D4A017] to-[#0E7C7B] flex items-center justify-center text-white font-bold text-sm lg:text-base">
-        {author.split(' ').map(n => n[0]).join('')}
-      </div>
-      <div>
-        <div className="font-semibold text-white text-sm lg:text-base">{author}</div>
-        <div className="text-xs lg:text-sm text-white/50">{role}, {company}</div>
-      </div>
-    </div>
-  </motion.div>
-);
-
-// Client Logo
-const ClientLogos = () => {
-  const logos = [
-    "TechCorp", "GlobalBank", "MediCare", "RetailMax", "LogiFlow",
-    "FinanceHub", "DataSync", "CloudNine", "InnovateAI", "SecureNet",
-    "RetailPro", "HealthTech", "FinServe", "AutoMotive", "EnergyPlus"
-  ];
-
-  return (
-    <div className="relative overflow-hidden py-8">
-      {/* Row 1 - Left to Right */}
-      <div className="flex mb-4">
-        <motion.div
-          className="flex gap-16 whitespace-nowrap"
-          animate={{ x: [0, -1000] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        >
-          {[...logos, ...logos].map((logo, i) => (
-            <div key={i} className="flex items-center gap-3 text-white/40">
-              <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center">
-                <span className="text-xs font-bold">{logo[0]}</span>
-              </div>
-              <span className="font-medium text-sm">{logo}</span>
-            </div>
-          ))}
-        </motion.div>
-      </div>
-
-      {/* Row 2 - Right to Left */}
-      <div className="flex">
-        <motion.div
-          className="flex gap-16 whitespace-nowrap"
-          animate={{ x: [-1000, 0] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        >
-          {[...logos.slice().reverse(), ...logos.slice().reverse()].map((logo, i) => (
-            <div key={i} className="flex items-center gap-3 text-white/40">
-              <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center">
-                <span className="text-xs font-bold">{logo[0]}</span>
-              </div>
-              <span className="font-medium text-sm">{logo}</span>
-            </div>
-          ))}
-        </motion.div>
-      </div>
-    </div>
-  );
-};
-
 // World Map with offices
 const GlobalOffices = () => {
   const offices = [
-    { name: "Vancouver", country: "Canada", coords: "top-[35%] left-[18%]" },
-    { name: "Dubai", country: "UAE", coords: "top-[45%] left-[58%]" },
-    { name: "Mumbai", country: "India", coords: "top-[55%] left-[68%]" },
+    { name: "Surrey", country: "Canada", coords: "top-[35%] left-[18%]" },
   ];
 
   return (
@@ -470,11 +373,11 @@ const caseStudies = [
 // Why Krovos data
 const whyKrovos = [
   {
-    title: "Global 3-Office Delivery Model",
-    description: "Strategic presence across Vancouver, Dubai, and Mumbai enables around-the-clock development cycles and diverse market expertise.",
-    icon: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
-  },
-  {
+    title: "Canadian Delivery Hub",
+        description: "Based in Surrey, BC, we provide hands-on technology delivery with deep local market expertise across Canada.",
+        icon: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+      },
+      {
     title: "6-Division Full-Stack Capability",
     description: "From AI automation to talent solutions, we provide end-to-end services across all technology domains your business needs.",
     icon: "M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6z",
@@ -488,28 +391,6 @@ const whyKrovos = [
     title: "Enterprise-Grade Quality",
     description: "ISO-certified processes, GDPR compliance, and Fortune 500 client references. Security and quality are non-negotiable.",
     icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
-  },
-];
-
-// Testimonials data
-const testimonials = [
-  {
-    quote: "Krovos transformed our digital infrastructure. Their team's expertise in AI automation helped us reduce operational costs by 40% in just 6 months.",
-    author: "James Morrison",
-    role: "CTO",
-    company: "Global Finance Corp",
-  },
-  {
-    quote: "Working with Krovos was exceptional. They delivered our custom software platform ahead of schedule and the quality exceeded our expectations.",
-    author: "Priya Sharma",
-    role: "VP of Operations",
-    company: "MediCare Plus",
-  },
-  {
-    quote: "The team's understanding of both technology and business requirements made all the difference. They didn't just build what we asked for, they built what we needed.",
-    author: "Michael Chen",
-    role: "CEO",
-    company: "TechVentures Inc",
   },
 ];
 
@@ -589,8 +470,8 @@ export default function HomePage() {
             <p className="mt-6 text-lg sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
               Enterprise AI &middot; Custom Software &middot; Managed IT &middot; Digital Marketing
               <span className="block mt-2 text-white/50">
-                delivered globally from Vancouver, Dubai & Mumbai
-              </span>
+                              delivered from Surrey, BC
+                            </span>
             </p>
           </motion.div>
 
@@ -621,21 +502,10 @@ export default function HomePage() {
             </Link>
           </motion.div>
 
-          {/* Social Proof */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-10 text-center text-white/50 text-sm"
-          >
-            <span className="text-[#D4A017] font-semibold">200+ projects</span> &middot;{" "}
-            <span className="text-[#D4A017] font-semibold">11 countries</span> &middot;{" "}
-            Fortune 500 clients
-          </motion.p>
-        </div>
-      </section>
+                  </div>
+                </section>
 
-      {/* Stats Counter Bar */}
+                {/* Stats Counter Bar */}
       <section className="py-12 bg-[#0D1F35] border-y border-[#D4A017]/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
@@ -693,24 +563,6 @@ export default function HomePage() {
               <ServiceCard key={index} {...service} delay={index * 0.1} />
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Client Logos Marquee */}
-      <section className="py-12 bg-[#0D1F35] border-y border-[#D4A017]/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-8"
-          >
-            <h3 className="text-white/40 text-sm font-medium uppercase tracking-widest">
-              Trusted by Industry Leaders
-            </h3>
-          </motion.div>
-          <ClientLogos />
         </div>
       </section>
 
@@ -773,35 +625,6 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
             {whyKrovos.map((item, index) => (
               <WhyKrovosCard key={index} {...item} delay={index * 0.1} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Carousel */}
-      <section className="py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto mb-16"
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0E7C7B]/10 text-[#0E7C7B] text-sm font-medium mb-4">
-              Testimonials
-            </div>
-            <h2 className="text-3xl lg:text-5xl font-bold text-white">
-              Client{" "}
-              <span className="bg-gradient-to-r from-[#D4A017] to-[#F0C040] bg-clip-text text-transparent">
-                Success Stories
-              </span>
-            </h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard key={index} {...testimonial} delay={index * 0.1} />
             ))}
           </div>
         </div>

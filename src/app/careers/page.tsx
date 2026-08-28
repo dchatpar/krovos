@@ -393,7 +393,7 @@ export default function CareersPage() {
     {
       icon: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
       title: "Global Mobility",
-      description: "Transfer between our offices in Vancouver, Dubai, and Mumbai. Experience different cultures while advancing your career with international exposure."
+            description: "Opportunities to work with teams across multiple time zones and locations, advancing your career with diverse project experience."
     }
   ];
 
@@ -447,7 +447,7 @@ export default function CareersPage() {
     {
       title: "Backend Engineer - AI/ML",
       department: "Engineering",
-      location: "Vancouver, Canada",
+      location: "Surrey, BC, Canada",
       type: "Full-time",
       description: "Build scalable backend systems that power our AI automation platform. Work with Python, Node.js, and cloud infrastructure to deliver intelligent solutions that transform enterprise operations.",
       requirements: [
@@ -473,7 +473,7 @@ export default function CareersPage() {
     {
       title: "Enterprise Sales Manager",
       department: "Sales",
-      location: "Dubai, UAE",
+      location: "Remote",
       type: "Full-time",
       description: "Drive revenue growth in the Middle East region. Build and manage relationships with enterprise clients seeking digital transformation solutions.",
       requirements: [
@@ -486,7 +486,7 @@ export default function CareersPage() {
     {
       title: "DevOps Engineer",
       department: "Engineering",
-      location: "Mumbai, India",
+      location: "Remote",
       type: "Full-time",
       description: "Build and maintain our cloud infrastructure. Ensure high availability, security, and performance across all our production systems serving global enterprise clients.",
       requirements: [
@@ -499,7 +499,7 @@ export default function CareersPage() {
     {
       title: "Customer Success Manager",
       department: "Customer Success",
-      location: "Vancouver, Canada",
+      location: "Surrey, BC, Canada",
       type: "Full-time",
       description: "Ensure our enterprise clients achieve their goals. Drive adoption, satisfaction, and long-term retention through proactive engagement and strategic account management.",
       requirements: [
@@ -789,16 +789,8 @@ export default function CareersPage() {
               <div className="relative">
                 <div className="aspect-square rounded-3xl bg-gradient-to-br from-navy-mid to-navy-light border border-[rgba(212,160,23,0.2)] p-8 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="text-6xl lg:text-8xl font-bold text-gradient-gold mb-4">4.9</div>
-                    <div className="text-xl text-white mb-2">Glassdoor Rating</div>
-                    <div className="flex justify-center gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <svg key={i} className="w-6 h-6 text-[#D4A017]" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
-                    </div>
-                    <p className="text-[#94A3B8] text-sm mt-4">Based on 50+ employee reviews</p>
+                    <div className="text-6xl lg:text-8xl font-bold text-gradient-gold mb-4">98%</div>
+                    <div className="text-xl text-white mb-2">Employee Satisfaction</div>
                   </div>
                 </div>
                 {/* Decorative elements */}
@@ -957,8 +949,8 @@ export default function CareersPage() {
 
             <p className="text-[#94A3B8] mt-8 text-sm">
               Do not see the right role? Email us at{" "}
-              <a href="mailto:careers@krovos.com" className="text-[#D4A017] hover:underline">
-                careers@krovos.com
+              <a href="mailto:careers@krovos.ca" className="text-[#D4A017] hover:underline">
+                careers@krovos.ca
               </a>
             </p>
           </SectionWrapper>

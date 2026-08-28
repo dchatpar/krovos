@@ -112,8 +112,8 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-semibold text-white mb-4">11. Governing Law</h2>
             <p>
-              These Terms shall be governed by and construed in accordance with the laws of the State of 
-              California, without regard to its conflict of law provisions.
+              These Terms shall be governed by and construed in accordance with the laws of the Province of 
+              British Columbia, Canada, without regard to its conflict of law provisions.
             </p>
           </section>
 
@@ -132,9 +132,9 @@ export default function TermsPage() {
             </p>
             <div className="mt-4 p-4 bg-[#0D2040] rounded-lg">
               <p className="text-white">Krovos Inc.</p>
-              <p className="text-white/60">123 Innovation Drive</p>
-              <p className="text-white/60">San Francisco, CA 94102</p>
-              <p className="text-white/60 mt-2">Email: legal@krovos.com</p>
+              <p className="text-white/60">13428 105 Ave Suite 1410</p>
+              <p className="text-white/60">Surrey, BC V3T 0S6</p>
+              <p className="text-white/60 mt-2">Email: legal@krovos.ca</p>
             </div>
           </section>
 

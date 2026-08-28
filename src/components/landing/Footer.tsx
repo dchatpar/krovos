@@ -20,29 +20,11 @@ const servicesLinks = [
   { name: "Logistics Tech", href: "/services/logistics" },
 ];
 
-const solutionsLinks = [
-  { name: "Enterprise Solutions", href: "/solutions/enterprise" },
-  { name: "Startup Accelerator", href: "/solutions/startup" },
-  { name: "Cloud Migration", href: "/solutions/cloud" },
-  { name: "Data Analytics", href: "/solutions/analytics" },
-  { name: "Cybersecurity", href: "/solutions/security" },
-  { name: "Digital Transformation", href: "/solutions/transformation" },
-];
-
-const resourcesLinks = [
-  { name: "Blog", href: "/resources/blog" },
-  { name: "Case Studies", href: "/resources/case-studies" },
-  { name: "Whitepapers", href: "/resources/whitepapers" },
-  { name: "Webinars", href: "/resources/webinars" },
-  { name: "Documentation", href: "/resources/docs" },
-  { name: "API Reference", href: "/resources/api" },
-];
-
 const contactInfo = {
-  address: "123 Innovation Drive",
-  city: "San Francisco, CA 94102",
-  email: "info@krovos.com",
-  phone: "+1 (415) 555-1234",
+  address: "13428 105 Ave Suite 1410",
+  city: "Surrey, BC V3T 0S6",
+  email: "info@krovos.ca",
+  phone: "+1 (604) 555-1234",
 };
 
 const Footer = () => {
@@ -60,14 +42,12 @@ const Footer = () => {
   const footerLinks = {
     company: companyLinks,
     services: servicesLinks,
-    solutions: solutionsLinks,
-    resources: resourcesLinks,
   };
 
   return (
     <footer className="bg-[#0A1628] border-t border-[#D4A017]/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-8">
           {/* Brand Column - Logo & Description */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center space-x-3 group">
@@ -187,44 +167,6 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               {footerLinks.services.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-white/60 hover:text-[#D4A017] transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Solutions Column */}
-          <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-              Solutions
-            </h3>
-            <ul className="space-y-3">
-              {footerLinks.solutions.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-white/60 hover:text-[#D4A017] transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources Column */}
-          <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-              Resources
-            </h3>
-            <ul className="space-y-3">
-              {footerLinks.resources.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}

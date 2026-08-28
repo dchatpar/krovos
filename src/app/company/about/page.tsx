@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const metadata = {
   title: "About - Krovos | Enterprise AI Automation Company",
-  description: "Krovos is a global enterprise technology holding company delivering transformative AI automation, custom software, digital marketing, managed IT, talent solutions, and logistics technology.",
+  description: "Krovos is an enterprise technology company delivering transformative AI automation, custom software, digital marketing, managed IT, talent solutions, and logistics technology.",
 };
 
 const values = [
@@ -30,18 +30,18 @@ const values = [
 ];
 
 const timeline = [
-  { year: "2023", event: "Krovos founded in Vancouver with vision to transform enterprise operations", milestone: true },
+  { year: "2023", event: "Krovos founded in Surrey, BC with vision to transform enterprise operations", milestone: true },
   { year: "2024", event: "Public beta launch - 10,000+ early adopters join platform", milestone: false },
   { year: "2025", event: "SOC 2 Type II certification achieved - enterprise security validated", milestone: true },
-  { year: "2025", event: "Expanded operations to Dubai and Mumbai - global presence established", milestone: false },
+  { year: "2025", event: "Enterprise platform launch - global presence established", milestone: false },
   { year: "2026", event: "Enterprise growth - 500+ enterprise clients worldwide", milestone: true },
   { year: "2026", event: "50M+ workflows automated - milestone of 50 million processes automated", milestone: true },
 ];
 
 const leadershipTeam = [
-  { name: "Sarah Chen", role: "CEO & Founder", bio: "Former VP of Engineering at Google with 15+ years in enterprise software. Led digital transformation initiatives for Fortune 500 companies." },
-  { name: "Marcus Rodriguez", role: "CTO", bio: "AI researcher and technologist. Previously founded 2 successful exits in the automation space. PhD in Machine Learning from Stanford." },
-  { name: "Emily Watson", role: "COO", bio: "Operational excellence leader with experience scaling startups to $100M+ ARR. Former McKinsey consultant." },
+  { name: "Sarah Chen", role: "CEO & Founder", bio: "Visionary leader with 15+ years in enterprise software. Led digital transformation initiatives for Fortune 500 companies." },
+  { name: "Marcus Rodriguez", role: "CTO", bio: "AI researcher and technologist. Previously founded 2 successful exits in the automation space." },
+  { name: "Emily Watson", role: "COO", bio: "Operational excellence leader with experience scaling technology startups to $100M+ ARR." },
 ];
 
 const stats = [
@@ -67,8 +67,7 @@ export default function AboutPage() {
               Building the Future of <span className="text-[#D4A017]">Enterprise</span> Technology
             </h1>
             <p className="mt-6 text-lg lg:text-xl text-white/70 leading-relaxed max-w-2xl">
-              Krovos Inc. is a premier global enterprise technology holding company headquartered in Vancouver, 
-              with operations spanning Dubai and Mumbai. We deliver transformative solutions across AI automation, 
+              Krovos Inc. is a premier enterprise technology holding company based in Surrey, BC. We deliver transformative solutions across AI automation,
               custom software, digital marketing, managed IT, talent solutions, and logistics technology.
             </p>
             <p className="mt-4 text-lg text-white/60 leading-relaxed max-w-2xl">
@@ -128,8 +127,8 @@ export default function AboutPage() {
                   complex workflow orchestration.
                 </p>
                 <p>
-                  Founded in Vancouver, Canada, and expanded globally to Dubai and Mumbai, Krovos 
-                  brings together diverse talent and perspectives to solve the most challenging 
+                  Founded in Surrey, BC, Krovos 
+                  brings together diverse talent and perspectives to solve the most challenging
                   problems in enterprise automation.
                 </p>
               </div>
@@ -272,8 +271,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Global Presence</h2>
               <p className="text-white/70 leading-relaxed mb-6">
-                With headquarters in Vancouver and operations spanning Dubai and Mumbai, Krovos 
-                serves enterprise clients across North America, Europe, Middle East, and Asia-Pacific.
+                With headquarters in Surrey, BC, Krovos serves enterprise clients across North America, Europe, and Asia-Pacific.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
@@ -281,28 +279,11 @@ export default function AboutPage() {
                     <span className="text-[#D4A017] font-bold">CA</span>
                   </div>
                   <div>
-                    <div className="text-white font-medium">Vancouver (HQ)</div>
-                    <div className="text-white/40 text-sm">North America</div>
+                    <div className="text-white font-medium">Surrey, BC (HQ)</div>
+                    <div className="text-white/40 text-sm">Canada</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-[#D4A017]/10 flex items-center justify-center">
-                    <span className="text-[#D4A017] font-bold">AE</span>
-                  </div>
-                  <div>
-                    <div className="text-white font-medium">Dubai</div>
-                    <div className="text-white/40 text-sm">Middle East</div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-[#D4A017]/10 flex items-center justify-center">
-                    <span className="text-[#D4A017] font-bold">IN</span>
-                  </div>
-                  <div>
-                    <div className="text-white font-medium">Mumbai</div>
-                    <div className="text-white/40 text-sm">Asia Pacific</div>
-                  </div>
-                </div>
+
               </div>
             </div>
             <div className="relative">

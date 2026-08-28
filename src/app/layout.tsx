@@ -25,7 +25,7 @@ const syne = Syne({
 export const metadata: Metadata = {
   title: "Krovos Inc. | Global Enterprise Technology Holdings",
   description:
-    "Krovos Inc. is a premier global enterprise technology holding company headquartered in Vancouver, with operations spanning Dubai and Mumbai. We deliver transformative AI automation, custom software, digital marketing, managed IT, talent solutions, and logistics technology.",
+    "Krovos Inc. is a premier enterprise technology holding company delivering transformative AI automation, custom software, digital marketing, managed IT, talent solutions, and logistics technology.",
   keywords: [
     "enterprise technology",
     "AI automation",

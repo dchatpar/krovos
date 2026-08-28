@@ -385,21 +385,15 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-[#0A1628]-light" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <SectionWrapper>
-            <div className="grid md:grid-cols-3 gap-6">
-              <ContactMethodCard
-                icon="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                title="Email Us"
-                description="Send us an email anytime. We respond within 24 hours."
-                detail="contact@krovos.com"
-                delay={0}
-              />
-              <ContactMethodCard
-                icon="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                title="Call Us"
-                description="Speak directly with our team during business hours."
-                detail="+1 (604) 555-0100"
-                delay={0.1}
-              />
+            <div className="grid md:grid-cols-2 gap-6">
+                          <ContactMethodCard
+                            icon="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                            title="Email Us"
+                            description="Send us an email anytime. We respond within 24 hours."
+                            detail="contact@krovos.ca"
+                            delay={0}
+                          />
+
               <ContactMethodCard
                 icon="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
                 title="Live Chat"
@@ -523,42 +517,24 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-6">
           <SectionWrapper>
             <div className="text-center mb-16">
-              <span className="text-[#D4A017] font-medium uppercase tracking-wider text-sm">Global Presence</span>
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mt-3">Our Offices Worldwide</h2>
-              <p className="text-[#94A3B8] mt-4 text-lg max-w-2xl mx-auto">
-                Visit one of our offices around the world. We are here to serve you globally.
-              </p>
-            </div>
+                          <span className="text-[#D4A017] font-medium uppercase tracking-wider text-sm">Our Location</span>
+                          <h2 className="text-4xl lg:text-5xl font-bold text-white mt-3">Visit Our Office</h2>
+                          <p className="text-[#94A3B8] mt-4 text-lg max-w-2xl mx-auto">
+                            Based in Surrey, British Columbia — serving clients across Canada and beyond.
+                          </p>
+                        </div>
 
-            <div className="grid md:grid-cols-3 gap-6">
-              <OfficeCard
-                city="Vancouver"
-                country="Canada (Headquarters)"
-                address="1000-500 Granville Street, Vancouver, BC V6C 1S4"
-                phone="+1 (604) 555-0100"
-                email="vancouver@krovos.com"
-                timezone="PST (UTC-8)"
-                delay={0}
-              />
-              <OfficeCard
-                city="Dubai"
-                country="United Arab Emirates"
-                address="Level 42, Emirates Tower, Sheikh Zayed Road, Dubai"
-                phone="+971 4 555 0200"
-                email="dubai@krovos.com"
-                timezone="GST (UTC+4)"
-                delay={0.15}
-              />
-              <OfficeCard
-                city="Mumbai"
-                country="India"
-                address="Level 8, One BKC, G Block, Bandra Kurla Complex, Mumbai 400051"
-                phone="+91 22 5555 0300"
-                email="mumbai@krovos.com"
-                timezone="IST (UTC+5:30)"
-                delay={0.3}
-              />
-            </div>
+                        <div className="grid md:grid-cols-1 gap-6 max-w-xl mx-auto">
+                          <OfficeCard
+                            city="Surrey"
+                            country="Canada"
+                            address="13428 105 Ave Suite 1410, Surrey, BC V3T 0S6"
+                            phone=""
+                            email="contact@krovos.ca"
+                            timezone="PT (UTC-8)"
+                            delay={0}
+                          />
+                        </div>
           </SectionWrapper>
         </div>
       </section>
@@ -575,10 +551,10 @@ export default function ContactPage() {
                   Serving Clients Across the Globe
                 </h2>
                 <p className="text-[#94A3B8] text-lg leading-relaxed mb-8">
-                  With offices in North America, Middle East, and Asia, we provide round-the-clock
-                  support to enterprise clients across 11 countries. Our distributed team ensures
-                  you always have access to the expertise you need, when you need it.
-                </p>
+                                  Based in Surrey, British Columbia, we provide enterprise technology solutions
+                                  to clients across North America and beyond. Our team is strategically positioned
+                                  to deliver the expertise you need, when you need it.
+                                </p>
 
                 <div className="grid grid-cols-3 gap-6">
                   {[
@@ -705,12 +681,7 @@ export default function ContactPage() {
                     </motion.svg>
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">LinkedIn</h3>
-                  <p className="text-[#94A3B8] mb-4">Connect with our professional network</p>
-                  <div className="flex items-center gap-2 text-sm text-[#0077B5] font-medium">
-                    <span>12,500+ followers</span>
-                    <span className="w-1 h-1 rounded-full bg-[#0077B5]" />
-                    <span>Join network</span>
-                  </div>
+                                    <p className="text-[#94A3B8] mb-4">Connect with our professional network</p>
                 </a>
               </motion.div>
 
@@ -728,10 +699,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">X (Twitter)</h3>
-                  <p className="text-[#94A3B8] text-sm">Latest updates & announcements</p>
-                  <div className="mt-4 flex items-center gap-2 text-sm text-[#1DA1F2] font-medium">
-                    <span>8,200+ followers</span>
-                  </div>
+                                    <p className="text-[#94A3B8] text-sm">Latest updates & announcements</p>
                 </a>
               </motion.div>
 
@@ -749,10 +717,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">GitHub</h3>
-                  <p className="text-[#94A3B8] text-sm">Explore our open source projects</p>
-                  <div className="mt-4 flex items-center gap-2 text-sm text-gray-400 font-medium">
-                    <span>150+ repositories</span>
-                  </div>
+                                    <p className="text-[#94A3B8] text-sm">Explore our open source projects</p>
                 </a>
               </motion.div>
 
@@ -770,10 +735,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">YouTube</h3>
-                  <p className="text-[#94A3B8] text-sm">Tutorials & product demos</p>
-                  <div className="mt-4 flex items-center gap-2 text-sm text-red-500 font-medium">
-                    <span>5,000+ subscribers</span>
-                  </div>
+                                    <p className="text-[#94A3B8] text-sm">Tutorials & product demos</p>
                 </a>
               </motion.div>
 
@@ -791,10 +753,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">Instagram</h3>
-                  <p className="text-[#94A3B8] text-sm">Behind the scenes & culture</p>
-                  <div className="mt-4 flex items-center gap-2 text-sm text-purple-500 font-medium">
-                    <span>3,800+ followers</span>
-                  </div>
+                                    <p className="text-[#94A3B8] text-sm">Behind the scenes & culture</p>
                 </a>
               </motion.div>
             </div>

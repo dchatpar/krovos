@@ -87,7 +87,7 @@ export default function CareersPage() {
             We&apos;re always looking for exceptional talent. Send us your resume.
           </p>
           <div className="mt-8">
-            <a href="mailto:careers@krovos.com" className="inline-flex items-center px-8 py-4 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors">
+            <a href="mailto:careers@krovos.ca" className="inline-flex items-center px-8 py-4 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors">
               Email us
             </a>
           </div>
