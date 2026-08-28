@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "./Logo";
@@ -53,10 +54,21 @@ const services = [
 ];
 
 const Navbar = () => {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Treat /services/* as active for the Services parent so the underline
+  // highlights whether the user is on the index or any sub-service page.
+  const isLinkActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    if (href === "/services") {
+      return pathname === "/services" || pathname.startsWith("/services/");
+    }
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -135,8 +147,9 @@ const Navbar = () => {
                     <button
                       onClick={() => setActiveDropdown(activeDropdown === link.name ? null : link.name)}
                       onMouseEnter={() => setActiveDropdown(link.name)}
-                      className={`flex items-center px-4 py-2 text-sm font-medium rounded-lg transition-all ${
-                        activeDropdown === link.name
+                      aria-current={isLinkActive(link.href) ? "page" : undefined}
+                      className={`relative flex items-center px-4 py-2 text-sm font-medium rounded-lg transition-all ${
+                        activeDropdown === link.name || isLinkActive(link.href)
                           ? "text-[#D4A017]"
                           : "text-white/80 hover:text-white hover:bg-white/10"
                       }`}
@@ -150,6 +163,12 @@ const Navbar = () => {
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
+                      {isLinkActive(link.href) && (
+                        <span
+                          aria-hidden="true"
+                          className="absolute left-3 right-5 -bottom-0.5 h-0.5 rounded-full bg-gradient-to-r from-[#D4A017] to-[#F0C040]"
+                        />
+                      )}
                     </button>
 
                     {/* Mega Menu Dropdown */}
@@ -211,9 +230,20 @@ const Navbar = () => {
                 ) : (
                   <Link
                     href={link.href}
-                    className="px-4 py-2 text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all"
+                    aria-current={isLinkActive(link.href) ? "page" : undefined}
+                    className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all ${
+                      isLinkActive(link.href)
+                        ? "text-white bg-white/10"
+                        : "text-white/80 hover:text-white hover:bg-white/10"
+                    }`}
                   >
                     {link.name}
+                    {isLinkActive(link.href) && (
+                      <span
+                        aria-hidden="true"
+                        className="absolute left-3 right-3 -bottom-0.5 h-0.5 rounded-full bg-gradient-to-r from-[#D4A017] to-[#F0C040]"
+                      />
+                    )}
                   </Link>
                 )}
               </div>
@@ -222,6 +252,16 @@ const Navbar = () => {
 
           {/* CTAs */}
           <div className="hidden lg:flex items-center space-x-4">
+            {/* Contact CTA - Gold gradient */}
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold rounded-full text-[#0A1628] bg-gradient-to-r from-[#D4A017] via-[#F0C040] to-[#D4A017] bg-[length:200%_100%] hover:bg-[position:100%_0] shadow-md shadow-[#D4A017]/20 hover:shadow-lg hover:shadow-[#D4A017]/40 hover:scale-[1.03] transition-all duration-300"
+            >
+              Contact
+              <svg className="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </Link>
             {/* Get Started Button - Gold CTA */}
             <Link
               href="/contact"
@@ -331,6 +371,19 @@ const Navbar = () => {
                                     {service.name}
                                   </Link>
                                 ))}
+                                <Link
+                                  href="/services"
+                                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-[#D4A017] hover:text-[#F0C040] transition-colors"
+                                  onClick={() => {
+                                    setIsMobileMenuOpen(false);
+                                    setActiveDropdown(null);
+                                  }}
+                                >
+                                  View all services
+                                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                  </svg>
+                                </Link>
                               </div>
                             </motion.div>
                           )}

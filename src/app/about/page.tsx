@@ -66,41 +66,14 @@ const TimelineItem = ({ year, title, description, isLeft = true, delay = 0 }: { 
       <div className={`w-5/12 ${isLeft ? "text-right pr-8" : "text-left pl-8"}`}>
         <div className="text-3xl font-bold text-gradient-gold mb-2">{year}</div>
         <h4 className="text-lg font-semibold text-white mb-2">{title}</h4>
-        <p className="text-[#94A3B8] text-sm leading-relaxed">{description}</p>
+        <p className="text-[#94A3B8] text-base lg:text-lg leading-relaxed">{description}</p>
       </div>
       <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-[#D4A017] to-[#F0C040] shadow-[0_0_15px_rgba(212,160,23,0.6)]" />
     </motion.div>
   );
 };
 
-// Team member card
-const TeamMember = ({ name, title, bio, imageColor, delay = 0 }: { name: string; title: string; bio: string; imageColor: string; delay?: number }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
 
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 40 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-      transition={{ duration: 0.6, delay, ease: "easeOut" }}
-      className="group relative"
-    >
-      <div className="relative p-6 rounded-2xl bg-navy-mid border border-[rgba(212,160,23,0.1)] hover:border-[rgba(212,160,23,0.4)] transition-all duration-500">
-        <div className="absolute inset-0 bg-gradient-to-br from-[rgba(212,160,23,0.08)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
-        <div className="relative z-10">
-          {/* Avatar placeholder */}
-          <div className={`w-24 h-24 rounded-full mx-auto mb-5 flex items-center justify-center ${imageColor}`}>
-            <span className="text-3xl font-bold text-navy">{name.split(" ").map(n => n[0]).join("")}</span>
-          </div>
-          <h3 className="text-xl font-bold text-white text-center mb-2">{name}</h3>
-          <p className="text-[#D4A017] text-center font-medium text-sm mb-4">{title}</p>
-          <p className="text-[#94A3B8] text-sm leading-relaxed text-center">{bio}</p>
-        </div>
-      </div>
-    </motion.div>
-  );
-};
 
 // Office location component
 const OfficeCard = ({ city, country, address, phone, email, delay = 0 }: { city: string; country: string; address: string; phone: string; email: string; delay?: number }) => {
@@ -126,19 +99,19 @@ const OfficeCard = ({ city, country, address, phone, email, delay = 0 }: { city:
         <h3 className="text-2xl font-bold text-white mb-2">{city}</h3>
         <p className="text-[#D4A017] font-medium mb-4">{country}</p>
         <div className="space-y-3">
-          <p className="text-[#94A3B8] text-sm flex items-start gap-2">
+          <p className="text-[#94A3B8] text-base lg:text-lg flex items-start gap-2">
             <svg className="w-4 h-4 mt-0.5 text-[#D4A017] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
             </svg>
             {address}
           </p>
-          <p className="text-[#94A3B8] text-sm flex items-center gap-2">
+          <p className="text-[#94A3B8] text-base lg:text-lg flex items-center gap-2">
             <svg className="w-4 h-4 text-[#D4A017] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
             {phone}
           </p>
-          <p className="text-[#94A3B8] text-sm flex items-center gap-2">
+          <p className="text-[#94A3B8] text-base lg:text-lg flex items-center gap-2">
             <svg className="w-4 h-4 text-[#D4A017] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
@@ -150,31 +123,7 @@ const OfficeCard = ({ city, country, address, phone, email, delay = 0 }: { city:
   );
 };
 
-// Award/certification card
-const AwardCard = ({ icon, title, description, delay = 0 }: { icon: string; title: string; description: string; delay?: number }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
 
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-      transition={{ duration: 0.5, delay, ease: "easeOut" }}
-      className="flex items-start gap-4 p-6 rounded-xl bg-navy-mid border border-[rgba(212,160,23,0.1)] hover:border-[rgba(212,160,23,0.3)] transition-all duration-300"
-    >
-      <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#D4A017]/20 to-[#F0C040]/20 flex items-center justify-center flex-shrink-0">
-        <svg className="w-6 h-6 text-[#D4A017]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={icon} />
-        </svg>
-      </div>
-      <div>
-        <h4 className="text-lg font-semibold text-white mb-1">{title}</h4>
-        <p className="text-[#94A3B8] text-sm">{description}</p>
-      </div>
-    </motion.div>
-  );
-};
 
 // Stats component
 const StatItem = ({ value, label, delay = 0 }: { value: string; label: string; delay?: number }) => {
@@ -234,69 +183,9 @@ export default function AboutPage() {
       }
     ];
 
-  // Team members data
-  const teamMembers = [
-    {
-      name: "Marcus Chen",
-      title: "Chief Executive Officer",
-      bio: "Former VP at Fortune 500 tech company. 20+ years in enterprise software. Stanford MBA.",
-      imageColor: "bg-gradient-to-br from-[#D4A017] to-[#F0C040]"
-    },
-    {
-      name: "Sarah Al-Rashid",
-      title: "Chief Technology Officer",
-      bio: "AI/ML researcher with 15 patents. Previously led engineering at major cloud provider.",
-      imageColor: "bg-gradient-to-br from-[#0E7C7B] to-[#14B8A6]"
-    },
-    {
-      name: "David Okonkwo",
-      title: "Chief Operating Officer",
-      bio: "Operations expert scaling startups to enterprises. Ex-McKinsey consultant.",
-      imageColor: "bg-gradient-to-br from-[#1B6CA8] to-[#3B82F6]"
-    },
-    {
-      name: "Emily Watson",
-      title: "VP of Engineering",
-      bio: "20 years building scalable systems. Led teams at top-tier technology companies.",
-      imageColor: "bg-gradient-to-br from-[#4A1882] to-[#8B5CF6]"
-    },
-    {
-      name: "Raj Patel",
-      title: "VP of Sales",
-      bio: "Enterprise sales leader with track record of 10x revenue growth in emerging markets.",
-      imageColor: "bg-gradient-to-br from-[#D4A017] to-[#F0C040]"
-    },
-    {
-      name: "Lisa Nakamura",
-      title: "VP of Customer Success",
-      bio: "Customer experience specialist ensuring enterprise clients achieve maximum value.",
-      imageColor: "bg-gradient-to-br from-[#0E7C7B] to-[#14B8A6]"
-    }
-  ];
 
-  // Awards data
-  const awards = [
-    {
-      icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z",
-      title: "ISO 27001 Certified",
-      description: "Information security management system meeting international standards"
-    },
-    {
-      icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z",
-      title: "ISO 9001 Certified",
-      description: "Quality management system ensuring consistent service delivery"
-    },
-    {
-      icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z",
-      title: "SOC 2 Type II",
-      description: "Audited compliance with security, availability, and confidentiality standards"
-    },
-    {
-      icon: "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z",
-      title: "Great Place to Work",
-      description: "Recognized as one of the best technology companies to work for"
-    }
-  ];
+
+
 
   return (
     <div className="min-h-screen">
@@ -453,7 +342,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership Team Section - removed */}
+      
 
       {/* Global Offices Section */}
       <section className="py-24 lg:py-32 relative">
@@ -482,32 +371,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Awards & Certifications Section */}
-      <section className="py-24 lg:py-32 relative bg-navy-light">
-        <div className="max-w-7xl mx-auto px-6">
-          <SectionWrapper>
-            <div className="text-center mb-16">
-              <span className="text-[#D4A017] font-medium uppercase tracking-wider text-sm">Recognition</span>
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mt-3">Awards & Certifications</h2>
-              <p className="text-[#94A3B8] mt-4 text-lg max-w-2xl mx-auto">
-                Industry-recognized certifications demonstrating our commitment to quality and security.
-              </p>
-            </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {awards.map((award, index) => (
-                <AwardCard
-                  key={index}
-                  icon={award.icon}
-                  title={award.title}
-                  description={award.description}
-                  delay={index * 0.1}
-                />
-              ))}
-            </div>
-          </SectionWrapper>
-        </div>
-      </section>
 
       {/* Stats Section - removed */}
 

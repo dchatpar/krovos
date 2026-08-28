@@ -66,11 +66,11 @@ export default function AboutPage() {
             <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
               Building the Future of <span className="text-[#D4A017]">Enterprise</span> Technology
             </h1>
-            <p className="mt-6 text-lg lg:text-xl text-white/70 leading-relaxed max-w-2xl">
+            <p className="mt-6 text-lg lg:text-xl text-[#CBD5E1] leading-relaxed max-w-2xl">
               Krovos Inc. is a premier enterprise technology holding company based in Surrey, BC. We deliver transformative solutions across AI automation,
               custom software, digital marketing, managed IT, talent solutions, and logistics technology.
             </p>
-            <p className="mt-4 text-lg text-white/60 leading-relaxed max-w-2xl">
+            <p className="text-[#94A3B8] mt-4 text-lg lg:text-xl max-w-2xl">
               Our mission is to liberate enterprises from repetitive tasks through intelligent automation, 
               enabling teams to focus on creative strategy and high-impact work that drives business growth.
             </p>
@@ -99,7 +99,7 @@ export default function AboutPage() {
               <div key={index} className="text-center">
                 <div className="text-3xl lg:text-5xl font-bold text-[#D4A017]">{stat.value}</div>
                 <div className="text-white font-semibold mt-2">{stat.label}</div>
-                <div className="text-white/50 text-sm mt-1">{stat.description}</div>
+                <div className="text-[#94A3B8] text-base lg:text-lg mt-1">{stat.description}</div>
               </div>
             ))}
           </div>
@@ -114,7 +114,7 @@ export default function AboutPage() {
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Our Mission
               </h2>
-              <div className="space-y-4 text-white/70 leading-relaxed">
+              <div className="space-y-4 text-[#CBD5E1] leading-relaxed">
                 <p>
                   At Krovos, we believe that the future of work lies in the seamless integration of 
                   artificial intelligence with human creativity. Our mission is to automate every repetitive 
@@ -154,7 +154,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Our Vision</h2>
-              <div className="space-y-4 text-white/70 leading-relaxed">
+              <div className="space-y-4 text-[#CBD5E1] leading-relaxed">
                 <p>
                   Our vision extends beyond mere efficiency gains. We envision a world where 
                   enterprises can scale infinitely without proportional increases in headcount, 
@@ -212,7 +212,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white">Our Core Values</h2>
-            <p className="mt-4 text-white/60 max-w-2xl mx-auto">
+            <p className="text-[#94A3B8] mt-4 text-base lg:text-lg max-w-2xl mx-auto">
               These principles guide every decision we make and every product we build
             </p>
           </div>
@@ -225,7 +225,7 @@ export default function AboutPage() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold text-white">{value.title}</h3>
-                <p className="text-white/50 text-sm mt-2 leading-relaxed">{value.description}</p>
+                <p className="text-[#94A3B8] text-base lg:text-lg mt-2 leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -237,7 +237,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white">Leadership Team</h2>
-            <p className="mt-4 text-white/60 max-w-2xl mx-auto">
+            <p className="text-[#94A3B8] mt-4 text-base lg:text-lg max-w-2xl mx-auto">
               Experienced leaders with deep expertise in enterprise technology and AI
             </p>
           </div>
@@ -249,7 +249,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-lg font-semibold text-white">{member.name}</h3>
                 <p className="text-[#D4A017] text-sm font-medium mt-1">{member.role}</p>
-                <p className="text-white/50 text-sm mt-3 leading-relaxed">{member.bio}</p>
+                <p className="text-[#94A3B8] text-base lg:text-lg mt-3 leading-relaxed">{member.bio}</p>
               </div>
             ))}
           </div>
@@ -270,7 +270,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Global Presence</h2>
-              <p className="text-white/70 leading-relaxed mb-6">
+              <p className="text-[#CBD5E1] leading-relaxed mb-6">
                 With headquarters in Surrey, BC, Krovos serves enterprise clients across North America, Europe, and Asia-Pacific.
               </p>
               <div className="space-y-4">
@@ -280,7 +280,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <div className="text-white font-medium">Surrey, BC (HQ)</div>
-                    <div className="text-white/40 text-sm">Canada</div>
+                    <div className="text-[#94A3B8] text-sm">Canada</div>
                   </div>
                 </div>
 
@@ -290,7 +290,7 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#0E7C7B]/20 to-[#D4A017]/20 rounded-3xl blur-2xl" />
               <div className="relative bg-[#0D2040] border border-[#D4A017]/20 rounded-2xl p-8">
                 <h3 className="text-xl font-semibold text-white mb-6">Why Global Matters</h3>
-                <ul className="space-y-4 text-white/70">
+                <ul className="space-y-4 text-[#CBD5E1]">
                   <li>Round-the-clock development cycles across time zones</li>
                   <li>Local market expertise in key enterprise regions</li>
                   <li>Data residency options for compliance requirements</li>
@@ -308,17 +308,17 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white">Our Journey</h2>
-            <p className="mt-4 text-white/60">From startup to enterprise leader</p>
+            <p className="text-[#94A3B8] mt-4 text-base lg:text-lg">From startup to enterprise leader</p>
           </div>
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-[#D4A017]/20" />
             {timeline.map((item, index) => (
               <div key={index} className="relative flex items-center justify-between mb-8 last:mb-0">
                 <div className={`w-5/12 ${index % 2 === 0 ? "text-right pr-8" : "ml-auto pl-8"}`}>
-                  <div className={`text-sm font-semibold ${item.milestone ? "text-[#D4A017]" : "text-white/40"}`}>
+                  <div className={`text-sm font-semibold ${item.milestone ? "text-[#D4A017]" : "text-[#475569]"}`}>
                     {item.year}
                   </div>
-                  <div className="text-white/80 text-sm mt-1">{item.event}</div>
+                  <div className="text-white/80 text-base lg:text-lg mt-1">{item.event}</div>
                 </div>
                 <div className={`absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full border-2 ${item.milestone ? "bg-[#D4A017] border-[#D4A017]" : "bg-[#0D2040] border-[#D4A017]/40"}`} />
                 <div className="w-5/12" />

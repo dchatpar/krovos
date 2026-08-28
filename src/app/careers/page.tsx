@@ -89,13 +89,13 @@ const JobCard = ({
               </span>
             </div>
             <h3 className="text-xl lg:text-2xl font-bold text-white mb-2">{title}</h3>
-            <p className="text-[#94A3B8] flex items-center gap-2">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              {location}
-            </p>
+            <p className="text-[#94A3B8] text-base lg:text-lg flex items-center gap-2">
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>
+                          {location}
+                        </p>
           </div>
           <button
             onClick={() => setIsExpanded(!isExpanded)}
@@ -114,12 +114,12 @@ const JobCard = ({
               transition={{ duration: 0.3 }}
               className="mt-6 pt-6 border-t border-[rgba(212,160,23,0.1)]"
             >
-              <p className="text-[#94A3B8] mb-4">{description}</p>
+              <p className="text-[#94A3B8] text-base lg:text-lg mb-4">{description}</p>
               <div className="mb-6">
                 <h4 className="text-white font-semibold mb-3">Requirements</h4>
                 <ul className="space-y-2">
                   {requirements.map((req, index) => (
-                    <li key={index} className="text-[#94A3B8] text-sm flex items-start gap-2">
+                    <li key={index} className="text-[#94A3B8] text-base lg:text-lg flex items-start gap-2">
                       <svg className="w-4 h-4 text-[#D4A017] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
@@ -166,7 +166,7 @@ const BenefitCard = ({ icon, title, description, delay = 0 }: { icon: string; ti
           </svg>
         </div>
         <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
-        <p className="text-[#94A3B8] leading-relaxed">{description}</p>
+        <p className="text-[#94A3B8] text-base lg:text-lg leading-relaxed">{description}</p>
       </div>
     </motion.div>
   );
@@ -190,7 +190,7 @@ const CultureItem = ({ number, title, description, delay = 0 }: { number: string
       </div>
       <div>
         <h3 className="text-lg font-bold text-white mb-2">{title}</h3>
-        <p className="text-[#94A3B8] text-sm leading-relaxed">{description}</p>
+        <p className="text-[#94A3B8] text-base lg:text-lg leading-relaxed">{description}</p>
       </div>
     </motion.div>
   );
@@ -215,44 +215,7 @@ const StatItem = ({ value, label, delay = 0 }: { value: string; label: string; d
   );
 };
 
-// Testimonial card component
-const TestimonialCard = ({ quote, author, role, company, avatar, delay = 0 }: { quote: string; author: string; role: string; company: string; avatar: string; delay?: number }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
 
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-      transition={{ duration: 0.6, delay, ease: "easeOut" }}
-      className="group relative p-8 rounded-2xl bg-navy-mid border border-[rgba(212,160,23,0.1)] hover:border-[rgba(212,160,23,0.4)] transition-all duration-500"
-    >
-      <div className="absolute inset-0 bg-gradient-to-br from-[rgba(212,160,23,0.05)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
-      <div className="relative z-10">
-        <div className="flex gap-1 mb-6">
-          {[...Array(5)].map((_, i) => (
-            <svg key={i} className="w-5 h-5 text-[#D4A017]" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-          ))}
-        </div>
-        <blockquote className="text-[#CBD5E1] text-lg leading-relaxed mb-6">
-          &ldquo;{quote}&rdquo;
-        </blockquote>
-        <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#D4A017] to-[#0E7C7B] flex items-center justify-center text-white font-bold text-lg">
-            {avatar}
-          </div>
-          <div>
-            <div className="text-white font-semibold">{author}</div>
-            <div className="text-[#94A3B8] text-sm">{role} at {company}</div>
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  );
-};
 
 // Bento grid item component
 const BentoItem = ({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) => {
@@ -293,7 +256,7 @@ const GrowthCard = ({ icon, title, description, delay = 0 }: { icon: string; tit
           </svg>
         </div>
         <h3 className="text-lg font-bold text-white mb-2">{title}</h3>
-        <p className="text-[#94A3B8] text-sm leading-relaxed">{description}</p>
+        <p className="text-[#94A3B8] text-base lg:text-lg leading-relaxed">{description}</p>
       </div>
     </motion.div>
   );
@@ -397,37 +360,7 @@ export default function CareersPage() {
     }
   ];
 
-  // Testimonials data
-  const testimonials = [
-    {
-      quote: "Joining Krovos was the best career decision I've ever made. The culture of innovation and collaboration is unmatched. I've grown more in two years here than I did in five years at my previous company.",
-      author: "Sarah Chen",
-      role: "Senior Software Engineer",
-      company: "Krovos",
-      avatar: "SC"
-    },
-    {
-      quote: "The leadership genuinely cares about employee growth. I've been given opportunities to lead major projects and develop skills I never thought I'd need. This is where careers are built.",
-      author: "Mohammed Al-Rashid",
-      role: "Engineering Manager",
-      company: "Krovos",
-      avatar: "MA"
-    },
-    {
-      quote: "As a designer, Krovos gives me the freedom to push boundaries and create meaningful experiences. The collaboration with engineering is seamless, and the impact of our work is visible every day.",
-      author: "Elena Rodriguez",
-      role: "Principal Product Designer",
-      company: "Krovos",
-      avatar: "ER"
-    },
-    {
-      quote: "The remote-first culture is real, not just a buzzword. I'm trusted to do my best work from anywhere, and the team connections are stronger than any office-based experience I've had.",
-      author: "James Okonkwo",
-      role: "DevOps Lead",
-      company: "Krovos",
-      avatar: "JO"
-    }
-  ];
+
 
   // Job openings data
   const jobOpenings = [
@@ -617,17 +550,6 @@ export default function CareersPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 relative bg-navy-mid">
-        <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-            <StatItem value="120+" label="Team Members" delay={0} />
-            <StatItem value="11" label="Countries" delay={0.1} />
-            <StatItem value="200+" label="Enterprise Clients" delay={0.2} />
-            <StatItem value="98%" label="Employee Satisfaction" delay={0.3} />
-          </div>
-        </div>
-      </section>
 
       {/* Why Krovos Section with Bento Grid */}
       <section id="culture" className="py-24 lg:py-32 relative">
@@ -676,7 +598,7 @@ export default function CareersPage() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">Health & Wellness</h3>
-                <p className="text-[#94A3B8] text-sm leading-relaxed">Full medical, dental, vision coverage plus mental health support.</p>
+                <p className="text-[#94A3B8] text-base lg:text-lg leading-relaxed">Full medical, dental, vision coverage plus mental health support.</p>
               </BentoItem>
 
               <BentoItem delay={0.2}>
@@ -686,7 +608,7 @@ export default function CareersPage() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">Unlimited PTO</h3>
-                <p className="text-[#94A3B8] text-sm leading-relaxed">Take the time you need to recharge and bring your best self.</p>
+                <p className="text-[#94A3B8] text-base lg:text-lg leading-relaxed">Take the time you need to recharge and bring your best self.</p>
               </BentoItem>
 
               <BentoItem className="bento-item-wide" delay={0.3}>
@@ -712,7 +634,7 @@ export default function CareersPage() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">$2,000 Setup</h3>
-                <p className="text-[#94A3B8] text-sm leading-relaxed">Home office stipend for your perfect workspace.</p>
+                <p className="text-[#94A3B8] text-base lg:text-lg leading-relaxed">Home office stipend for your perfect workspace.</p>
               </BentoItem>
 
               <BentoItem delay={0.5}>
@@ -722,7 +644,7 @@ export default function CareersPage() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">$3,000 Learning</h3>
-                <p className="text-[#94A3B8] text-sm leading-relaxed">Annual budget for courses, conferences, and certifications.</p>
+                <p className="text-[#94A3B8] text-base lg:text-lg leading-relaxed">Annual budget for courses, conferences, and certifications.</p>
               </BentoItem>
             </div>
           </SectionWrapper>
@@ -802,35 +724,7 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-24 lg:py-32 relative">
-        <div className="absolute inset-0 bg-mesh-gold opacity-20" />
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <SectionWrapper>
-            <div className="text-center mb-16">
-              <span className="text-[#D4A017] font-medium uppercase tracking-wider text-sm">Testimonials</span>
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mt-3">Hear From Our Team</h2>
-              <p className="text-[#94A3B8] mt-4 text-lg max-w-2xl mx-auto">
-                Do not just take our word for it. Hear from the people who make Krovos a great place to work.
-              </p>
-            </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
-              {testimonials.map((testimonial, index) => (
-                <TestimonialCard
-                  key={index}
-                  quote={testimonial.quote}
-                  author={testimonial.author}
-                  role={testimonial.role}
-                  company={testimonial.company}
-                  avatar={testimonial.avatar}
-                  delay={index * 0.1}
-                />
-              ))}
-            </div>
-          </SectionWrapper>
-        </div>
-      </section>
 
       {/* Open Positions Section */}
       <section id="open-positions" className="py-24 lg:py-32 relative bg-navy-light">
@@ -910,7 +804,7 @@ export default function CareersPage() {
                 >
                   <div className="text-4xl font-bold text-gradient-gold mb-4">{item.step}</div>
                   <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-[#94A3B8] text-sm">{item.description}</p>
+                  <p className="text-[#94A3B8] text-base lg:text-lg">{item.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -947,7 +841,7 @@ export default function CareersPage() {
               </Link>
             </div>
 
-            <p className="text-[#94A3B8] mt-8 text-sm">
+            <p className="text-[#94A3B8] mt-8 text-base lg:text-lg">
               Do not see the right role? Email us at{" "}
               <a href="mailto:careers@krovos.ca" className="text-[#D4A017] hover:underline">
                 careers@krovos.ca

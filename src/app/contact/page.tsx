@@ -119,14 +119,14 @@ const OfficeCard = ({ city, country, address, phone, email, timezone, delay = 0 
             <svg className="w-5 h-5 text-[#D4A017] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
             </svg>
-            <span className="text-[#94A3B8] text-sm">{address}</span>
+            <span className="text-[#94A3B8] text-base lg:text-lg">{address}</span>
           </div>
 
           <div className="flex items-center gap-3">
             <svg className="w-5 h-5 text-[#D4A017] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
-            <a href={`tel:${phone}`} className="text-[#94A3B8] text-sm hover:text-[#D4A017] transition-colors">
+            <a href={`tel:${phone}`} className="text-[#94A3B8] text-base lg:text-lg hover:text-[#D4A017] transition-colors">
               {phone}
             </a>
           </div>
@@ -135,7 +135,7 @@ const OfficeCard = ({ city, country, address, phone, email, timezone, delay = 0 
             <svg className="w-5 h-5 text-[#D4A017] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
-            <a href={`mailto:${email}`} className="text-[#94A3B8] text-sm hover:text-[#D4A017] transition-colors">
+            <a href={`mailto:${email}`} className="text-[#94A3B8] text-base lg:text-lg hover:text-[#D4A017] transition-colors">
               {email}
             </a>
           </div>
@@ -144,7 +144,7 @@ const OfficeCard = ({ city, country, address, phone, email, timezone, delay = 0 
             <svg className="w-5 h-5 text-[#D4A017] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span className="text-[#94A3B8] text-sm">{timezone}</span>
+            <span className="text-[#94A3B8] text-base lg:text-lg">{timezone}</span>
           </div>
         </div>
       </div>
@@ -236,7 +236,7 @@ const FAQItem = ({ question, answer, delay = 0 }: { question: string; answer: st
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
-            <p className="text-[#94A3B8] pb-6">{answer}</p>
+            <p className="text-[#94A3B8] text-base lg:text-lg pb-6">{answer}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -350,10 +350,10 @@ export default function ContactPage() {
             transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
             className="flex flex-wrap justify-center gap-4"
           >
-            <a href="#contact-form" className="px-8 py-3 bg-gradient-to-r from-[#D4A017] to-[#F0C040] text-[#0A1628] font-semibold rounded-full hover:shadow-lg hover:shadow-[#D4A017]/30 hover:scale-105 transition-all text-lg px-8 py-4">
+            <a href="#contact-form" className="bg-gradient-to-r from-[#D4A017] to-[#F0C040] text-[#0A1628] font-semibold rounded-full hover:shadow-lg hover:shadow-[#D4A017]/30 hover:scale-105 transition-all text-lg px-8 py-4">
               Send a Message
             </a>
-            <a href="#offices" className="px-8 py-3 border-2 border-[#D4A017] text-[#D4A017] font-semibold rounded-full hover:bg-[#D4A017] hover:text-[#0A1628] transition-all text-lg px-8 py-4">
+            <a href="#offices" className="border-2 border-[#D4A017] text-[#D4A017] font-semibold rounded-full hover:bg-[#D4A017] hover:text-[#0A1628] transition-all text-lg px-8 py-4">
               Visit Our Offices
             </a>
           </motion.div>
@@ -387,21 +387,13 @@ export default function ContactPage() {
           <SectionWrapper>
             <div className="grid md:grid-cols-2 gap-6">
                           <ContactMethodCard
-                            icon="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                            title="Email Us"
-                            description="Send us an email anytime. We respond within 24 hours."
-                            detail="contact@krovos.ca"
-                            delay={0}
-                          />
-
-              <ContactMethodCard
-                icon="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                title="Live Chat"
-                description="Chat with us in real-time for quick answers."
-                detail="Start a conversation"
-                delay={0.2}
-              />
-            </div>
+                                          icon="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                          title="Email Us"
+                                          description="Send us an email anytime. We respond within 24 hours."
+                                          detail="contact@krovos.ca"
+                                          delay={0}
+                                        />
+                                      </div>
           </SectionWrapper>
         </div>
       </section>
@@ -500,7 +492,7 @@ export default function ContactPage() {
                       )}
                     </button>
 
-                    <p className="text-center text-[#64748B] text-sm">
+                    <p className="text-center text-[#64748B] text-base lg:text-lg">
                       By submitting this form, you agree to our{" "}
                       <Link href="/privacy" className="text-[#D4A017] hover:underline">Privacy Policy</Link>.
                     </p>
@@ -564,7 +556,7 @@ export default function ContactPage() {
                   ].map((stat, index) => (
                     <div key={index} className="text-center">
                       <div className="text-3xl lg:text-4xl font-bold text-gradient-gold mb-1">{stat.value}</div>
-                      <div className="text-[#94A3B8] text-sm">{stat.label}</div>
+                      <div className="text-[#94A3B8] text-base lg:text-lg">{stat.label}</div>
                     </div>
                   ))}
                 </div>
@@ -699,7 +691,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">X (Twitter)</h3>
-                                    <p className="text-[#94A3B8] text-sm">Latest updates & announcements</p>
+                                    <p className="text-[#94A3B8] text-base lg:text-lg">Latest updates & announcements</p>
                 </a>
               </motion.div>
 
@@ -717,7 +709,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">GitHub</h3>
-                                    <p className="text-[#94A3B8] text-sm">Explore our open source projects</p>
+                                    <p className="text-[#94A3B8] text-base lg:text-lg">Explore our open source projects</p>
                 </a>
               </motion.div>
 
@@ -735,7 +727,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">YouTube</h3>
-                                    <p className="text-[#94A3B8] text-sm">Tutorials & product demos</p>
+                                    <p className="text-[#94A3B8] text-base lg:text-lg">Tutorials & product demos</p>
                 </a>
               </motion.div>
 
@@ -753,7 +745,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">Instagram</h3>
-                                    <p className="text-[#94A3B8] text-sm">Behind the scenes & culture</p>
+                                    <p className="text-[#94A3B8] text-base lg:text-lg">Behind the scenes & culture</p>
                 </a>
               </motion.div>
             </div>
@@ -804,10 +796,10 @@ export default function ContactPage() {
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="#contact-form" className="px-8 py-3 bg-gradient-to-r from-[#D4A017] to-[#F0C040] text-[#0A1628] font-semibold rounded-full hover:shadow-lg hover:shadow-[#D4A017]/30 hover:scale-105 transition-all text-lg px-8 py-4">
+              <a href="#contact-form" className="bg-gradient-to-r from-[#D4A017] to-[#F0C040] text-[#0A1628] font-semibold rounded-full hover:shadow-lg hover:shadow-[#D4A017]/30 hover:scale-105 transition-all text-lg px-8 py-4">
                 Contact Us Now
               </a>
-              <Link href="/demo" className="px-8 py-3 border-2 border-[#D4A017] text-[#D4A017] font-semibold rounded-full hover:bg-[#D4A017] hover:text-[#0A1628] transition-all text-lg px-8 py-4">
+              <Link href="/demo" className="border-2 border-[#D4A017] text-[#D4A017] font-semibold rounded-full hover:bg-[#D4A017] hover:text-[#0A1628] transition-all text-lg px-8 py-4">
                 Request a Demo
               </Link>
             </div>
